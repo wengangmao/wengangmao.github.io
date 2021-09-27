@@ -1,11 +1,5 @@
-# VoySmart Teamwork
-+++
----
+# Welcome to your Jupyter Book: a meeting minute and follow up logbook for supervision meetings
 
-** A virtual platform for our team to work with energy efficiency measures in shipping
-
-
----
 
 :::{note}
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Energy Efficiency Shipping</title>
+    <title>Welcome to your Jupyter Book: a meeting minute and follow up logbook for supervision meetings &#8212; Energy Efficiency Shipping</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,7 +42,14 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -124,7 +131,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contents/students-phd/langxiao/intro.html">
-   Xiao Research Logbook
+   1. Xiao Research Logbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -134,19 +141,19 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-phd/langxiao/langxiao_logbook_2021.html">
-     Xiao activities 2021
+     1.1. Xiao activities 2021
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-phd/langxiao/langxiao_research.html">
-     Research achievements
+     1.2. Research achievements
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contents/students-phd/daiyong/intro.html">
-   Daiyong Work Logbook
+   2. Daiyong Work Logbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -156,24 +163,24 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-phd/daiyong/daiyong_logbook_2021.html">
-     Daiyong activities 2021
+     2.1. Daiyong activities 2021
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-phd/daiyong/daiyong_research.html">
-     Research achievements and problems
+     2.2. Research achievements and problems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-phd/daiyong/daiyong_project.html">
-     Project activities and plan
+     2.3. Project activities and plan
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contents/students-msc/zangshuo/intro.html">
-   Zangshuo Logbook
+   3. Zangshuo Logbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -183,24 +190,24 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-msc/zangshuo/zangshuo_logbook_2021.html">
-     Zangshuo activities 2021
+     3.1. Zangshuo activities 2021
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="contents/students-msc/zangshuo/zangshuo_research.html">
-     Research results
+     3.2. Research results
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="contents/students-phd/martin/martin.html">
-   Martin logbook 2021
+   4. Martin logbook 2021
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="contents/students-visit/zhangchi/zhangchi.html">
-   Zhangchi visiting 2021
+   5. Zhangchi visiting 2021
   </a>
  </li>
 </ul>
@@ -285,6 +292,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -309,13 +333,53 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="welcome-to-your-jupyter-book-a-meeting-minute-and-follow-up-logbook-for-supervision-meetings">
+<h1>Welcome to your Jupyter Book: a meeting minute and follow up logbook for supervision meetings<a class="headerlink" href="#welcome-to-your-jupyter-book-a-meeting-minute-and-follow-up-logbook-for-supervision-meetings" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This book will contain the following chapters:</p>
+<p>1, common issues
+2, <a class="reference internal" href="contents/students-phd/langxiao/langxiao_logbook_2021.html"><span class="doc std std-doc">langxiao</span></a></p>
+</div>
+<hr class="docutils" />
+<p>Below is the common issues for the upcoming month:</p>
+<ol class="simple">
+<li><p>NMU abstract (deadline: 2021-09-30)</p></li>
+<li><p>ISOPE or OMAE conferences (deadlines: 2021-9)</p></li>
+<li><p>EcoSail 7th GA meeting 2021-10-15</p></li>
+</ol>
+<blockquote>
+<div><p>Simulation platform to be ready
+Summary of your achievement on ship performance models
+Summary of your achievement on voyage optimizations</p>
+</div></blockquote>
+<p>4.<span style = "color:blue; font-size: 30px;"></span></p>
+<blockquote>
+<div><p>Daiyong Lic plan: 2022-09-30
+Xiao’s PhD defense plan: 2022-12-30
+We need to schedule a meeting with Jonas</p>
+</div></blockquote>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
