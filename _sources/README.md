@@ -1,28 +1,17 @@
-# Welcome to your Jupyter Book: a meeting minute and follow up logbook for supervision meetings
+# A logbook for VoySmart research activities
 
 
-:::{note}
+This log book is written as a Markdown format based on [JupyterBook](https://jupyterbook.org/start/your-first-book.html).
 
-This book will contain the following chapters:
+In order to build the markdown into html pages, you need to download:
+- jupter book (build html files from markdown files)
+- ghp-import  (upload html files onto Github to publish the website)
 
-1, common issues
-2, [langxiao](contents/students-phd/langxiao/langxiao_logbook_2021.md)
+Run the following steps to compile the Jupter book:
 
+> 1. Go to upper level directory containing the "voysmart" folder
+> 2. Build the book by run "jupter-book build voysmart"
+> 3. Enter into the "voysmart" folder
+> 4. Publish the html pages by run "ghp-import -n -p -f _build/html"
 
-:::
-
-***
-
-Below is the common issues for the upcoming month:
-1. NMU abstract (deadline: 2021-09-30)
-2. ISOPE or OMAE conferences (deadlines: 2021-9)
-3. EcoSail 7th GA meeting 2021-10-15
-> Simulation platform to be ready 
-> Summary of your achievement on ship performance models
-> Summary of your achievement on voyage optimizations
-
-4.<span style = "color:blue; font-size: 30px;"></span>
-> Daiyong Lic plan: 2022-09-30
-> Xiao's PhD defense plan: 2022-12-30 
-> We need to schedule a meeting with Jonas
-
+Then you should be able to access the [website](wengangmao.github.io/voysmart)!
