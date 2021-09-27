@@ -1,5 +1,5 @@
 format: jb-book
-root: home
+root: contents/home
 parts:
 - caption: RESEARCH PROJECT
   chapters:
@@ -14,7 +14,7 @@ parts:
   - file: contents/projects/others.md
     title: othergrants
 - caption: TEAMWORK LOGBOOK
-  numbered: true
+#  numbered: false
   chapters:
   - file: contents/students-phd/langxiao/intro.md
     title: Xiao Research Logbook
