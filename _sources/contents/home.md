@@ -1,4 +1,4 @@
-# **VoySmart Teamwork**
+# <span style = "color:red; font-weight: 500; font-size: 30px; align: center">VoySmart Teamwork</span>
 +++
 ---
 
