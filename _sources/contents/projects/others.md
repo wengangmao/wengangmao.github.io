@@ -8,7 +8,7 @@ Below I just list several of them which I am in charge of at least 1 WP at Chalm
 
 ---
 
-### Project on Energy efficiency measures
+### Project on energy efficiency measures
 
 * PropIT -- wind propulsion ships funded by Swedish Energy Agency
 * Feasibility study on renewable ship propulsions funded by EU commission environment action

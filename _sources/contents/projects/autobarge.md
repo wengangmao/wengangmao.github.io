@@ -49,7 +49,7 @@ ESR7: Real-time multi-objective voyage optimization algorithms based on on-line 
 
 ## Our research platform
 
-```{figure} ./images/ship1m.jpg 
+```{figure} ./images/ship1m.png 
 ---
 height: 200px
 name: 1m ship model
@@ -57,7 +57,7 @@ alt: easy to catch for testing
 ---
 ```
 
-```{figure} ./images/ship3m.jpg 
+```{figure} ./images/ship3m.png 
 ---
 height: 200px
 name: 3m ship model
