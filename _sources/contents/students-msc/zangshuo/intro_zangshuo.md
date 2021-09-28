@@ -7,7 +7,7 @@
 Zang Shuo's project is to develop simulation platform for testing and optimizating electrifying inland ships for zero-emission shipping.
 
 
-```{figure} ./images/battership.png 
+```{figure} ./images/batteryship.png 
 ---
 height: 300px
 name: funding agencies

@@ -3,14 +3,14 @@
 +++
 ----
 
-## Ideas for energy efficiency measures
+## Energy efficiency measures
 * Optimization of ship resistance, engine load and propulsion efficiency
 * Control algorithm for CPP ship navigation
 * Electrifying ships with optimization speed and battery configurations
 
 
 
-## Ideas for autonomous shipping
+## Autonomous shipping
 * How to introduce uncertain models in MPC control algorithms
 * Kalmar filter or wavelet methods to get smooth u, v, r for maneuverability models of various ship propulsion systems
 * RNN+LSTM learning to predict real-time ship trajectories
@@ -19,11 +19,11 @@
 
 
 
-## Ideas for spatio-temporal modelling of metocean parameters
+## Spatio-temporal modelling of metocean parameters
 * SPDE models and conditional prediction for short-term weather prediction
 
 
-## Ideas of machine learning for maritime applications
+## Machine learning for maritime applications
 * ML DCP method to split stationary sea states and their applications
 * Hybrid models for ship performance modelling
 * How to get baselines from ML analysis
