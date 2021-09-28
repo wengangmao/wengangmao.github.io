@@ -14,4 +14,4 @@ Run the following steps to compile the Jupter book:
 > 3. Enter into the "voysmart" folder
 > 4. Publish the html pages by run "ghp-import -n -p -f _build/html"
 
-Then you should be able to access the [website](wengangmao.github.io/voysmart)!
+Then you should be able to access the [VoySmart logbook website](https://wengangmao.github.io/voysmart/contents/home.html)!
