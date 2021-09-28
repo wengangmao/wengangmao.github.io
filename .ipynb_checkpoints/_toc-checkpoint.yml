@@ -49,8 +49,8 @@ parts:
     title: Project coordination
   - file: contents/wengang/research_ideas.md
     title: Research ideas
-  - file: contents/wengang/wengang_work_research.ipynb
-    title: Initial investigation
+  - file: contents/wengang/rnn_tensorflow.ipynb
+    title: Vattenfall project
 - caption: PUBLICATIONS
   chapters:
   - file: contents/references/published/published.md
