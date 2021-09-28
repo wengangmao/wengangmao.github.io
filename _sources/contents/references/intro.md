@@ -1,1 +1,3 @@
-# This is a logbook for Lang Xiao's research activities since 2021-09-27
+# VoySmart team production
+
+In this section, we will list various published, planned and working research articles from our team.

@@ -1,0 +1,1492 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vattenfall RNN prediction &#8212; Energy Efficiency Shipping</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Published papers before 2021-09" href="../references/published/published.html" />
+    <link rel="prev" title="Research ideas for proposal" href="research_ideas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/voysmart.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Energy Efficiency Shipping</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../home.html">
+   <span style="color:red; font-weight: 500;">
+    Teamwork Logbook
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  RESEARCH PROJECT
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/ecosail.html">
+   Ecosail 2018-2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/E-Nav.html">
+   E-Nav 2019-2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/viakaizen.html">
+   VIA Kaizen 2020-2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/autobarge.html">
+   Autobarge 2022-2025
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/others.html">
+   othergrants
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  TEAMWORK LOGBOOK
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../students-phd/langxiao/intro_xiao.html">
+   Xiao Research Logbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-phd/langxiao/langxiao_logbook_2021.html">
+     Xiao activities 2021
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-phd/langxiao/langxiao_research.html">
+     Research achievements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../students-phd/daiyong/intro_daiyong.html">
+   Daiyong Work Logbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-phd/daiyong/daiyong_logbook_2021.html">
+     Daiyong activities 2021
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-phd/daiyong/icsos.html">
+     ICSOS paper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-phd/daiyong/mariner.html">
+     MSS-mariner
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../students-msc/zangshuo/intro_zangshuo.html">
+   Zangshuo Logbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../students-msc/zangshuo/zangshuo_logbook_2021.html">
+     Zangshuo activities 2021
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../students-phd/martin/martin.html">
+   Martin logbook 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../students-visit/zhangchi/zhangchi.html">
+   Zhangchi visiting 2021
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  VOYSMART OUTLOOK
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="research_plan.html">
+   Project coordination
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="research_ideas.html">
+   Research ideas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Vattenfall RNN prediction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  PUBLICATIONS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references/published/published.html">
+   Published articles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references/working/ongoing.html">
+   Working articles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references/future/plan.html">
+   Planned publications
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/contents/wengang/rnn_tensorflow.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/contents/wengang/rnn_tensorflow.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Vattenfall RNN prediction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-data">
+     1, Load the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocess-the-data-clean-and-split-the-data-for-training-and-validation">
+     2, Preprocess the data (clean and split the data) for training and validation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#be-careful-to-select-parameters-in-this-procedure">
+       2.1, be careful to select parameters in this procedure
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#normalize-the-data">
+       2.2, normalize the data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#font-color-blue-2-3-index-and-offset-for-the-model-fitting-nb-important-to-adjust-font">
+       <font color="blue">
+        <strong>
+         2.3, index and offset for the model fitting (NB: important to adjust)
+        </strong>
+       </font>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-tf-data-datasets">
+     2.4, Create tf.data.Datasets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#baseline-model">
+     3, Baseline model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nb-following-codes-are-using-keras-tutorials-not-work-for-this-case">
+   NB: Following codes are using Keras tutorials not work for this case
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processing-datasets-for-training-and-validation">
+     2.2, Processing datasets for training and validation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#training-start">
+     3, Training start…..
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vattenfall-rnn-prediction">
+<h1>Vattenfall RNN prediction<a class="headerlink" href="#vattenfall-rnn-prediction" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">register_matplotlib_converters</span>
+<span class="c1"># plt.style.use([&#39;science&#39;,&#39;no-latex&#39;])</span>
+<span class="c1"># plt.rcParams[&quot;font.family&quot;] = &quot;Times New Roman&quot;</span>
+<span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-the-data">
+<h2>1, Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from tensorflow import keras</span>
+<span class="c1">#from google.colab import drive</span>
+<span class="c1">#drive.mount(&#39;/content/drive&#39;)</span>
+<span class="c1">#df = pd.read_csv(&#39;/content/drive/MyDrive/Data/vattenfall_turbine.csv&#39;)</span>
+<span class="c1">#drive.flush_and_unmount()</span>
+<span class="c1">#print(&#39;NB: Unmount the google cloud driver&#39;)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;vattenfall_turbine.csv&#39;</span><span class="p">)</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">feature_keys</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span>
+<span class="n">time_key</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_30208</span><span class="o">/</span><span class="mf">2332029171.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#print(&#39;NB: Unmount the google cloud driver&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;vattenfall_turbine.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">feature_keys</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\util\_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> 
+<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> 
+<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span> 
+<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span> 
+<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> 
+<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> 
+<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
+<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> 
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\parsers\base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\pandas\io\common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">             # Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">701</span><span class="s2">             handle = open(</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">                 handle,</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 ioargs.mode,</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;vattenfall_turbine.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;guide_open&#39;</span><span class="p">]][</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>guide_open</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0004</td>
+      <td>0.897672</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0012</td>
+      <td>0.882785</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0020</td>
+      <td>0.897672</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.0028</td>
+      <td>0.841845</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.0036</td>
+      <td>0.860454</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_cols</span> <span class="o">=</span> <span class="n">feature_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_keys</span><span class="p">):</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">plot_features</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">plot_cols</span><span class="p">]</span>
+<span class="c1">#plot_features.index = df[time_key]</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_features</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plot_features</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">plot_cols</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span><span class="mi">1000</span><span class="p">]</span>
+<span class="c1">#plot_features.index = df[time_key][:480]</span>
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">plot_features</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_6_0.png" src="../../_images/rnn_tensorflow_6_0.png" />
+<img alt="../../_images/rnn_tensorflow_6_1.png" src="../../_images/rnn_tensorflow_6_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist2d</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pump101_speed&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Guide open [degree&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pump101 speed [rpm]&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist2d</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pump101_speed&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pump102_speed&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Pump101 speed [rpm]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pump102 speed [rpm]&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_7_0.png" src="../../_images/rnn_tensorflow_7_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(386.21013, 447.92068600000005, 385.579537, 448.09854)
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_7_2.png" src="../../_images/rnn_tensorflow_7_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_raw_visualization</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_8_0.png" src="../../_images/rnn_tensorflow_8_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df_data</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_9_0.png" src="../../_images/rnn_tensorflow_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="preprocess-the-data-clean-and-split-the-data-for-training-and-validation">
+<h2>2, Preprocess the data (clean and split the data) for training and validation<a class="headerlink" href="#preprocess-the-data-clean-and-split-the-data-for-training-and-validation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="be-careful-to-select-parameters-in-this-procedure">
+<h3>2.1, be careful to select parameters in this procedure<a class="headerlink" href="#be-careful-to-select-parameters-in-this-procedure" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_keys</span>
+<span class="n">input_keys</span> <span class="o">=</span> <span class="n">feature_keys</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="n">output_key</span> <span class="o">=</span> <span class="n">feature_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">input_keys</span><span class="p">,</span> <span class="n">output_key</span><span class="p">)</span>
+<span class="n">input_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">input_keys</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">):</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">output_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">output_key</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">):</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="c1"># split the data into 70% for training, 20% for validation, and 10% for testing</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">train_df</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mf">0.7</span><span class="p">)]</span>
+<span class="n">val_df</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mf">0.7</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mf">0.9</span><span class="p">)]</span>
+<span class="n">test_df</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mf">0.9</span><span class="p">):]</span>
+
+<span class="n">num_features</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;guide_open&#39; &#39;running_speed&#39; &#39;pump101_speed&#39; &#39;head_net&#39; &#39;discharge_rate&#39;] guide_open
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;&lt;span style=&quot;color:blue;font-size:50px&quot;&gt;**Lets take a close look at the time series.**&lt;/span&gt;&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><span style="color:blue;font-size:50px"><strong>Lets take a close look at the time series.</strong></span></p>
+</div>
+</div>
+</div>
+<div class="section" id="normalize-the-data">
+<h3>2.2, normalize the data<a class="headerlink" href="#normalize-the-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_mean</span> <span class="o">=</span> <span class="n">train_df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">train_std</span> <span class="o">=</span> <span class="n">train_df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="n">train_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">train_df</span> <span class="o">-</span> <span class="n">train_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">train_std</span>
+<span class="n">val_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">val_df</span> <span class="o">-</span> <span class="n">train_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">train_std</span>
+<span class="n">test_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">test_df</span> <span class="o">-</span> <span class="n">train_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">train_std</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_mean</span> <span class="o">=</span> <span class="n">train_df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">train_std</span> <span class="o">=</span> <span class="n">train_df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="n">df_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">train_df</span> <span class="o">-</span> <span class="n">train_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">train_std</span>
+<span class="n">df_std</span> <span class="o">=</span> <span class="n">df_std</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Column&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Normalized&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Column&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Normalized&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_std</span><span class="p">)</span>
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_15_0.png" src="../../_images/rnn_tensorflow_15_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>guide_open         10.773071
+running_speed     679.285443
+pump101_speed     418.524643
+head_net            6.992708
+discharge_rate      0.155963
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="font-color-blue-2-3-index-and-offset-for-the-model-fitting-nb-important-to-adjust-font">
+<h3><font color='blue'> <strong>2.3, index and offset for the model fitting (NB: important to adjust)</strong> </font><a class="headerlink" href="#font-color-blue-2-3-index-and-offset-for-the-model-fitting-nb-important-to-adjust-font" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">WindowGenerator</span><span class="p">():</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_width</span><span class="p">,</span> <span class="n">label_width</span><span class="p">,</span> <span class="n">shift</span><span class="p">,</span>
+               <span class="n">train_df</span><span class="o">=</span><span class="n">train_df</span><span class="p">,</span> <span class="n">val_df</span><span class="o">=</span><span class="n">val_df</span><span class="p">,</span> <span class="n">test_df</span><span class="o">=</span><span class="n">test_df</span><span class="p">,</span>
+               <span class="n">label_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># Store the raw data.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">train_df</span> <span class="o">=</span> <span class="n">train_df</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">val_df</span> <span class="o">=</span> <span class="n">val_df</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">test_df</span> <span class="o">=</span> <span class="n">test_df</span>
+
+    <span class="c1"># Work out the label column indices.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_columns</span> <span class="o">=</span> <span class="n">label_columns</span>
+    <span class="k">if</span> <span class="n">label_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">label_columns_indices</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span>
+                                    <span class="nb">enumerate</span><span class="p">(</span><span class="n">label_columns</span><span class="p">)}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">column_indices</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span>
+                           <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)}</span>
+
+    <span class="c1"># Work out the window parameters.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_width</span> <span class="o">=</span> <span class="n">input_width</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_width</span> <span class="o">=</span> <span class="n">label_width</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">shift</span> <span class="o">=</span> <span class="n">shift</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span> <span class="o">=</span> <span class="n">input_width</span> <span class="o">+</span> <span class="n">shift</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">input_width</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">input_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">input_slice</span><span class="p">]</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_width</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">labels_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label_start</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_slice</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="sa">f</span><span class="s1">&#39;Total window size: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s1">&#39;Input indices: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">input_indices</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s1">&#39;Label indices: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">label_indices</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s1">&#39;Label column name(s): </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">label_columns</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span><span class="n">input_width</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">label_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span>
+                     <span class="n">label_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">])</span>
+<span class="n">w1</span>
+
+<span class="n">w2</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span><span class="n">input_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">label_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                     <span class="n">label_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">])</span>
+<span class="n">w2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total window size: 201
+Input indices: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199]
+Label indices: [200]
+Label column name(s): [&#39;guide_open&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">split_window</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+  <span class="n">inputs</span> <span class="o">=</span> <span class="n">features</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_slice</span><span class="p">,</span> <span class="p">:]</span>
+  <span class="n">labels</span> <span class="o">=</span> <span class="n">features</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_slice</span><span class="p">,</span> <span class="p">:]</span>
+  <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">labels</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">column_indices</span><span class="p">[</span><span class="n">name</span><span class="p">]]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_columns</span><span class="p">],</span>
+        <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+  <span class="c1"># Slicing doesn&#39;t preserve static shape information, so set the shapes</span>
+  <span class="c1"># manually. This way the `tf.data.Datasets` are easier to inspect.</span>
+  <span class="n">inputs</span><span class="o">.</span><span class="n">set_shape</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_width</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+  <span class="n">labels</span><span class="o">.</span><span class="n">set_shape</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_width</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+
+  <span class="k">return</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span>
+
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">split_window</span> <span class="o">=</span> <span class="n">split_window</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stack three slices, the length of the total window.</span>
+<span class="n">example_window</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">train_df</span><span class="p">[:</span><span class="n">w2</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">]),</span>
+                           <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">100</span><span class="o">+</span><span class="n">w2</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">]),</span>
+                           <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="mi">200</span><span class="p">:</span><span class="mi">200</span><span class="o">+</span><span class="n">w2</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">])])</span>
+
+<span class="n">example_inputs</span><span class="p">,</span> <span class="n">example_labels</span> <span class="o">=</span> <span class="n">w2</span><span class="o">.</span><span class="n">split_window</span><span class="p">(</span><span class="n">example_window</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All shapes are: (batch, time, features)&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Window shape: </span><span class="si">{</span><span class="n">example_window</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inputs shape: </span><span class="si">{</span><span class="n">example_inputs</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Labels shape: </span><span class="si">{</span><span class="n">example_labels</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>All shapes are: (batch, time, features)
+Window shape: (3, 201, 5)
+Inputs shape: (3, 200, 5)
+Labels shape: (3, 1, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w2</span><span class="o">.</span><span class="n">example</span> <span class="o">=</span> <span class="n">example_inputs</span><span class="p">,</span> <span class="n">example_labels</span>
+
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_col</span><span class="o">=</span><span class="s1">&#39;guide_open&#39;</span><span class="p">,</span> <span class="n">max_subplots</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+  <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">example</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+  <span class="n">plot_col_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">column_indices</span><span class="p">[</span><span class="n">plot_col</span><span class="p">]</span>
+  <span class="n">max_n</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">max_subplots</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">))</span>
+  <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_n</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">max_n</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">plot_col</span><span class="si">}</span><span class="s1"> [normed]&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_indices</span><span class="p">,</span> <span class="n">inputs</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:,</span> <span class="n">plot_col_index</span><span class="p">],</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Inputs&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_columns</span><span class="p">:</span>
+      <span class="n">label_col_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_columns_indices</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">plot_col</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">label_col_index</span> <span class="o">=</span> <span class="n">plot_col_index</span>
+
+    <span class="k">if</span> <span class="n">label_col_index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">continue</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label_indices</span><span class="p">,</span> <span class="n">labels</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:,</span> <span class="n">label_col_index</span><span class="p">],</span>
+                <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Labels&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#2ca02c&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label_indices</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="p">:,</span> <span class="n">label_col_index</span><span class="p">],</span>
+                  <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predictions&#39;</span><span class="p">,</span>
+                  <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time [h]&#39;</span><span class="p">)</span>
+
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">plot</span> <span class="o">=</span> <span class="n">plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w2</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">w2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">plot_col</span><span class="o">=</span><span class="s1">&#39;running_speed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_23_0.png" src="../../_images/rnn_tensorflow_23_0.png" />
+<img alt="../../_images/rnn_tensorflow_23_1.png" src="../../_images/rnn_tensorflow_23_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-tf-data-datasets">
+<h2>2.4, Create tf.data.Datasets<a class="headerlink" href="#create-tf-data-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+  <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">timeseries_dataset_from_array</span><span class="p">(</span>
+      <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+      <span class="n">targets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+      <span class="n">sequence_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">total_window_size</span><span class="p">,</span>
+      <span class="n">sequence_stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+      <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+      <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,)</span>
+
+  <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">split_window</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">ds</span>
+
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">make_dataset</span> <span class="o">=</span> <span class="n">make_dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_df</span><span class="p">)</span>
+
+<span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">val</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val_df</span><span class="p">)</span>
+
+<span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_df</span><span class="p">)</span>
+
+<span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Get and cache an example batch of `inputs, labels` for plotting.&quot;&quot;&quot;</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_example&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># No example batch was found, so get one from the `.train` dataset</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train</span><span class="p">))</span>
+    <span class="c1"># And cache it for next time</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_example</span> <span class="o">=</span> <span class="n">result</span>
+  <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">train</span> <span class="o">=</span> <span class="n">train</span>
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">test</span> <span class="o">=</span> <span class="n">test</span>
+<span class="n">WindowGenerator</span><span class="o">.</span><span class="n">example</span> <span class="o">=</span> <span class="n">example</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total window size: 201
+Input indices: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199]
+Label indices: [200]
+Label column name(s): [&#39;guide_open&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Each element is an (inputs, label) pair.</span>
+<span class="n">w2</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">element_spec</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(TensorSpec(shape=(None, 200, 5), dtype=tf.float32, name=None),
+ TensorSpec(shape=(None, 1, 1), dtype=tf.float32, name=None))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">example_inputs</span><span class="p">,</span> <span class="n">example_labels</span> <span class="ow">in</span> <span class="n">w2</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inputs shape (batch, time, features): </span><span class="si">{</span><span class="n">example_inputs</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Labels shape (batch, time, features): </span><span class="si">{</span><span class="n">example_labels</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inputs shape (batch, time, features): (32, 200, 5)
+Labels shape (batch, time, features): (32, 1, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">single_step_window</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span>
+    <span class="n">input_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">label_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">])</span>
+<span class="n">single_step_window</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total window size: 11
+Input indices: [0 1 2 3 4 5 6 7 8 9]
+Label indices: [10]
+Label column name(s): [&#39;guide_open&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">example_inputs</span><span class="p">,</span> <span class="n">example_labels</span> <span class="ow">in</span> <span class="n">single_step_window</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inputs shape (batch, time, features): </span><span class="si">{</span><span class="n">example_inputs</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Labels shape (batch, time, features): </span><span class="si">{</span><span class="n">example_labels</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inputs shape (batch, time, features): (32, 1, 5)
+Labels shape (batch, time, features): (32, 1, 1)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="baseline-model">
+<h2>3, Baseline model<a class="headerlink" href="#baseline-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Baseline</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label_index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_index</span> <span class="o">=</span> <span class="n">label_index</span>
+
+  <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">inputs</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_index</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">tf</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_indices</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_indices</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)}</span>
+
+<span class="n">baseline</span> <span class="o">=</span> <span class="n">Baseline</span><span class="p">(</span><span class="n">label_index</span><span class="o">=</span><span class="n">column_indices</span><span class="p">[</span><span class="s1">&#39;guide_open&#39;</span><span class="p">])</span>
+
+<span class="n">baseline</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">MeanSquaredError</span><span class="p">(),</span>
+                 <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">MeanAbsoluteError</span><span class="p">()])</span>
+
+<span class="n">val_performance</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">performance</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">val_performance</span><span class="p">[</span><span class="s1">&#39;Baseline&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">single_step_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">performance</span><span class="p">[</span><span class="s1">&#39;Baseline&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">single_step_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">273</span><span class="o">-</span><span class="mi">1</span><span class="n">f4c4828c646</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">val_performance</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">performance</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">val_performance</span><span class="p">[</span><span class="s1">&#39;Baseline&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">single_step_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">performance</span><span class="p">[</span><span class="s1">&#39;Baseline&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">single_step_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-260-fa9c97d26d90&gt;</span> in <span class="ni">val</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">def</span> <span class="nf">val</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>   <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val_df</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> 
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="nd">@property</span>
+
+<span class="nn">&lt;ipython-input-259-0863ffc3e807&gt;</span> in <span class="ni">make_dataset</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>   <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>   <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">timeseries_dataset_from_array</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>       <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>       <span class="n">targets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+
+<span class="nn">C:\Users\Public\programs\Anaconda3\lib\site-packages\tensorflow\python\keras\preprocessing\timeseries.py</span> in <span class="ni">timeseries_dataset_from_array</span><span class="nt">(data, targets, sequence_length, sequence_stride, sampling_rate, batch_size, shuffle, seed, start_index, end_index)</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span>   <span class="c1"># Validate strides</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>   <span class="k">if</span> <span class="n">sampling_rate</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">sampling_rate</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">142</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>         <span class="s1">&#39;sampling_rate must be higher than 0 and lower than &#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span>         <span class="s1">&#39;the length of the data. Got: &#39;</span>
+
+<span class="ne">ValueError</span>: sampling_rate must be higher than 0 and lower than the length of the data. Got: sampling_rate=1 for data of length 0.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nb-following-codes-are-using-keras-tutorials-not-work-for-this-case">
+<h1>NB: Following codes are using Keras tutorials not work for this case<a class="headerlink" href="#nb-following-codes-are-using-keras-tutorials-not-work-for-this-case" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split_fraction</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">train_split</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">split_fraction</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">df_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">past</span> <span class="o">=</span> <span class="mi">72000</span>
+<span class="n">future</span> <span class="o">=</span> <span class="mi">720</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">train_split</span><span class="p">):</span>
+    <span class="n">data_mean</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:</span><span class="n">train_split</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">data_std</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:</span><span class="n">train_split</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">data_mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">data_std</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;The selected parameters are:&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">titles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]),</span>
+<span class="p">)</span>
+<span class="n">selected_features</span> <span class="o">=</span> <span class="p">[</span><span class="n">feature_keys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">selected_features</span><span class="p">]</span>
+<span class="n">features</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">date_time_key</span><span class="p">]</span>
+<span class="n">features</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">features</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">train_split</span><span class="p">)</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">features</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="n">train_split</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">val_data</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train_split</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The selected parameters are: Alpha (degC), n (rpm), P101 (rpm), P102 (rpm), Hn (meters), Hg (meters), Q (m3/s)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Num GPUs Available: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;CPU&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Num GPUs Available:  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="processing-datasets-for-training-and-validation">
+<h2>2.2, Processing datasets for training and validation<a class="headerlink" href="#processing-datasets-for-training-and-validation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Training dataset</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">past</span> <span class="o">+</span> <span class="n">future</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">train_split</span>
+
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">][[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">sequence_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">past</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((629144, 7), (629144, 1))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="n">dataset_train</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">timeseries_dataset_from_array</span><span class="p">(</span>
+    <span class="n">x_train</span><span class="p">,</span>
+    <span class="n">y_train</span><span class="p">,</span>
+    <span class="n">sequence_length</span><span class="o">=</span><span class="n">sequence_length</span><span class="p">,</span>
+    <span class="n">sampling_rate</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Validation dataset</span>
+<span class="n">x_end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">val_data</span><span class="p">)</span> <span class="o">-</span> <span class="n">past</span> <span class="o">-</span> <span class="n">future</span>
+
+<span class="n">label_start</span> <span class="o">=</span> <span class="n">train_split</span> <span class="o">+</span> <span class="n">past</span> <span class="o">+</span> <span class="n">future</span>
+
+<span class="n">x_val</span> <span class="o">=</span> <span class="n">val_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">x_end</span><span class="p">][[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_val</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">label_start</span><span class="p">:][[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">dataset_val</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">timeseries_dataset_from_array</span><span class="p">(</span>
+    <span class="n">x_val</span><span class="p">,</span>
+    <span class="n">y_val</span><span class="p">,</span>
+    <span class="n">sequence_length</span><span class="o">=</span><span class="n">sequence_length</span><span class="p">,</span>
+    <span class="n">sampling_rate</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">dataset_train</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">batch</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input shape:&quot;</span><span class="p">,</span> <span class="n">inputs</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target shape:&quot;</span><span class="p">,</span> <span class="n">targets</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input shape: (256, 72, 7)
+Target shape: (256, 1)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="training-start">
+<h2>3, Training start…..<a class="headerlink" href="#training-start" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inputs</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="n">lstm_out</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">32</span><span class="p">)(</span><span class="n">inputs</span><span class="p">)</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="n">lstm_out</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span> <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;mse&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;functional_1&quot;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 72, 7)]           0         
+_________________________________________________________________
+lstm (LSTM)                  (None, 32)                5120      
+_________________________________________________________________
+dense (Dense)                (None, 1)                 33        
+=================================================================
+Total params: 5,153
+Trainable params: 5,153
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epochs</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">path_checkpoint</span> <span class="o">=</span> <span class="s2">&quot;model_checkpoint.h5&quot;</span>
+<span class="n">es_callback</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s2">&quot;val_loss&quot;</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">patience</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">modelckpt_callback</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">ModelCheckpoint</span><span class="p">(</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="s2">&quot;val_loss&quot;</span><span class="p">,</span>
+    <span class="n">filepath</span><span class="o">=</span><span class="n">path_checkpoint</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">save_weights_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">dataset_train</span><span class="p">,</span>
+    <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
+    <span class="n">validation_data</span><span class="o">=</span><span class="n">dataset_val</span><span class="p">,</span>
+    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">es_callback</span><span class="p">,</span> <span class="n">modelckpt_callback</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/2
+2177/2177 [==============================] - ETA: 0s - loss: 0.0055
+Epoch 00001: val_loss improved from inf to 0.00411, saving model to model_checkpoint.h5
+2177/2177 [==============================] - 92s 42ms/step - loss: 0.0055 - val_loss: 0.0041
+Epoch 2/2
+2176/2177 [============================&gt;.] - ETA: 0s - loss: 2.1945e-04
+Epoch 00002: val_loss improved from 0.00411 to 0.00265, saving model to model_checkpoint.h5
+2177/2177 [==============================] - 95s 44ms/step - loss: 2.1941e-04 - val_loss: 0.0027
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visualize the loss function from the learning</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">visualize_loss</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s2">&quot;loss&quot;</span><span class="p">]</span>
+    <span class="n">val_loss</span> <span class="o">=</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s2">&quot;val_loss&quot;</span><span class="p">]</span>
+    <span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">loss</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Training loss&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">val_loss</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Validation loss&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Epochs&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">visualize_loss</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="s2">&quot;Training and Validation Loss&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_47_0.png" src="../../_images/rnn_tensorflow_47_0.png" />
+</div>
+</div>
+<p>Prediction using the trained model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_plot</span><span class="p">(</span><span class="n">plot_data</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;History&quot;</span><span class="p">,</span> <span class="s2">&quot;True Future&quot;</span><span class="p">,</span> <span class="s2">&quot;Model Prediction&quot;</span><span class="p">]</span>
+    <span class="n">marker</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.-&quot;</span><span class="p">,</span> <span class="s2">&quot;rx&quot;</span><span class="p">,</span> <span class="s2">&quot;go&quot;</span><span class="p">]</span>
+    <span class="n">time_steps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">plot_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">delta</span><span class="p">:</span>
+        <span class="n">future</span> <span class="o">=</span> <span class="n">delta</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">future</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plot_data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">future</span><span class="p">,</span> <span class="n">plot_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">marker</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_steps</span><span class="p">,</span> <span class="n">plot_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">marker</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="n">time_steps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">future</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time-Step&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>
+
+
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">dataset_val</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">show_plot</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">1</span><span class="p">]],</span>
+        <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;Single Step Prediction&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/rnn_tensorflow_49_0.png" src="../../_images/rnn_tensorflow_49_0.png" />
+<img alt="../../_images/rnn_tensorflow_49_1.png" src="../../_images/rnn_tensorflow_49_1.png" />
+<img alt="../../_images/rnn_tensorflow_49_2.png" src="../../_images/rnn_tensorflow_49_2.png" />
+<img alt="../../_images/rnn_tensorflow_49_3.png" src="../../_images/rnn_tensorflow_49_3.png" />
+<img alt="../../_images/rnn_tensorflow_49_4.png" src="../../_images/rnn_tensorflow_49_4.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./contents\wengang"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="research_ideas.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Research ideas for proposal</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../references/published/published.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Published papers before 2021-09</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By wengang.mao@chalmers.se<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
