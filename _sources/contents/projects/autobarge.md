@@ -17,7 +17,7 @@ alt: large funding agencies supporting our research
 <br />
 
 
-<span style = "color:blue; font-weight: 500; font-size: 25px;">European training and research network on Autonomous Barges for Smart Inland Shipping” within the Horizon 2020 Programme of the European Commission.</span>
+<!-- <span style = "color:blue; font-weight: 500; font-size: 25px;">European training and research network on Autonomous Barges for Smart Inland Shipping” within the Horizon 2020 Programme of the European Commission.</span> -->
 
 ---
 
