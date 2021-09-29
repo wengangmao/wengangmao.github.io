@@ -16,7 +16,7 @@
 - RNN LSTM machine learning models for dynamic ship performance modelling
 - Machine learning method for ship fatigue prediction
 
-### Wengang Mao
+#### Wengang Mao
 - Vattenfall project papers
 - Separation of stationary sea states and its application for reliability
 - Comparison of CPP and FPP ship operations
@@ -24,7 +24,7 @@
 - FEM + CFD + ML for ship hydrodynamic analysi
 
 
-### Published conference papers
+#### Published conference papers
 - NMU conference (ATTENTION please)
 - ISOPE 2022 (Shanghai)
 - OMAE 2022

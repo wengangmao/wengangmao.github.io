@@ -17,30 +17,30 @@ parts:
 #  numbered: false
   chapters:
   - file: contents/students-phd/langxiao/intro_xiao.md
-    title: Xiao Research Logbook
+    title: Xiao PhD Research
     sections:
     - file: contents/students-phd/langxiao/langxiao_logbook_2021.md
-      title: Xiao activities 2021
+      title: Research Logbook 2021
     - file: contents/students-phd/langxiao/langxiao_research.ipynb
       title: Research achievements
   - file: contents/students-phd/daiyong/intro_daiyong.md
-    title: Daiyong Work Logbook
+    title: Daiyong PhD Research
     sections:
     - file: contents/students-phd/daiyong/daiyong_logbook_2021.md
-      title: Daiyong activities 2021
+      title: Research Logbook 2021
     - file: contents/students-phd/daiyong/icsos.ipynb
       title: ICSOS paper
     - file: contents/students-phd/daiyong/mariner.md
       title: MSS-mariner
   - file: contents/students-msc/zangshuo/intro_zangshuo.md
-    title: Zangshuo Logbook
+    title: Zangshuo MSc study
     sections:
     - file: contents/students-msc/zangshuo/zangshuo_logbook_2021.md
-      title: Zangshuo activities 2021
+      title: Logbook 2021
 #    - file: contents/students-msc/zangshuo/zangshuo_research.ipynb
 #      title: Research results
   - file: contents/students-phd/martin/martin.md
-    title: Martin logbook 2021
+    title: Martin PhD logbook 2021
   - file: contents/students-visit/zhangchi/zhangchi.md
     title: Zhangchi visiting 2021
 - caption: VOYSMART OUTLOOK
