@@ -4,7 +4,7 @@
 +++
 ---
 
-Lang Xiao's project is funded by the Lighthouse funded DEMOPS and Energy agency funded DDEEF projects.
+Martin's project is funded by the Lighthouse funded DEMOPS and Energy agency funded DDEEF projects.
 
 
 ```{figure} ./images/martin.jpg 
