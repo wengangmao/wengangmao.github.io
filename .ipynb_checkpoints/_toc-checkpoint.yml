@@ -12,7 +12,7 @@ parts:
   - file: contents/projects/autobarge.md
     title: Autobarge 2022-2025
   - file: contents/projects/others.md
-    title: othergrants
+    title: Other projects
 - caption: TEAMWORK LOGBOOK
 #  numbered: false
   chapters:
