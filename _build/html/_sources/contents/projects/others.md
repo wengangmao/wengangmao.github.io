@@ -25,6 +25,8 @@ This area includes 1 project funded by Vinnova, 2 projects on control and optimi
 * Stochastic loads on ship fatigue and safety funded by VR
 * SEAMOCS funded by EU Marie Cruie Training network
 * Spatio-temporal modelling of metocean environmentd funded by VGR More2020
+* STINT on sustinable arctic shipping (on-going)
+* Adlerbertska forskningsstiftelsen ML-CFD for maritime applications (on-going)
 
 ---
 
