@@ -18,6 +18,52 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ***
 ---
 
+### Meeting on 2021-09-30
+Today, we had a meeting with LeanMarine to understand their FuelOpt and FleetAnalysis system. Their inputs will be valuable for our development of optimal navigation strategies. Good discussions with Linus from LeanMarine regarding the inputs of our future optimization development.
+- SOG setting is not the optimal solution for energy efficiency shipping navigation
+- For actual navigation, first legs: optimization of fixed RPM/power; last leg: speed fixed to reach ETA
+- for sailing in harsh environments, by setting several control variables and constrain for max fuel/RPM 
+
+```{figure} ./images/leanmarine210930/leanmarine_background.png 
+---
+height: 500px
+name: lean_background
+alt: leanmarine system
+---
+General background and possible setting of the leanmarine FuelOpt and FleetAnalysis system.
+```
+
+
+
+```{figure} ./images/leanmarine210930/leanmarine_fleetanalysis.png 
+---
+height: 600px
+name: lean_background
+alt: leanmarine system
+---
+Fleet analysis layout for the whole fleet of one shipping company called AUTO
+```
+
+
+```{figure} ./images/leanmarine210930/leanmarine_auto.png 
+---
+height: 500px
+name: lean_background
+alt: leanmarine system
+---
+An example of the performance monitoring of the fleetAnalysis of the AutoSKy ship
+```
+
+
+```{figure} ./images/leanmarine210930/leanmarine_data.png 
+---
+height: 400px
+name: lean_background
+alt: leanmarine system
+---
+Functionalities and GUI lookout of the FleetAnalysis system.
+```
+
 ### Plan/action for Week 39
 <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
   1. OE paper revision <br />
