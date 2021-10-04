@@ -17,9 +17,9 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 40
     
-1. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">OE paper revision [done by the end of this week]<br /> </span>
-2. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Prepare for the Ecosail presentation: summarize your achievement so far <br /></span>
-3. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Participant the Vattenfall project meeting <br /></span>
+1.  <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: yellow">[by end of this week]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Prepare for the Ecosail presentation: summarize your achievement so far <br /></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">Participant the Vattenfall project meeting <br /></span>
 
 ---
     
@@ -32,8 +32,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 39
     
-1. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">OE paper revision <br /> </span>
-2. <strike><span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Prepare meeting with Lean Marine <br /></span></strike>
+1. OE paper revision <br /> 
+2. <strike>Prepare meeting with Lean Marine <br /></strike>
 
 
 ---
