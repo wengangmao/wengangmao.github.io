@@ -14,11 +14,24 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 | :---: | :---: | :---: |
 | Background and inventory study on literature review| August, 2021| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-10-15 </span> |
 | Electric ship test data collection | 2021-09| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12 </span>|
-| Implement model for resistance (Python jupyter notebook| 2021-10-15| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-10-30 </span> |
-| Implement model for propulsion efficiency (Python jupyter notebook| 2021-10-20| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-11-15 </span>|
+| Implement model for resistance | 2021-10-15| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-10-30 </span> |
+| Implement model for propulsion efficiency| 2021-10-20| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-11-15 </span>|
 | Implement model for electric/combustion engine efficiency (Python jupyter notebook|2021-11|<span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12-10 </span>|
 | Assemble different model for simulation and valiation|2021-12|<span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12-30 </span>|
 | Writing the report/paper| 2021-09|<span style= 'background:yellow; color: blue; font-weight: 500'> 2022-01-10 </span>|
+
+
+
+***
+## Week 40 -- (Meeting on 2021-10-04)
+---
+
+
+### Plan/action for Week 40
+<span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
+  1. Introduction of basic electric and combustion engine propulsion systems [To be finished at the end of this week] <br />
+  2. Literature review on improvement of conventional propulsion systems for electric propulsions <br />
+</span>
 
 
 ***
@@ -27,10 +40,8 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 
 
 ### Plan/action for Week 39
-<span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
   1. Paper background <br />
   2. State-of-the-art on propulsion power sources <br />
-</span>
 
 
 
