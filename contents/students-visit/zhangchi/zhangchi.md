@@ -21,4 +21,16 @@ Zhang Chi's project is funded by NSFC and CSC to develop methods for sustainable
 - **Real time ice prediction and its application for arctic path planning**
 
 
+
+***
+## Week 40 -- (Meeting on 2021-10-04)
+---
+
+
+### Plan/action for Week 40
+<span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
+  1. Finish the revision of OE paper <br />
+  2. Machine learning(ARIMA) for ice and wind code implementation <br />
+</span>
+
 ***
