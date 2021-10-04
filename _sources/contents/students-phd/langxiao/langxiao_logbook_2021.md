@@ -10,14 +10,35 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 <span style = "color: blue; font-weight: 400; font-size: 20px">Develop algorithms to optimize fixed speed/RPM/Power for optimal navigation.</span>
 ```
 
+***
+## Week 40 -- (Meeting on 2021-10-04)
+---
+***
+
+### Plan/action for Week 40
+    
+1. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">OE paper revision [done by the end of this week]<br /> </span>
+2. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Prepare for the Ecosail presentation: summarize your achievement so far <br /></span>
+3. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Participant the Vattenfall project meeting <br /></span>
+
+---
+    
+
 
 ***
 ## Week 39 -- (Meeting on 2021-09-27)
 ---
-
 ***
----
 
+### Plan/action for Week 39
+    
+1. <span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">OE paper revision <br /> </span>
+2. <strike><span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">Prepare meeting with Lean Marine <br /></span></strike>
+
+
+---
+    
+    
 ### Meeting on 2021-09-30
 Today, we had a meeting with LeanMarine to understand their FuelOpt and FleetAnalysis system. Their inputs will be valuable for our development of optimal navigation strategies. Good discussions with Linus from LeanMarine regarding the inputs of our future optimization development.
 - SOG setting is not the optimal solution for energy efficiency shipping navigation
@@ -63,12 +84,6 @@ alt: leanmarine system
 ---
 Functionalities and GUI lookout of the FleetAnalysis system.
 ```
-
-### Plan/action for Week 39
-<span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
-  1. OE paper revision <br />
-  2. Prepare meeting with Lean Marine
-</span>
 
 
 
