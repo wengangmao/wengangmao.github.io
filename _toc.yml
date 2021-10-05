@@ -47,7 +47,7 @@ parts:
     title: Dr. Da Wu
     sections:
     - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
-    title: RNN/LSTM/GRU tutorial
+      title: RNN/LSTM/GRU tutorial
 - caption: VOYSMART OUTLOOK
   chapters:
   - file: contents/wengang/research_plan.md
