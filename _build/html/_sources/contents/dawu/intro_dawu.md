@@ -10,9 +10,9 @@ Wuhan, China                        dawu#whut.edu.cn
 Education
 ---------
 2015-2020
-:   **Ph.D., Solid and Structural mechanics**; CHALMERS UNIVERSITY OF TECHNOLOGY 
+:   **Ph.D., Solid and Structural Mechanics**; CHALMERS UNIVERSITY OF TECHNOLOGY 
 
-    *Thesis title: Process modeling of liquid composite molding processes
+    Thesis title: Process modeling of liquid composite molding processes
 
 Projects
 ----------
