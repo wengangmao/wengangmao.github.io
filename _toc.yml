@@ -43,6 +43,11 @@ parts:
     title: Martin PhD logbook 2021
   - file: contents/students-visit/zhangchi/zhangchi.md
     title: Zhangchi visiting 2021
+  - file: contents/dawu/intro_dawu.md
+    title: Dr. Da Wu
+    sections:
+    - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
+    title: RNN/LSTM/GRU tutorial
 - caption: VOYSMART OUTLOOK
   chapters:
   - file: contents/wengang/research_plan.md
