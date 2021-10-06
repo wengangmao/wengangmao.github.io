@@ -28,10 +28,9 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 
 
 ### Plan/action for Week 40
-<span style = "background: yellow; font-weight: 400; font-size: 20px; color: red">
-  1. Introduction of basic electric and combustion engine propulsion systems [To be finished at the end of this week] <br />
-  2. Literature review on improvement of conventional propulsion systems for electric propulsions <br />
-</span>
+
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Introduction of basic electric and combustion engine propulsion system <span style = "background: yellow">[by end of this week]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions<br /></span>
 
 
 ***
