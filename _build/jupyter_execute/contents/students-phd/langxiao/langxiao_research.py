@@ -3,19 +3,19 @@
 
 # # **Achieved results/milstones**
 
-# In[1]:
+# In[ ]:
 
 
 # put some figures and codes here to demonstrate your work
 
 
-# In[2]:
+# In[ ]:
 
 
 # we can also try to put ppt here
 
 
-# In[3]:
+# In[1]:
 
 
 # you can also share some important piece of code here

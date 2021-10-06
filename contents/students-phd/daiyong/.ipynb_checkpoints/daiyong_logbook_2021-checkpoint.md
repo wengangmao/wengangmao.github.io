@@ -14,17 +14,16 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 ***
-## Week 40 -- (Meeting on 2021-10-04) <span style = "font-weight: 400; font-size: 20px; color: blue; "background: yellow">[Not participant]</span>
+## Week 40 -- (Meeting on 2021-10-04) <span style = "font-weight: 400; font-size: 30px; color: blue; background: yellow">[Not participant]</span>
 ---
 ***
 
 ### Plan/action for Week 40
     
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Detailed presentation of IsoChrone voyage optimization algorith (maybe also 2DDP, 3DDP) <span style = "background: yellow">[Next Monday Presentation]<br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: blue"> Present IsoChrone  optimization algorithm (maybe also 2DDP, 3DDP) <span style = "background: yellow">[Next Monday]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">First water test <span style = "background: yellow">[Weekend?]<br /></span></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">USV control platform (website) <br /></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">USV control platform/website <br /></span>
 
----
     
 
 
@@ -35,8 +34,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 39
 
-$\qquad$ <span style = "background: yellow; font-weight: 500; font-size: 20px; color: red">* <strike>Finish EcoSail simulator</strike> <br /> </span>
-$\qquad$ <span style = "background: yellow; font-weight: 500; font-size: 20px; color: red">* USV for first water test <br /></span>
+$\qquad$ <span style = "font-weight: 500; font-size: 20px; color: red">* <strike>Finish EcoSail simulator</strike> <br /> </span>
+$\qquad$ <span style = "font-weight: 500; font-size: 20px; color: red">* USV for first water test <br /></span>
 
 
 

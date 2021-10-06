@@ -47,7 +47,7 @@ def error_r(p_r, r, dr):
 
 # ### load zigzag data and pretreatment
 
-# In[3]:
+# In[75]:
 
 
 # data = pd.read_csv("./model_data/trunning_30_inter.csv")
