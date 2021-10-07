@@ -19,8 +19,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ```{admonition}  <span style = "color: blue; font-weight: 500; font-size: 25px">Urgent research duties</span>
 <br />
-<span style = "color: blue; font-weight: 400; font-size: 20px"> 1, ICSOS paper submission  <br /></span>
-<span style = "color: blue; font-weight: 400; font-size: 20px">2, Benchmark voyage optimization algorithms <br /></span>
+<span style = "color: blue; font-weight: 400; font-size: 20px"> 1, Benchmark voyage optimization algorithms <br /></span>
+<span style = "color: blue; font-weight: 400; font-size: 20px">2, USV testing <br /></span>
 
 ```
 
