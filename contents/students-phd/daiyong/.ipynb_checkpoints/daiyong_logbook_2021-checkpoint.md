@@ -7,9 +7,9 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ---
 
 
-```{admonition}  <span style = "color: red; font-weight: 600; font-size: 25px">KPI PhD study</span>
+```{admonition}  <span style = "color: red; font-weight: 600; font-size: 25px">PhD study KPI</span>
 <br />
-<span style = "color: red; font-weight: 400; font-size: 25px"> Consider and report during weekly meetings<>/span <br />
+<span style = "color: red; font-weight: 400; font-size: 25px"> Consider and report during weekly meetings:</span> <br />
 <span style = "color: red; font-weight: 400; font-size: 25px"> 1, Hours of interation with colleagues (Fika, lunch, social chats,...)   <br /></span>
 <span style = "color: red; font-weight: 400; font-size: 25px">2, Hours of research (literature study, writing, coding, ...) <br /></span>
 ```
@@ -27,7 +27,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 
 ***
-## Week 40 -- (Meeting on 2021-10-04) <span style = "font-weight: 400; font-size: 30px; color: blue; background: yellow">[Not participant]</span>
+## Week 40 -- (<strike>Meeting on 2021-10-04 absent</strike>) 
+
 ---
 ***
 
@@ -55,7 +56,7 @@ $\qquad$ <span style = "font-weight: 500; font-size: 20px; color: red">* USV for
 ### General update of research activities
 
 * Constant RPM and power for TTM vessels done with accurate ETA (error less than 1 hour)
-* <span style = "color: blue; font-weight: 500">Completed tasks</span>
-    > 1, Speed to power ML models <br />
-    > 2, RPM to speed models <br />
-    > 3, Power to speed models <br />
+* <span style = "color: blue; font-weight: 500">Completed tasks </span>
+    > <span style = "color: blue; font-weight: 500">1, Speed to power ML models <br />  </span>
+    > <span style = "color: blue; font-weight: 500">2, RPM to speed models <br />  </span>
+    > <span style = "color: blue; font-weight: 500">3, Power to speed models <br />  </span>
