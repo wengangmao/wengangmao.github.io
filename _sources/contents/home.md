@@ -28,7 +28,7 @@ alt: large funding agencies supporting our research
 
 <span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU abstract (deadline: 2021-09-30)</span>  <br>
 <span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences (deadlines: 2021-9)</span> <br>
-<span style = "color: blue; font-weight: 500;  font-size: 15px">3, EcoSail 7th GA meeting 2021-10-15</span> <br>
+<span style = "color: blue; font-weight: 500;  font-size: 15px">3, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br>
 
 ```
 ***
@@ -43,15 +43,39 @@ alt: large funding agencies supporting our research
 ### 2, Planning of staff/PhD milestones
 
 * Daiyong Lic plan: 2022-09-30
+* Martin Lic plan: 2022-09-30
 * Xiao's PhD defense plan: 2022-12-30 
 * We need to schedule a meeting with Jonas
 
 ### 3, Project related issues
 
-* Simulation platform to be ready 
-* Summary of your achievement on ship performance models
-* Summary of your achievement on voyage optimizations
+* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
+* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
+* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
+* Masther thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
 <br />
-<span style = "color:red; font-weight:400; font-size: 25px; background: yellow">Feel free to comment and revise your items in this logbook.</span>
+
+### Contact us for more information:
+
++++
+---
+#### Wengang Mao
+
+Professor of ship mechanics <br />
+Department of Mechanics and Maritime Sciences <br />
+Chalmers Univeristy of Technology <br />
+Gothenburg, Sweden <br />
+Email: wengang.mao@chalmers.se <br />
+Phone: + 46 (0) 31 772 1483 <br />
+
+---
+
+#### Da Wu
+
+Ass. professor <br />
+Wuhan University of Technology <br />
+Wuhan, China  <br />
+
+***
