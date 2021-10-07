@@ -10,11 +10,12 @@
 
 
 We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
-The research activities are mainly supported by the following funders:
+The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
 
-```{figure} ./images/funders.png 
+
+```{figure} ./images/3dda_voyplan.gif 
 ---
-height: 200px
+height: 500px
 name: funding agencies
 alt: large funding agencies supporting our research
 ---

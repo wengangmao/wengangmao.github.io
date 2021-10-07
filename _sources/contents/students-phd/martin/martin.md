@@ -18,7 +18,7 @@ alt: large funding agencies supporting our research
 <br />
 
 
-<span style = "color:red; font-weight: 500; font-size: 20px;">PhD topic: machine learning methods for ship  hydrodynamic modelling</span>
+<span style = "font-size: 20px; font-weight: 500; color: red">PhD topic: </span><span style = "font-size: 20px; font-weight: 400; color: blue">[machine learning methods for ship  hydrodynamic modelling](https://martinlarsalbert.github.io/wPCC/00.01_intro.html)</span>
 
 ---
 

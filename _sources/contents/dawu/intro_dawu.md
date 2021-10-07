@@ -1,11 +1,11 @@
 Da Wu
-============
 <br/><br/>
-![infucion](./images/logo.gif)
-<figcaption align = "left"><b>a holistic simulation of the VARTM process</b></figcaption><br/>
+![Alt Text](./images/logo.gif)
+============
 
-***
-Wuhan, China           dawu+whut.edu.cn
+-------------------     ----------------------------
+Wuhan, China                        dawu#whut.edu.cn
+-------------------     ----------------------------
 
 Education
 ---------

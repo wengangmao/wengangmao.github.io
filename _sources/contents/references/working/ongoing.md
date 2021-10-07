@@ -1,5 +1,7 @@
 # Working papers in 2021-09
 
++++
+
 ---
 
 ### Working journal papers
@@ -13,11 +15,6 @@
 - RPM and power to speed and its application for optimal ship navigation strategy
 - RNN LSTM machine learning models for dynamic ship performance modelling
 - Machine learning method for ship fatigue prediction
-
-#### Da Wu
-- Transformer\-ARIMA model for dynamic ship performance modelling
-- Transfer learning for sea\-ice prediction and forecasting
-- Artificial potential field risk analysis
 
 #### Wengang Mao
 - Vattenfall project papers
