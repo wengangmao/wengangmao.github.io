@@ -16,6 +16,12 @@ parts:
 - caption: TEAMWORK LOGBOOK
 #  numbered: false
   chapters:
+  - file: contents/dawu/intro_dawu.md
+    title: Dr. Da Wu
+    sections:
+      - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
+        title: RNN/LSTM/GRU tutorial
+        
   - file: contents/students-phd/langxiao/intro_xiao.md
     title: Xiao PhD Research
     sections:
@@ -32,6 +38,12 @@ parts:
       title: ICSOS paper
     - file: contents/students-phd/daiyong/mariner.md
       title: MSS-mariner
+      
+  - file: contents/students-phd/martin/martin.md
+    title: Martin PhD logbook 2021
+  - file: contents/students-visit/zhangchi/zhangchi.md
+    title: Zhangchi visiting 2021
+
   - file: contents/students-msc/zangshuo/intro_zangshuo.md
     title: Zangshuo MSc study
     sections:
@@ -39,10 +51,8 @@ parts:
       title: Logbook 2021
 #    - file: contents/students-msc/zangshuo/zangshuo_research.ipynb
 #      title: Research results
-  - file: contents/students-phd/martin/martin.md
-    title: Martin PhD logbook 2021
-  - file: contents/students-visit/zhangchi/zhangchi.md
-    title: Zhangchi visiting 2021
+
+
 - caption: VOYSMART OUTLOOK
   chapters:
   - file: contents/wengang/research_plan.md
@@ -51,6 +61,8 @@ parts:
     title: Research ideas
   - file: contents/wengang/rnn_tensorflow.ipynb
     title: Vattenfall project
+  - file: contents/wengang/code_experiences.md
+    title: Code solutions
 - caption: PUBLICATIONS
   chapters:
   - file: contents/references/published/published.md
