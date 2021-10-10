@@ -52,7 +52,7 @@ alt: large funding agencies supporting our research
 * Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
 * Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
 * Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
-* Masther thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
+* Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
 <br />

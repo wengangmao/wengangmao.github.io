@@ -69,7 +69,7 @@ parts:
     title: Published articles
   - file: contents/references/working/ongoing.md
     title: Working articles
-  - file: contents/references/future/plan.md
-    title: Planned publications
+#  - file: contents/references/future/plan.md
+#    title: Planned publications
 #  - file: contents/references/intro.md
 #    title: VOYSMART RESEARCH DATABASE

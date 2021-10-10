@@ -3,8 +3,8 @@
 +++
 ---
 
-During the past years, the research team has been financially supported by more than 10 other projects, including both Chalmers internal and external fundings. 
-Below I just list several of them which I am in charge of at least 1 WP at Chalmers.
+During the past years, the research team has been financially supported by more than 20 other projects, including both Chalmers internal and external fundings. 
+Below I just list several of them which we are in charge of at least 1 WP at Chalmers.
 
 ---
 

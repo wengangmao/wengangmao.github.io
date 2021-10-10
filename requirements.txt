@@ -1,0 +1,7 @@
+Jupyter Book      : 0.11.3
+External ToC      : 0.2.3
+MyST-Parser       : 0.13.7
+MyST-NB           : 0.12.3
+Sphinx Book Theme : 0.1.5
+Jupyter-Cache     : 0.4.3
+NbClient          : 0.5.3
