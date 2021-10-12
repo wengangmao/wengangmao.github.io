@@ -16,14 +16,14 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 | Electric ship test data collection | 2021-09| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12 </span>|
 | Implement model for resistance | 2021-10-15| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-10-30 </span> |
 | Implement model for propulsion efficiency| 2021-10-20| <span style= 'background:yellow; color: blue; font-weight: 500'> 2021-11-15 </span>|
-| Implement model for electric/combustion engine efficiency (Python jupyter notebook|2021-11|<span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12-10 </span>|
+| Implement model for electric/combustion engine efficiency |2021-11|<span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12-10 </span>|
 | Assemble different model for simulation and valiation|2021-12|<span style= 'background:yellow; color: blue; font-weight: 500'> 2021-12-30 </span>|
 | Writing the report/paper| 2021-09|<span style= 'background:yellow; color: blue; font-weight: 500'> 2022-01-10 </span>|
 
 
 
 ***
-## Week 40 -- (Meeting on 2021-10-04)
+## Week 40 --> to be continued in Week 41 -- (Meeting on 2021-10-11)
 ---
 
 
