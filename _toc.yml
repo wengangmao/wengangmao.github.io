@@ -55,14 +55,16 @@ parts:
 
 - caption: VOYSMART OUTLOOK
   chapters:
-  - file: contents/wengang/research_plan.md
-    title: Project coordination
+  - file: contents/wengang/work_plan.md
+    title: WengangMao activities
   - file: contents/wengang/research_ideas.md
     title: Research ideas
   - file: contents/wengang/rnn_tensorflow.ipynb
     title: Vattenfall project
   - file: contents/wengang/code_experiences.md
     title: Code solutions
+
+
 - caption: PUBLICATIONS
   chapters:
   - file: contents/references/published/published.md
