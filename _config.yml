@@ -48,4 +48,4 @@ repository:
   path_to_book              : "./"  # A path to your book's folder, relative to the repository root.
 
 #######################################################################################
-theme: jekyll-theme-leap-day
+theme: jekyll-theme-dinky
