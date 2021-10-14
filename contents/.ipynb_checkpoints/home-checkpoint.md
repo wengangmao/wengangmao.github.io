@@ -49,7 +49,7 @@ alt: large funding agencies supporting our research
 * Daiyong Lic plan: 2022-09-30
 * Martin Lic plan: 2022-09-30
 * Xiao's PhD defense plan: 2022-12-30 
-* We need to schedule a meeting with Jonas
+* New PhD student expected 2022-03-01
 
 ### 3, Project related issues
 
@@ -59,11 +59,9 @@ alt: large funding agencies supporting our research
 * Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
-<br />
-
 ---
 
-### Project report numbers at Chalmers (internal use)
+### 4, Project report numbers at Chalmers (internal use)
 **My account: 30WEMA01;  MT account: 305000**
 - Faculty: 30450000
 - Ecosail: 30250007
@@ -76,24 +74,19 @@ alt: large funding agencies supporting our research
 - ISEA:
 - ML+CFD
 
-
++++
+---
 
 ### Contact us for more information:
 
 +++
 ---
-#### Wengang Mao
+#### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)
 
-Professor of Ship Mechanics <br />
-Department of Mechanics and Maritime Sciences <br />
-Chalmers Univeristy of Technology <br />
-Gothenburg, Sweden <br />
-Email: wengang.mao@chalmers.se <br />
-Phone: + 46 (0) 31 772 1483 <br />
+![contact](./images/wengangmao_contact.png)
 
----
 
-#### Da Wu
+#### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达)
 
 Ass. professor <br />
 Wuhan University of Technology <br />

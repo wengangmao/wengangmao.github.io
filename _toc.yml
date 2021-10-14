@@ -53,7 +53,7 @@ parts:
 #      title: Research results
 
 
-- caption: R & D (毛文刚) 
+- caption: R&D - WENGANG (毛文刚) 
   chapters:
   - file: contents/wengang/research_ideas.md
     title: Research outlook
