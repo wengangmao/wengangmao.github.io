@@ -3,7 +3,7 @@
 <span style = "color: blue; font-size: 20px; font-weight: 500">We are looking forward to cooperating with you in the following R\&D fields.</span><br />
 
 
-**Wengang Mao**
+**Wengang Mao**<br />
 Email: wengang.mao@chalmers.se <br />
 Professor of ship mechanics <br />
 Department of Mechanics and Maritime Sciences <br />
