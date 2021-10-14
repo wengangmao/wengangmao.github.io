@@ -53,24 +53,25 @@ parts:
 #      title: Research results
 
 
-- caption: WengangMao R&D
+- caption: R & D (毛文刚) 
   chapters:
-  - file: contents/wengang/work_plan.md
-    title: WengangMao activities
   - file: contents/wengang/research_ideas.md
-    title: Research ideas
+    title: Research outlook
+  - file: contents/wengang/work_plan.md
+    title: Activities and Deadlines
   - file: contents/wengang/rnn_tensorflow.ipynb
-    title: Vattenfall project
+    title: Vattenfall by Tensorflow
   - file: contents/wengang/code_experiences.md
     title: Code solutions
 
 
 - caption: PUBLICATIONS
   chapters:
-  - file: contents/references/published/published.md
-    title: Published articles
   - file: contents/references/working/ongoing.md
     title: Working articles
+  - file: contents/references/published/published.md
+    title: Published articles
+
 #  - file: contents/references/future/plan.md
 #    title: Planned publications
 #  - file: contents/references/intro.md

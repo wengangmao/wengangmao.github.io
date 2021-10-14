@@ -61,13 +61,30 @@ alt: large funding agencies supporting our research
 
 <br />
 
+---
+
+### Project report numbers at Chalmers (internal use)
+**My account: 30WEMA01;  MT account: 305000**
+- Faculty: 30450000
+- Ecosail: 30250007
+- STINT: 48204039
+- E-Nav: 30250017
+- VIA Kaizen: 30250029
+- Chalmers Electrity: 30450814/30450811
+- DEMOPS: 30650006
+- VATTENFALL: 30224704
+- ISEA:
+- ML+CFD
+
+
+
 ### Contact us for more information:
 
 +++
 ---
 #### Wengang Mao
 
-Professor of ship mechanics <br />
+Professor of Ship Mechanics <br />
 Department of Mechanics and Maritime Sciences <br />
 Chalmers Univeristy of Technology <br />
 Gothenburg, Sweden <br />

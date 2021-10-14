@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Tensorflow -- Deep learning to model transient dynamics of hydro Turbine
+# # Tensorflow: vattenfall
+# 
+# **Deep learning to model transient dynamics of hydro Turbine**
 
-# In[1]:
+# In[3]:
 
 
 import pandas as pd
@@ -21,7 +23,7 @@ import tensorflow as tf
 
 # ## 1, Load the data
 
-# In[2]:
+# In[4]:
 
 
 #from tensorflow import keras
@@ -37,7 +39,7 @@ feature_keys = keys[np.arange(1,5).tolist() + np.arange(7,10).tolist()]
 time_key = keys[0]
 
 
-# In[3]:
+# In[5]:
 
 
 plot_cols = feature_keys[0:len(feature_keys):2]
@@ -60,7 +62,7 @@ fig2 = plot_features.plot(subplots=True, figsize=(15, 10))
 
 # ### 2.1, resample the data with low-resolution
 
-# In[4]:
+# In[6]:
 
 
 df_train = df[feature_keys[0:7:2]][int(len(df)/4):int(len(df)/2):100]
@@ -79,7 +81,7 @@ sns.heatmap(df_train.corr(), annot=True, fmt=".2f")
 plt.show()
 
 
-# In[5]:
+# In[7]:
 
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
@@ -106,7 +108,7 @@ plt.ylabel('discharge_rate', size=20)
 plt.colorbar()
 
 
-# In[6]:
+# In[8]:
 
 
 features = df.keys()
@@ -115,7 +117,7 @@ features
 
 # ### 2.2, autocorrelation function (ACF) and (PACF) to check time dependence
 
-# In[7]:
+# In[9]:
 
 
 def autocorr(x):
@@ -149,7 +151,7 @@ plt.show()
 
 # ### 2.3 crossing autocorrelationship for various parameters
 
-# In[8]:
+# In[10]:
 
 
 # NB: we have resampled the data for the autocorreltion analysis
@@ -192,7 +194,7 @@ ax3.set_xlabel(r'Time Lag: sample frequency $\times$ 5000', fontsize=20, color='
 plt.show()
 
 
-# In[9]:
+# In[11]:
 
 
 # Autocorrelation between guide_opan and pump101_speed
@@ -239,7 +241,7 @@ plt.show()
 
 # ### 2.4, normalize the data
 
-# In[10]:
+# In[12]:
 
 
 # First, we assume all data are used for the training (the time series is not that stationary for the prediction)
@@ -256,7 +258,7 @@ ax = sns.violinplot(x='Column', y='Normalized', data=df_std)
 fig3 = ax.set_xticklabels(train_df.keys(), rotation=90)
 
 
-# In[11]:
+# In[13]:
 
 
 # tf.convert_to_tensor(new_df)
@@ -270,7 +272,7 @@ new_df = tf.convert_to_tensor(new_df)
 #normalizer.adapt(numeric_features)
 
 
-# In[12]:
+# In[14]:
 
 
 feature_keys
@@ -280,7 +282,7 @@ feature_keys
 
 # 
 
-# In[13]:
+# In[15]:
 
 
 df_train = df[feature_keys][int(len(df)/4):int(len(df)/2):100]
@@ -292,7 +294,7 @@ df_target = df_train.pop('head_gross')
 df_train.head()
 
 
-# In[14]:
+# In[16]:
 
 
 # Pre-normalize the features for ML analysis
@@ -325,7 +327,7 @@ model = get_basic_model()
 model.fit(tf_train, tf_target, epochs=10, batch_size=BATCH_SIZE)
 
 
-# In[15]:
+# In[17]:
 
 
 plt.plot(model.predict(df_train),'b')
@@ -333,7 +335,7 @@ plt.plot(tf_target,'k')
 plt.show()
 
 
-# In[16]:
+# In[18]:
 
 
 norm1 = tf.keras.layers.Normalization(axis =-1)
@@ -353,7 +355,7 @@ model.fit(dataset_batches, epochs=10)
 
 # ### 3.2, Understand datastructure of the tensorflow package --> formulate rolling windowed dataset --> for model in Section 4
 
-# In[17]:
+# In[19]:
 
 
 # split the time series of data into train (70%), test (20%) and validation (10%)
@@ -393,7 +395,7 @@ ax.set_yticklabels(ax.get_yticks(), size = 30)
 
 # ### 4.1, Read data into the data class
 
-# In[18]:
+# In[20]:
 
 
 # 4.1.1, Indexes and offsets
@@ -494,7 +496,7 @@ WindowGenerator.plot = plot
 
 # ### 4.2, Check the constructed basic dataset class
 
-# In[19]:
+# In[21]:
 
 
 # Test of windowed dataset 
@@ -516,7 +518,7 @@ print(f'Inputs shape: {example_inputs.shape}')
 print(f'Labels shape: {example_labels.shape}')
 
 
-# In[20]:
+# In[22]:
 
 
 w.example = example_inputs, example_labels
@@ -525,7 +527,7 @@ w.plot(plot_col='guide_open')
 
 # ### <span style ="color:blue; font-size:25px"> **4.3, Formulate train, test, validation datasets in the data structure**</span>
 
-# In[21]:
+# In[23]:
 
 
 def make_dataset(self, data):
@@ -579,7 +581,7 @@ for example_inputs, example_labels in w.train.take(1):
   print(f'Labels shape (batch, time, features): {example_labels.shape}')
 
 
-# In[22]:
+# In[24]:
 
 
 for example_inputs, example_labels in w.train.take(1):
@@ -597,7 +599,7 @@ for example_inputs, example_labels in w.train.take(1):
 
 # #### Test 1: narrow window dataset (single output window)
 
-# In[23]:
+# In[25]:
 
 
 # Get the first dataset (all features as output)
@@ -613,7 +615,7 @@ for example_inputs, example_labels in single_step_window.train.take(1):
 single_step_window.label_columns, single_step_window.column_indices
 
 
-# In[24]:
+# In[26]:
 
 
 # Baseline model
@@ -642,7 +644,7 @@ val_performance['Baseline'] = baseline.evaluate(single_step_window.val)
 performance['Baseline'] = baseline.evaluate(single_step_window.test, verbose=0)
 
 
-# In[25]:
+# In[27]:
 
 
 single_step_window.test
@@ -650,11 +652,11 @@ single_step_window.test
 
 # #### Test 2: wide output window
 
-# In[26]:
+# In[28]:
 
 
 wide_window = WindowGenerator(
-    input_width=300, label_width=300, shift=2,
+    input_width=320, label_width=320, shift=2,
     label_columns=['head_gross'])    ################# NB: it is very important to choose the parameters here ##############
 ###################################################################################################################################
 
@@ -667,7 +669,7 @@ wide_window.plot(baseline)
 
 # ### 5.2, Linear model with narrow window dataset <span style = "background: yellow">"WindowGenerator(input_width=1, label_width=1, shift=1)"</span>
 
-# In[27]:
+# In[29]:
 
 
 # define linear model from the package
@@ -686,7 +688,7 @@ plt.title('The model performance might be uncertainly varied (no convergent)')
 plt.show()
 
 
-# In[28]:
+# In[30]:
 
 
 MAX_EPOCHS = 3
@@ -711,7 +713,7 @@ val_performance['Linear'] = linear.evaluate(single_step_window.val)
 performance['Linear'] = linear.evaluate(single_step_window.test, verbose=0)
 
 
-# In[29]:
+# In[31]:
 
 
 # Two ways to plot the results
@@ -729,7 +731,7 @@ ax2.set_title("NB: the linear model is the same as the optimized in the history,
 
 # ### 5.3, linear model for wide window data inputs <span style = "background: yellow">"WindowGenerator(input_width=300, label_width=300, shift=1)"</span>
 
-# In[30]:
+# In[32]:
 
 
 # Plot the result to check the linear model
@@ -761,7 +763,7 @@ print('Output shape:', baseline(wide_window.example[0]).shape)
 # 
 # 
 
-# In[31]:
+# In[33]:
 
 
 # model construction and estimation
@@ -792,7 +794,7 @@ ax2.plot(single_step_window.example[1].numpy().flatten(), 'k')
 # ### 6.1, Set up the convolutional neuron network (CNN) dataset.
 # ![RNN_Data_Structrue](./images/cnn_dataset.png)
 
-# In[32]:
+# In[34]:
 
 
 # Create the indexes
@@ -813,7 +815,7 @@ plt.title("Given 3 hours of inputs, predict 1 hour into the future.")
 # ### 6.2, Test for the "multiple-steps model" model 
 # (Using CNN data structure) -- <span style = "color: blue; font-size: 20px"> Narrow window: input_width = 3</span>
 
-# In[33]:
+# In[35]:
 
 
 # configure the model
@@ -835,7 +837,7 @@ plt.title('The model performance might be uncertainly varied (no convergent)')
 plt.show()
 
 
-# In[34]:
+# In[36]:
 
 
 # optimise the model through "compile_and_fit"
@@ -861,7 +863,7 @@ plt.show()
 # * model construction: CNN model require input_width, but no need for layers.flatten() and layers.reshape([1, -1])
 # * data structure: output of CNN datastructure is (#input_window -1) dimensions less
 
-# In[ ]:
+# In[37]:
 
 
 # Configure the CNN model
@@ -885,7 +887,7 @@ val_performance['Conv'] = conv_model.evaluate(conv_window.val)
 performance['Conv'] = conv_model.evaluate(conv_window.test, verbose=0)
 
 
-# In[ ]:
+# In[38]:
 
 
 # Check the length difference between multiple-step-dense model and the CNN model
@@ -906,7 +908,7 @@ plt.show()
 # <span style = "color: blue; font-size: 20px"> Wide window: input_width = CONV_width = 30</span>
 # 
 
-# In[ ]:
+# In[39]:
 
 
 LABEL_WIDTH = 24
@@ -938,7 +940,7 @@ wide_conv_window.plot(conv_model)
 # * return_sequences=True for the third figure above
 # 
 
-# In[58]:
+# In[40]:
 
 
 # Configure the RNN (LSTM) model
@@ -959,13 +961,249 @@ plt.title('Remark: very good agreement. Why?')
 plt.show()
 
 
-# In[1]:
+# In[41]:
 
 
+'''
 # Estimate/construct the model
 history_lstm = compile_and_fit(lstm_model, wide_window)
 
 IPython.display.clear_output()
 val_performance['LSTM'] = lstm_model.evaluate(wide_window.val)
 performance['LSTM'] = lstm_model.evaluate(wide_window.test, verbose=0)
+
+### It seems that the RNN cannot be run at CPU computers
+### Tests from other websites
+##batch_size = 100
+##from tensorflow.keras import Sequential
+##from tensorflow.keras.layers import LSTM, Dense
+##from tensorflow.keras.optimizers import Adam
+##
+##model = Sequential()
+##model.add(LSTM(100, batch_input_shape=(32, 320, 5), return_sequences=True))
+##model.add(LSTM(100, return_sequences=True))
+##model.add(LSTM(100))
+##model.add(Dense(number_of_classes, activation='softmax'))
+##
+##model.summary()
+##
+##print("Created model.")
+##
+##model.compile(optimizer=Adam(lr=0.02),
+##              loss='categorical_crossentropy', 
+##              metrics=['acc'])
+##
+##print("Compiled model.")
+
+'''
+
+
+# # 7. Multi-step output models
+# **NB: different from Multi-output models that can be obtained by the previous code. Two rough approaches to this:**
+# 
+# 
+# * Single shot predictions where the entire time series is predicted at once.
+# * Autoregressive predictions where the model only makes single step predictions and its output is fed back as its input.
+
+# ## 7.1, Generate the dataset for the modelling
+# **NB: we will skip the baseline model in this example**
+
+# In[42]:
+
+
+OUT_STEPS = 24
+multi_window = WindowGenerator(input_width=24,
+                               label_width=OUT_STEPS,
+                               shift=OUT_STEPS)
+
+multi_window.plot()
+multi_window
+
+
+# ## 7.2 Illustration of various models for single-shot prediction
+# |base_future = last | base_future = repeated | linear/dense models |CNN | RNN|
+# |:-----:|:-----:|:-----:|:-----:|:-----:|
+# |![base_last](./images/multistep_baseline_last.png)|![base_repeat](./images/multistep_baseline_repeat.png)|![linear_dense](./images/multistep_linear_dense.png)|![cnn](./images/multistep_cnn.png)|![cnn](./images/multistep_rnn.png)|
+
+# ### 7.2.1, Linear and dense model
+
+# In[46]:
+
+
+## Linear model
+#num_features = df_train.shape[1]
+#multi_linear_model = tf.keras.Sequential([
+#    # Take the last time-step.
+#    # Shape [batch, time, features] => [batch, 1, features]
+#    tf.keras.layers.Lambda(lambda x: x[:, -1:, :]),
+#    # Shape => [batch, 1, out_steps*features]
+#    tf.keras.layers.Dense(OUT_STEPS*num_features,
+#                          kernel_initializer=tf.initializers.zeros()),
+#    # Shape => [batch, out_steps, features]
+#    tf.keras.layers.Reshape([OUT_STEPS, num_features])
+#])
+#
+#history = compile_and_fit(multi_linear_model, multi_window)
+
+multi_val_performance = {}
+multi_performance = {}
+
+IPython.display.clear_output()
+multi_val_performance['Linear'] = multi_linear_model.evaluate(multi_window.val)
+multi_performance['Linear'] = multi_linear_model.evaluate(multi_window.test, verbose=0)
+multi_window.plot(multi_linear_model)
+
+
+
+# Dense model
+multi_dense_model = tf.keras.Sequential([
+    # Take the last time step.
+    # Shape [batch, time, features] => [batch, 1, features]
+    tf.keras.layers.Lambda(lambda x: x[:, -1:, :]),
+    # Shape => [batch, 1, dense_units]
+    tf.keras.layers.Dense(512, activation='relu'),
+    # Shape => [batch, out_steps*features]
+    tf.keras.layers.Dense(OUT_STEPS*num_features,
+                          kernel_initializer=tf.initializers.zeros()),
+    # Shape => [batch, out_steps, features]
+    tf.keras.layers.Reshape([OUT_STEPS, num_features])
+])
+
+history = compile_and_fit(multi_dense_model, multi_window)
+
+IPython.display.clear_output()
+multi_val_performance['Dense'] = multi_dense_model.evaluate(multi_window.val)
+multi_performance['Dense'] = multi_dense_model.evaluate(multi_window.test, verbose=0)
+multi_window.plot(multi_dense_model)
+
+
+# ### 7.2.2, CNN model with conv length
+
+# In[47]:
+
+
+CONV_WIDTH = 3
+multi_conv_model = tf.keras.Sequential([
+    # Shape [batch, time, features] => [batch, CONV_WIDTH, features]
+    tf.keras.layers.Lambda(lambda x: x[:, -CONV_WIDTH:, :]),
+    # Shape => [batch, 1, conv_units]
+    tf.keras.layers.Conv1D(256, activation='relu', kernel_size=(CONV_WIDTH)),
+    # Shape => [batch, 1,  out_steps*features]
+    tf.keras.layers.Dense(OUT_STEPS*num_features,
+                          kernel_initializer=tf.initializers.zeros()),
+    # Shape => [batch, out_steps, features]
+    tf.keras.layers.Reshape([OUT_STEPS, num_features])
+])
+
+history = compile_and_fit(multi_conv_model, multi_window)
+
+IPython.display.clear_output()
+
+multi_val_performance['Conv'] = multi_conv_model.evaluate(multi_window.val)
+multi_performance['Conv'] = multi_conv_model.evaluate(multi_window.test, verbose=0)
+multi_window.plot(multi_conv_model)
+
+
+# ### 7.3.3, RNN (LSTM) model
+
+# In[ ]:
+
+
+multi_lstm_model = tf.keras.Sequential([
+    # Shape [batch, time, features] => [batch, lstm_units].
+    # Adding more `lstm_units` just overfits more quickly.
+    tf.keras.layers.LSTM(32, return_sequences=False),
+    # Shape => [batch, out_steps*features].
+    tf.keras.layers.Dense(OUT_STEPS*num_features,
+                          kernel_initializer=tf.initializers.zeros()),
+    # Shape => [batch, out_steps, features].
+    tf.keras.layers.Reshape([OUT_STEPS, num_features])
+])
+
+history = compile_and_fit(multi_lstm_model, multi_window)
+
+IPython.display.clear_output()
+
+multi_val_performance['LSTM'] = multi_lstm_model.evaluate(multi_window.val)
+multi_performance['LSTM'] = multi_lstm_model.evaluate(multi_window.test, verbose=0)
+multi_window.plot(multi_lstm_model)
+
+
+# ## 7.3 Illustration of autoregressive RNN model
+# ![rnn_autoregressive](./images/multistep_rnn_autoregressive.png)
+# 
+# **Model description of autoregressive rnn model**
+
+# In[ ]:
+
+
+# define the model
+class FeedBack(tf.keras.Model):
+  def __init__(self, units, out_steps):
+    super().__init__()
+    self.out_steps = out_steps
+    self.units = units
+    self.lstm_cell = tf.keras.layers.LSTMCell(units)
+    # Also wrap the LSTMCell in an RNN to simplify the `warmup` method.
+    self.lstm_rnn = tf.keras.layers.RNN(self.lstm_cell, return_state=True)
+    self.dense = tf.keras.layers.Dense(num_features)
+    
+feedback_model = FeedBack(units=32, out_steps=OUT_STEPS)
+
+# define the warm-up
+def warmup(self, inputs):
+  # inputs.shape => (batch, time, features)
+  # x.shape => (batch, lstm_units)
+  x, *state = self.lstm_rnn(inputs)
+
+  # predictions.shape => (batch, features)
+  prediction = self.dense(x)
+  return prediction, state
+
+FeedBack.warmup = warmup
+prediction, state = feedback_model.warmup(multi_window.example[0])
+prediction.shape
+
+
+# get iteractive output
+def call(self, inputs, training=None):
+  # Use a TensorArray to capture dynamically unrolled outputs.
+  predictions = []
+  # Initialize the LSTM state.
+  prediction, state = self.warmup(inputs)
+
+  # Insert the first prediction.
+  predictions.append(prediction)
+
+  # Run the rest of the prediction steps.
+  for n in range(1, self.out_steps):
+    # Use the last prediction as input.
+    x = prediction
+    # Execute one lstm step.
+    x, state = self.lstm_cell(x, states=state,
+                              training=training)
+    # Convert the lstm output to a prediction.
+    prediction = self.dense(x)
+    # Add the prediction to the output.
+    predictions.append(prediction)
+
+  # predictions.shape => (time, batch, features)
+  predictions = tf.stack(predictions)
+  # predictions.shape => (batch, time, features)
+  predictions = tf.transpose(predictions, [1, 0, 2])
+  return predictions
+
+FeedBack.call = call
+
+print('Output shape (batch, time, features): ', feedback_model(multi_window.example[0]).shape)
+
+
+# train the model
+history = compile_and_fit(feedback_model, multi_window)
+
+IPython.display.clear_output()
+
+multi_val_performance['AR LSTM'] = feedback_model.evaluate(multi_window.val)
+multi_performance['AR LSTM'] = feedback_model.evaluate(multi_window.test, verbose=0)
+multi_window.plot(feedback_model)
 

@@ -1,7 +1,5 @@
 # Working papers in 2021-09
 
-+++
-
 ---
 
 ### Working journal papers
@@ -16,6 +14,11 @@
 - RNN LSTM machine learning models for dynamic ship performance modelling
 - Machine learning method for ship fatigue prediction
 
+#### Da Wu
+- Transformer\-ARIMA model for dynamic ship performance modelling
+- Transfer learning for sea\-ice prediction and forecasting
+- Artificial potential field risk analysis
+
 #### Wengang Mao
 - Vattenfall project papers
 - Separation of stationary sea states and its application for reliability
@@ -24,7 +27,7 @@
 - FEM + CFD + ML for ship hydrodynamic analysi
 
 
-#### Published conference papers
+#### Working conference papers
 - NMU conference (ATTENTION please)
 - ISOPE 2022 (Shanghai)
 - OMAE 2022

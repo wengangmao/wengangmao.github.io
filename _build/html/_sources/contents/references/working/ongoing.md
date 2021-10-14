@@ -27,7 +27,7 @@
 - FEM + CFD + ML for ship hydrodynamic analysi
 
 
-#### Published conference papers
+#### Working conference papers
 - NMU conference (ATTENTION please)
 - ISOPE 2022 (Shanghai)
 - OMAE 2022

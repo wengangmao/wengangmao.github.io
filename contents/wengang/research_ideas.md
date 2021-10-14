@@ -1,4 +1,15 @@
-# Research ideas for proposal
+# Research fields for cooperation
+
+<span style = "color: blue; font-size: 20px; font-weight: 500">We are looking forward to cooperating with you in the following R\&D fields.</span><br />
+
+
+**Wengang Mao**
+Email: wengang.mao@chalmers.se <br />
+Professor of ship mechanics <br />
+Department of Mechanics and Maritime Sciences <br />
+Chalmers Univeristy of Technology <br />
+Gothenburg, Sweden <br />
+
 
 +++
 ----
@@ -21,6 +32,9 @@
 
 ## Spatio-temporal modelling of metocean parameters
 * SPDE models and conditional prediction for short-term weather prediction
+* Spatio-temporal modelling of wind and wave environments
+* Spatio-temporal/SPDE metocean models to assist ship navigation
+* Wave statistics to ship safety
 
 
 ## Machine learning for maritime applications

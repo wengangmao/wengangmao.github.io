@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tensorflow – Deep learning to model transient dynamics of hydro Turbine &#8212; Energy Efficiency Shipping</title>
+    <title>Tensorflow: vattenfall &#8212; Energy Efficiency Shipping</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Solutions of solving code problems" href="code_experiences.html" />
-    <link rel="prev" title="Research ideas for proposal" href="research_ideas.html" />
+    <link rel="prev" title="R&amp;D Activites and deadlines" href="work_plan.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -234,23 +234,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  WengangMao R&amp;D
+  R &amp; D (毛文刚)
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="work_plan.html">
-   WengangMao activities
+  <a class="reference internal" href="research_ideas.html">
+   Research outlook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="research_ideas.html">
-   Research ideas
+  <a class="reference internal" href="work_plan.html">
+   Activities and Deadlines
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Vattenfall project
+   Tensorflow: vattenfall
   </a>
  </li>
  <li class="toctree-l1">
@@ -266,13 +266,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../references/published/published.html">
-   Published articles
+  <a class="reference internal" href="../references/working/ongoing.html">
+   Working articles
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../references/working/ongoing.html">
-   Working articles
+  <a class="reference internal" href="../references/published/published.html">
+   Published articles
   </a>
  </li>
 </ul>
@@ -387,166 +387,212 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-the-data">
-   1, Load the data
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tensorflow: vattenfall
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">
-   2, Preprocessing data: normalize, train, validation, test, etc.
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">
-     2.1, resample the data with low-resolution
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-data">
+     1, Load the data
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence">
-     2.2, autocorrelation function (ACF) and (PACF) to check time dependence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crossing-autocorrelationship-for-various-parameters">
-     2.3 crossing autocorrelationship for various parameters
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalize-the-data">
-     2.4, normalize the data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">
-   3, Understand the dataset construction and build basic models (treated as independent dataset)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">
-     3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span">
-   <span style="color:blue; font-size:25px">
-    <strong>
-     4, Dataset (rolling/windowed dataset) for time series analysis
-    </strong>
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#read-data-into-the-data-class">
-     4.1, Read data into the data class
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-constructed-basic-dataset-class">
-     4.2, Check the constructed basic dataset class
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span">
-     <span style="color:blue; font-size:25px">
-      <strong>
-       4.3, Formulate train, test, validation datasets in the data structure
-      </strong>
-     </span>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">
-   5,
-   <strong>
-    Single step model: $
-    <span class="math notranslate nohighlight">
-     \(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)
-    </span>
-    $
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#baseline-and-linear-models">
-     5.1, Baseline and linear models
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">
+     2, Preprocessing data: normalize, train, validation, test, etc.
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-1-narrow-window-dataset-single-output-window">
-       Test 1: narrow window dataset (single output window)
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">
+       2.1, resample the data with low-resolution
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-2-wide-output-window">
-       Test 2: wide output window
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence">
+       2.2, autocorrelation function (ACF) and (PACF) to check time dependence
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crossing-autocorrelationship-for-various-parameters">
+       2.3 crossing autocorrelationship for various parameters
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#normalize-the-data">
+       2.4, normalize the data
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">
-     5.2, Linear model with narrow window dataset
-     <span style="background: yellow">
-      ”WindowGenerator(input_width=1, label_width=1, shift=1)”
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">
+     3, Understand the dataset construction and build basic models (treated as independent dataset)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">
+       3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span">
+     <span style="color:blue; font-size:25px">
+      <strong>
+       4, Dataset (rolling/windowed dataset) for time series analysis
+      </strong>
      </span>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-data-into-the-data-class">
+       4.1, Read data into the data class
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-the-constructed-basic-dataset-class">
+       4.2, Check the constructed basic dataset class
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span">
+       <span style="color:blue; font-size:25px">
+        <strong>
+         4.3, Formulate train, test, validation datasets in the data structure
+        </strong>
+       </span>
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">
-     5.3, linear model for wide window data inputs
-     <span style="background: yellow">
-      ”WindowGenerator(input_width=300, label_width=300, shift=1)”
-     </span>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">
+     5,
+     <strong>
+      Single step model: $
+      <span class="math notranslate nohighlight">
+       \(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)
+      </span>
+      $
+     </strong>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#baseline-and-linear-models">
+       5.1, Baseline and linear models
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#test-1-narrow-window-dataset-single-output-window">
+         Test 1: narrow window dataset (single output window)
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#test-2-wide-output-window">
+         Test 2: wide output window
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">
+       5.2, Linear model with narrow window dataset
+       <span style="background: yellow">
+        ”WindowGenerator(input_width=1, label_width=1, shift=1)”
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">
+       5.3, linear model for wide window data inputs
+       <span style="background: yellow">
+        ”WindowGenerator(input_width=300, label_width=300, shift=1)”
+       </span>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dense-model-multiple-layers-and-activation-function">
+       5.4, Dense model (multiple layers and activation function)
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dense-model-multiple-layers-and-activation-function">
-     5.4, Dense model (multiple layers and activation function)
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">
+     6,
+     <strong>
+      CNN Model construction for
+      <span class="math notranslate nohighlight">
+       \(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)
+      </span>
+     </strong>
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#set-up-the-convolutional-neuron-network-cnn-dataset">
+       6.1, Set up the convolutional neuron network (CNN) dataset.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#test-for-the-multiple-steps-model-model">
+       6.2, Test for the “multiple-steps model” model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convolutional-neuron-network">
+       6.3, Convolutional Neuron Network:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       6.4, Convolutional Neuron Network
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recurrent-neuron-network-rnn">
+       6.5 Recurrent Neuron Network (RNN)
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">
-   6,
-   <strong>
-    CNN Model construction for
-    <span class="math notranslate nohighlight">
-     \(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)
-    </span>
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-step-output-models">
+   7. Multi-step output models
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-up-the-convolutional-neuron-network-cnn-dataset">
-     6.1, Set up the convolutional neuron network (CNN) dataset.
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-the-dataset-for-the-modelling">
+     7.1, Generate the dataset for the modelling
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test-for-the-multiple-steps-model-model">
-     6.2, Test for the “multiple-steps model” model
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#illustration-of-various-models-for-single-shot-prediction">
+     7.2 Illustration of various models for single-shot prediction
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linear-and-dense-model">
+       7.2.1, Linear and dense model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cnn-model-with-conv-length">
+       7.2.2, CNN model with conv length
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rnn-lstm-model">
+       7.3.3, RNN (LSTM) model
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convolutional-neuron-network">
-     6.3, Convolutional Neuron Network:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     6.4, Convolutional Neuron Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recurrent-neuron-network-rnn">
-     6.5 Recurrent Neuron Network (RNN)
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#illustration-of-autoregressive-rnn-model">
+     7.3 Illustration of autoregressive RNN model
     </a>
    </li>
   </ul>
@@ -562,8 +608,9 @@
         
               <div>
                 
-  <div class="section" id="tensorflow-deep-learning-to-model-transient-dynamics-of-hydro-turbine">
-<h1>Tensorflow – Deep learning to model transient dynamics of hydro Turbine<a class="headerlink" href="#tensorflow-deep-learning-to-model-transient-dynamics-of-hydro-turbine" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="tensorflow-vattenfall">
+<h1>Tensorflow: vattenfall<a class="headerlink" href="#tensorflow-vattenfall" title="Permalink to this headline">¶</a></h1>
+<p><strong>Deep learning to model transient dynamics of hydro Turbine</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -684,7 +731,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x27af214d490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x28253e14520&gt;
 </pre></div>
 </div>
 <img alt="../../_images/rnn_tensorflow_8_1.png" src="../../_images/rnn_tensorflow_8_1.png" />
@@ -1020,28 +1067,28 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/10
-4/4 [==============================] - 1s 4ms/step - loss: 1.9068 - accuracy: 0.0000e+00
+4/4 [==============================] - 1s 4ms/step - loss: 23.7285 - accuracy: 0.0000e+00
 Epoch 2/10
-4/4 [==============================] - 0s 4ms/step - loss: 0.0823 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 0.3162 - accuracy: 0.0000e+00
 Epoch 3/10
-4/4 [==============================] - 0s 5ms/step - loss: 0.8043 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 0.8179 - accuracy: 0.0000e+00
 Epoch 4/10
-4/4 [==============================] - 0s 4ms/step - loss: -0.5637 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 0.2230 - accuracy: 0.0000e+00
 Epoch 5/10
-4/4 [==============================] - 0s 4ms/step - loss: -0.7082 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 0.7362 - accuracy: 0.0000e+00
 Epoch 6/10
-4/4 [==============================] - 0s 5ms/step - loss: -0.7467 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 3ms/step - loss: 0.0784 - accuracy: 0.0000e+00
 Epoch 7/10
-4/4 [==============================] - 0s 4ms/step - loss: -1.3473 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 0.2511 - accuracy: 0.0000e+00
 Epoch 8/10
-4/4 [==============================] - 0s 5ms/step - loss: -1.7651 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: -0.0369 - accuracy: 0.0000e+00
 Epoch 9/10
-4/4 [==============================] - 0s 4ms/step - loss: -1.8266 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: -0.2754 - accuracy: 0.0000e+00
 Epoch 10/10
-4/4 [==============================] - 0s 4ms/step - loss: -1.8662 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: -0.2687 - accuracy: 0.0000e+00
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.callbacks.History at 0x27b2cd6e310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.callbacks.History at 0x282a4f19b80&gt;
 </pre></div>
 </div>
 </div>
@@ -1078,28 +1125,28 @@ Epoch 10/10
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/10
-4/4 [==============================] - 0s 5ms/step - loss: 73.8814 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 523.7493 - accuracy: 0.0000e+00
 Epoch 2/10
-4/4 [==============================] - 0s 4ms/step - loss: 24.8696 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 5ms/step - loss: 109.0707 - accuracy: 0.0000e+00
 Epoch 3/10
-4/4 [==============================] - 0s 5ms/step - loss: 14.5230 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 5ms/step - loss: 55.5138 - accuracy: 0.0000e+00
 Epoch 4/10
-4/4 [==============================] - 0s 6ms/step - loss: 9.8505 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 5ms/step - loss: 33.8233 - accuracy: 0.0000e+00
 Epoch 5/10
-4/4 [==============================] - 0s 6ms/step - loss: 7.2704 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 22.7980 - accuracy: 0.0000e+00
 Epoch 6/10
-4/4 [==============================] - 0s 4ms/step - loss: 5.7677 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 16.3655 - accuracy: 0.0000e+00
 Epoch 7/10
-4/4 [==============================] - 0s 5ms/step - loss: 4.7755 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 12.2998 - accuracy: 0.0000e+00
 Epoch 8/10
-4/4 [==============================] - 0s 5ms/step - loss: 4.1848 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 9.7406 - accuracy: 0.0000e+00
 Epoch 9/10
-4/4 [==============================] - 0s 6ms/step - loss: 3.7388 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 7.8712 - accuracy: 0.0000e+00
 Epoch 10/10
-4/4 [==============================] - 0s 4ms/step - loss: 3.3513 - accuracy: 0.0000e+00
+4/4 [==============================] - 0s 4ms/step - loss: 7.0274 - accuracy: 0.0000e+00
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.callbacks.History at 0x27af354adf0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;keras.callbacks.History at 0x282550de250&gt;
 </pre></div>
 </div>
 </div>
@@ -1143,7 +1190,7 @@ Epoch 10/10
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-17-bf96d0c125a6&gt;:31: UserWarning: FixedFormatter should only be used together with FixedLocator
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-19-bf96d0c125a6&gt;:31: UserWarning: FixedFormatter should only be used together with FixedLocator
   ax.set_yticklabels(ax.get_yticks(), size = 30)
 </pre></div>
 </div>
@@ -1496,7 +1543,7 @@ Labels shape (batch, time, features): (32, 1, 1)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wide_window</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span>
-    <span class="n">input_width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">label_width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">input_width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span> <span class="n">label_width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">label_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;head_gross&#39;</span><span class="p">])</span>    <span class="c1">################# NB: it is very important to choose the parameters here ##############</span>
 <span class="c1">###################################################################################################################################</span>
 
@@ -1571,12 +1618,12 @@ Output shape: (32, 1, 1)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/3
-17204/17204 [==============================] - 54s 3ms/step - loss: 0.0065 - mean_absolute_error: 0.0553 - val_loss: 0.0035 - val_mean_absolute_error: 0.0467
+17204/17204 [==============================] - 54s 3ms/step - loss: 0.1395 - mean_absolute_error: 0.1352 - val_loss: 0.0035 - val_mean_absolute_error: 0.0460
 Epoch 2/3
-17204/17204 [==============================] - 53s 3ms/step - loss: 0.0037 - mean_absolute_error: 0.0465 - val_loss: 0.0035 - val_mean_absolute_error: 0.0471
+17204/17204 [==============================] - 52s 3ms/step - loss: 0.0037 - mean_absolute_error: 0.0467 - val_loss: 0.0034 - val_mean_absolute_error: 0.0449
 Epoch 3/3
-17204/17204 [==============================] - 53s 3ms/step - loss: 0.0036 - mean_absolute_error: 0.0462 - val_loss: 0.0034 - val_mean_absolute_error: 0.0442
-2458/2458 [==============================] - 5s 2ms/step - loss: 0.0034 - mean_absolute_error: 0.0442
+17204/17204 [==============================] - 52s 3ms/step - loss: 0.0036 - mean_absolute_error: 0.0463 - val_loss: 0.0036 - val_mean_absolute_error: 0.0486
+2458/2458 [==============================] - 5s 2ms/step - loss: 0.0036 - mean_absolute_error: 0.0486
 </pre></div>
 </div>
 </div>
@@ -1631,8 +1678,8 @@ Epoch 3/3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input shape: (32, 300, 5)
-Output shape: (32, 300, 1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input shape: (32, 320, 5)
+Output shape: (32, 320, 1)
 </pre></div>
 </div>
 <img alt="../../_images/rnn_tensorflow_50_1.png" src="../../_images/rnn_tensorflow_50_1.png" />
@@ -1672,15 +1719,15 @@ Output shape: (32, 300, 1)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/3
-17204/17204 [==============================] - 82s 5ms/step - loss: 0.0048 - mean_absolute_error: 0.0511 - val_loss: 0.0038 - val_mean_absolute_error: 0.0479
+17204/17204 [==============================] - 79s 5ms/step - loss: 0.0047 - mean_absolute_error: 0.0508 - val_loss: 0.0042 - val_mean_absolute_error: 0.0525
 Epoch 2/3
-17204/17204 [==============================] - 87s 5ms/step - loss: 0.0038 - mean_absolute_error: 0.0486 - val_loss: 0.0035 - val_mean_absolute_error: 0.0467
+17204/17204 [==============================] - 78s 5ms/step - loss: 0.0038 - mean_absolute_error: 0.0486 - val_loss: 0.0035 - val_mean_absolute_error: 0.0462
 Epoch 3/3
-17204/17204 [==============================] - 92s 5ms/step - loss: 0.0038 - mean_absolute_error: 0.0483 - val_loss: 0.0035 - val_mean_absolute_error: 0.0466
-2458/2458 [==============================] - 9s 4ms/step - loss: 0.0035 - mean_absolute_error: 0.0466
+17204/17204 [==============================] - 78s 5ms/step - loss: 0.0038 - mean_absolute_error: 0.0482 - val_loss: 0.0034 - val_mean_absolute_error: 0.0447
+2458/2458 [==============================] - 8s 3ms/step - loss: 0.0034 - mean_absolute_error: 0.0447
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x27af0993eb0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2825537bf40&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/rnn_tensorflow_52_2.png" src="../../_images/rnn_tensorflow_52_2.png" />
@@ -1775,7 +1822,7 @@ Label column name(s): [&#39;head_gross&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 4s 2ms/step - loss: 0.0026 - mean_absolute_error: 0.0405
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 5s 2ms/step - loss: 0.0028 - mean_absolute_error: 0.0424
 </pre></div>
 </div>
 <img alt="../../_images/rnn_tensorflow_58_1.png" src="../../_images/rnn_tensorflow_58_1.png" />
@@ -1815,13 +1862,7 @@ Difference between multi-step dense model and CNN model</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Conv model on `conv_window`
-Input shape: (32, 30, 5)
-Output shape: (32, 1, 1)
-Epoch 1/3
-17203/17203 [==============================] - 89s 5ms/step - loss: 0.0052 - mean_absolute_error: 0.0528 - val_loss: 0.0039 - val_mean_absolute_error: 0.0499
-Epoch 2/3
-17203/17203 [==============================] - ETA: 0s - loss: 0.0033 - mean_absolute_error: 0.0457
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 8s 3ms/step - loss: 0.0031 - mean_absolute_error: 0.0449
 </pre></div>
 </div>
 </div>
@@ -1841,6 +1882,16 @@ Epoch 2/3
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wide window
+Input shape: (32, 320, 5)
+Labels shape: (32, 320, 1)
+Output shape: (32, 291, 1)
+WARNING:tensorflow:5 out of the last 66 calls to &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000028256AB3A60&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_61_1.png" src="../../_images/rnn_tensorflow_61_1.png" />
 </div>
 </div>
 </div>
@@ -1865,6 +1916,15 @@ Epoch 2/3
 <span class="n">wide_conv_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">conv_model</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wide conv window
+Input shape: (32, 53, 5)
+Labels shape: (32, 24, 1)
+Output shape: (32, 24, 1)
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_63_1.png" src="../../_images/rnn_tensorflow_63_1.png" />
 </div>
 </div>
 </div>
@@ -1912,7 +1972,7 @@ Epoch 2/3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input shape: (32, 300, 5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input shape: (32, 320, 5)
 Output shape: (32, 1)
 </pre></div>
 </div>
@@ -1921,28 +1981,303 @@ Output shape: (32, 1)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate/construct the model</span>
-<span class="n">history_lstm</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">lstm_model</span><span class="p">,</span> <span class="n">wide_window</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># Estimate/construct the model</span>
+<span class="sd">history_lstm = compile_and_fit(lstm_model, wide_window)</span>
 
-<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
-<span class="n">val_performance</span><span class="p">[</span><span class="s1">&#39;LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lstm_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">wide_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-<span class="n">performance</span><span class="p">[</span><span class="s1">&#39;LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lstm_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">wide_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="sd">IPython.display.clear_output()</span>
+<span class="sd">val_performance[&#39;LSTM&#39;] = lstm_model.evaluate(wide_window.val)</span>
+<span class="sd">performance[&#39;LSTM&#39;] = lstm_model.evaluate(wide_window.test, verbose=0)</span>
+
+<span class="sd">### It seems that the RNN cannot be run at CPU computers</span>
+<span class="sd">### Tests from other websites</span>
+<span class="sd">##batch_size = 100</span>
+<span class="sd">##from tensorflow.keras import Sequential</span>
+<span class="sd">##from tensorflow.keras.layers import LSTM, Dense</span>
+<span class="sd">##from tensorflow.keras.optimizers import Adam</span>
+<span class="sd">##</span>
+<span class="sd">##model = Sequential()</span>
+<span class="sd">##model.add(LSTM(100, batch_input_shape=(32, 320, 5), return_sequences=True))</span>
+<span class="sd">##model.add(LSTM(100, return_sequences=True))</span>
+<span class="sd">##model.add(LSTM(100))</span>
+<span class="sd">##model.add(Dense(number_of_classes, activation=&#39;softmax&#39;))</span>
+<span class="sd">##</span>
+<span class="sd">##model.summary()</span>
+<span class="sd">##</span>
+<span class="sd">##print(&quot;Created model.&quot;)</span>
+<span class="sd">##</span>
+<span class="sd">##model.compile(optimizer=Adam(lr=0.02),</span>
+<span class="sd">##              loss=&#39;categorical_crossentropy&#39;, </span>
+<span class="sd">##              metrics=[&#39;acc&#39;])</span>
+<span class="sd">##</span>
+<span class="sd">##print(&quot;Compiled model.&quot;)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">36256</span><span class="n">d9b3480</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Estimate/construct the model</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">history</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">lstm_model</span><span class="p">,</span> <span class="n">wide_window</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">val_performance</span><span class="p">[</span><span class="s1">&#39;LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lstm_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">wide_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;compile_and_fit&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n# Estimate/construct the model\nhistory_lstm = compile_and_fit(lstm_model, wide_window)\n\nIPython.display.clear_output()\nval_performance[\&#39;LSTM\&#39;] = lstm_model.evaluate(wide_window.val)\nperformance[\&#39;LSTM\&#39;] = lstm_model.evaluate(wide_window.test, verbose=0)\n\n### It seems that the RNN cannot be run at CPU computers\n### Tests from other websites\n##batch_size = 100\n##from tensorflow.keras import Sequential\n##from tensorflow.keras.layers import LSTM, Dense\n##from tensorflow.keras.optimizers import Adam\n##\n##model = Sequential()\n##model.add(LSTM(100, batch_input_shape=(32, 320, 5), return_sequences=True))\n##model.add(LSTM(100, return_sequences=True))\n##model.add(LSTM(100))\n##model.add(Dense(number_of_classes, activation=\&#39;softmax\&#39;))\n##\n##model.summary()\n##\n##print(&quot;Created model.&quot;)\n##\n##model.compile(optimizer=Adam(lr=0.02),\n##              loss=\&#39;categorical_crossentropy\&#39;, \n##              metrics=[\&#39;acc\&#39;])\n##\n##print(&quot;Compiled model.&quot;)\n\n&#39;
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-step-output-models">
+<h1>7. Multi-step output models<a class="headerlink" href="#multi-step-output-models" title="Permalink to this headline">¶</a></h1>
+<p><strong>NB: different from Multi-output models that can be obtained by the previous code. Two rough approaches to this:</strong></p>
+<ul class="simple">
+<li><p>Single shot predictions where the entire time series is predicted at once.</p></li>
+<li><p>Autoregressive predictions where the model only makes single step predictions and its output is fed back as its input.</p></li>
+</ul>
+<div class="section" id="generate-the-dataset-for-the-modelling">
+<h2>7.1, Generate the dataset for the modelling<a class="headerlink" href="#generate-the-dataset-for-the-modelling" title="Permalink to this headline">¶</a></h2>
+<p><strong>NB: we will skip the baseline model in this example</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">OUT_STEPS</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">multi_window</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span><span class="n">input_width</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span>
+                               <span class="n">label_width</span><span class="o">=</span><span class="n">OUT_STEPS</span><span class="p">,</span>
+                               <span class="n">shift</span><span class="o">=</span><span class="n">OUT_STEPS</span><span class="p">)</span>
+
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">multi_window</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total window size: 48
+Input indices: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+Label indices: [24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47]
+Label column name(s): None
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_69_1.png" src="../../_images/rnn_tensorflow_69_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="illustration-of-various-models-for-single-shot-prediction">
+<h2>7.2 Illustration of various models for single-shot prediction<a class="headerlink" href="#illustration-of-various-models-for-single-shot-prediction" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>base_future = last</p></th>
+<th class="text-align:center head"><p>base_future = repeated</p></th>
+<th class="text-align:center head"><p>linear/dense models</p></th>
+<th class="text-align:center head"><p>CNN</p></th>
+<th class="text-align:center head"><p>RNN</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><img alt="base_last" src="contents/wengang/images/multistep_baseline_last.png" /></p></td>
+<td class="text-align:center"><p><img alt="base_repeat" src="contents/wengang/images/multistep_baseline_repeat.png" /></p></td>
+<td class="text-align:center"><p><img alt="linear_dense" src="contents/wengang/images/multistep_linear_dense.png" /></p></td>
+<td class="text-align:center"><p><img alt="cnn" src="contents/wengang/images/multistep_cnn.png" /></p></td>
+<td class="text-align:center"><p><img alt="cnn" src="contents/wengang/images/multistep_rnn.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="linear-and-dense-model">
+<h3>7.2.1, Linear and dense model<a class="headerlink" href="#linear-and-dense-model" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Linear model</span>
+<span class="c1">#num_features = df_train.shape[1]</span>
+<span class="c1">#multi_linear_model = tf.keras.Sequential([</span>
+<span class="c1">#    # Take the last time-step.</span>
+<span class="c1">#    # Shape [batch, time, features] =&gt; [batch, 1, features]</span>
+<span class="c1">#    tf.keras.layers.Lambda(lambda x: x[:, -1:, :]),</span>
+<span class="c1">#    # Shape =&gt; [batch, 1, out_steps*features]</span>
+<span class="c1">#    tf.keras.layers.Dense(OUT_STEPS*num_features,</span>
+<span class="c1">#                          kernel_initializer=tf.initializers.zeros()),</span>
+<span class="c1">#    # Shape =&gt; [batch, out_steps, features]</span>
+<span class="c1">#    tf.keras.layers.Reshape([OUT_STEPS, num_features])</span>
+<span class="c1">#])</span>
+<span class="c1">#</span>
+<span class="c1">#history = compile_and_fit(multi_linear_model, multi_window)</span>
+
+<span class="n">multi_val_performance</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">multi_performance</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+<span class="n">multi_val_performance</span><span class="p">[</span><span class="s1">&#39;Linear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_linear_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">multi_performance</span><span class="p">[</span><span class="s1">&#39;Linear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_linear_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">multi_linear_model</span><span class="p">)</span>
+
+
+
+<span class="c1"># Dense model</span>
+<span class="n">multi_dense_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># Take the last time step.</span>
+    <span class="c1"># Shape [batch, time, features] =&gt; [batch, 1, features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Lambda</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:]),</span>
+    <span class="c1"># Shape =&gt; [batch, 1, dense_units]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+    <span class="c1"># Shape =&gt; [batch, out_steps*features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">OUT_STEPS</span><span class="o">*</span><span class="n">num_features</span><span class="p">,</span>
+                          <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">zeros</span><span class="p">()),</span>
+    <span class="c1"># Shape =&gt; [batch, out_steps, features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Reshape</span><span class="p">([</span><span class="n">OUT_STEPS</span><span class="p">,</span> <span class="n">num_features</span><span class="p">])</span>
+<span class="p">])</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">multi_dense_model</span><span class="p">,</span> <span class="n">multi_window</span><span class="p">)</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+<span class="n">multi_val_performance</span><span class="p">[</span><span class="s1">&#39;Dense&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_dense_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">multi_performance</span><span class="p">[</span><span class="s1">&#39;Dense&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_dense_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">multi_dense_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 7s 3ms/step - loss: 0.0069 - mean_absolute_error: 0.0350
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_72_1.png" src="../../_images/rnn_tensorflow_72_1.png" />
+<img alt="../../_images/rnn_tensorflow_72_2.png" src="../../_images/rnn_tensorflow_72_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="cnn-model-with-conv-length">
+<h3>7.2.2, CNN model with conv length<a class="headerlink" href="#cnn-model-with-conv-length" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CONV_WIDTH</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">multi_conv_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># Shape [batch, time, features] =&gt; [batch, CONV_WIDTH, features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Lambda</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[:,</span> <span class="o">-</span><span class="n">CONV_WIDTH</span><span class="p">:,</span> <span class="p">:]),</span>
+    <span class="c1"># Shape =&gt; [batch, 1, conv_units]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv1D</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="n">CONV_WIDTH</span><span class="p">)),</span>
+    <span class="c1"># Shape =&gt; [batch, 1,  out_steps*features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">OUT_STEPS</span><span class="o">*</span><span class="n">num_features</span><span class="p">,</span>
+                          <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">zeros</span><span class="p">()),</span>
+    <span class="c1"># Shape =&gt; [batch, out_steps, features]</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Reshape</span><span class="p">([</span><span class="n">OUT_STEPS</span><span class="p">,</span> <span class="n">num_features</span><span class="p">])</span>
+<span class="p">])</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">multi_conv_model</span><span class="p">,</span> <span class="n">multi_window</span><span class="p">)</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+
+<span class="n">multi_val_performance</span><span class="p">[</span><span class="s1">&#39;Conv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_conv_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">multi_performance</span><span class="p">[</span><span class="s1">&#39;Conv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_conv_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">multi_conv_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 6s 3ms/step - loss: 0.0066 - mean_absolute_error: 0.0335
+</pre></div>
+</div>
+<img alt="../../_images/rnn_tensorflow_74_1.png" src="../../_images/rnn_tensorflow_74_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="rnn-lstm-model">
+<h3>7.3.3, RNN (LSTM) model<a class="headerlink" href="#rnn-lstm-model" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_lstm_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># Shape [batch, time, features] =&gt; [batch, lstm_units].</span>
+    <span class="c1"># Adding more `lstm_units` just overfits more quickly.</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="c1"># Shape =&gt; [batch, out_steps*features].</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">OUT_STEPS</span><span class="o">*</span><span class="n">num_features</span><span class="p">,</span>
+                          <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">zeros</span><span class="p">()),</span>
+    <span class="c1"># Shape =&gt; [batch, out_steps, features].</span>
+    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Reshape</span><span class="p">([</span><span class="n">OUT_STEPS</span><span class="p">,</span> <span class="n">num_features</span><span class="p">])</span>
+<span class="p">])</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">multi_lstm_model</span><span class="p">,</span> <span class="n">multi_window</span><span class="p">)</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+
+<span class="n">multi_val_performance</span><span class="p">[</span><span class="s1">&#39;LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_lstm_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">multi_performance</span><span class="p">[</span><span class="s1">&#39;LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_lstm_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">multi_lstm_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="illustration-of-autoregressive-rnn-model">
+<h2>7.3 Illustration of autoregressive RNN model<a class="headerlink" href="#illustration-of-autoregressive-rnn-model" title="Permalink to this headline">¶</a></h2>
+<p><img alt="rnn_autoregressive" src="contents/wengang/images/multistep_rnn_autoregressive.png" /></p>
+<p><strong>Model description of autoregressive rnn model</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the model</span>
+<span class="k">class</span> <span class="nc">FeedBack</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">out_steps</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">out_steps</span> <span class="o">=</span> <span class="n">out_steps</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">units</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lstm_cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">units</span><span class="p">)</span>
+    <span class="c1"># Also wrap the LSTMCell in an RNN to simplify the `warmup` method.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lstm_rnn</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lstm_cell</span><span class="p">,</span> <span class="n">return_state</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dense</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">num_features</span><span class="p">)</span>
+    
+<span class="n">feedback_model</span> <span class="o">=</span> <span class="n">FeedBack</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">out_steps</span><span class="o">=</span><span class="n">OUT_STEPS</span><span class="p">)</span>
+
+<span class="c1"># define the warm-up</span>
+<span class="k">def</span> <span class="nf">warmup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+  <span class="c1"># inputs.shape =&gt; (batch, time, features)</span>
+  <span class="c1"># x.shape =&gt; (batch, lstm_units)</span>
+  <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm_rnn</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+
+  <span class="c1"># predictions.shape =&gt; (batch, features)</span>
+  <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">state</span>
+
+<span class="n">FeedBack</span><span class="o">.</span><span class="n">warmup</span> <span class="o">=</span> <span class="n">warmup</span>
+<span class="n">prediction</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="n">feedback_model</span><span class="o">.</span><span class="n">warmup</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">example</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">prediction</span><span class="o">.</span><span class="n">shape</span>
+
+
+<span class="c1"># get iteractive output</span>
+<span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+  <span class="c1"># Use a TensorArray to capture dynamically unrolled outputs.</span>
+  <span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="c1"># Initialize the LSTM state.</span>
+  <span class="n">prediction</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">warmup</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+
+  <span class="c1"># Insert the first prediction.</span>
+  <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+
+  <span class="c1"># Run the rest of the prediction steps.</span>
+  <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_steps</span><span class="p">):</span>
+    <span class="c1"># Use the last prediction as input.</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">prediction</span>
+    <span class="c1"># Execute one lstm step.</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm_cell</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">states</span><span class="o">=</span><span class="n">state</span><span class="p">,</span>
+                              <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+    <span class="c1"># Convert the lstm output to a prediction.</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Add the prediction to the output.</span>
+    <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+
+  <span class="c1"># predictions.shape =&gt; (time, batch, features)</span>
+  <span class="n">predictions</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
+  <span class="c1"># predictions.shape =&gt; (batch, time, features)</span>
+  <span class="n">predictions</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+  <span class="k">return</span> <span class="n">predictions</span>
+
+<span class="n">FeedBack</span><span class="o">.</span><span class="n">call</span> <span class="o">=</span> <span class="n">call</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Output shape (batch, time, features): &#39;</span><span class="p">,</span> <span class="n">feedback_model</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">example</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+
+<span class="c1"># train the model</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">compile_and_fit</span><span class="p">(</span><span class="n">feedback_model</span><span class="p">,</span> <span class="n">multi_window</span><span class="p">)</span>
+
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+
+<span class="n">multi_val_performance</span><span class="p">[</span><span class="s1">&#39;AR LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">feedback_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+<span class="n">multi_performance</span><span class="p">[</span><span class="s1">&#39;AR LSTM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">feedback_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">multi_window</span><span class="o">.</span><span class="n">test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">multi_window</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">feedback_model</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -1979,11 +2314,11 @@ Output shape: (32, 1)
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="research_ideas.html" title="previous page">
+        <a class="left-prev" href="work_plan.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Research ideas for proposal</p>
+                <p class="prevnext-title">R&amp;D Activites and deadlines</p>
             </div>
         </a>
     </div>
