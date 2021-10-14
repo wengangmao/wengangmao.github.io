@@ -1,9 +1,13 @@
 # <span style = "color:red; font-weight: 500;">Teamwork Logbook</span>
+<br />
+
+**A virtual team platform to work with energy efficiency measures in shipping**
+
 +++
 ---
 
 
-**<span style = "color:red; font-weight: 500; font-size: 18px;">A virtual team platform to work with energy efficiency measures in shipping</span>**
+<center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center><br />
 
 
 ***

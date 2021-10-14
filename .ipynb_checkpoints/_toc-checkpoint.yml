@@ -53,13 +53,13 @@ parts:
 #      title: Research results
 
 
-- caption: VOYSMART OUTLOOK
+- caption: WengangMao R&D
   chapters:
   - file: contents/wengang/work_plan.md
     title: WengangMao activities
   - file: contents/wengang/research_ideas.md
     title: Research ideas
-  - file: https://wengangmao.github.io/vattenfall/contents/codes/tensorflow_simple.html #contents/wengang/rnn_tensorflow.ipynb
+  - file: contents/wengang/rnn_tensorflow.ipynb
     title: Vattenfall project
   - file: contents/wengang/code_experiences.md
     title: Code solutions
