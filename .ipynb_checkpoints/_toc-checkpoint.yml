@@ -61,6 +61,8 @@ parts:
     title: Activities and Deadlines
   - file: contents/wengang/rnn_tensorflow.ipynb
     title: Vattenfall by Tensorflow
+  - file: contents/wengang/Keras_LSTM.ipynb
+    title: Vattenfall by LSTM
   - file: contents/wengang/code_experiences.md
     title: Code solutions
 

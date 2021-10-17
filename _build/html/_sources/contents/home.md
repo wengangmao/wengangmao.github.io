@@ -81,12 +81,17 @@ alt: large funding agencies supporting our research
 
 +++
 ---
-#### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)
 
-![contact](./images/wengangmao_contact.png)
+#### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)</span>
 
+Professor of ship mechanics <br />
+Department of Mechanics and Maritime Sciences <br />
+Chalmers Univeristy of Technology <br />
+Gothenburg, Sweden <br />
+Email: wengang.mao@chalmers.se <br />
+Phone: + 46 (0) 31 772 1483 <br />
 
-#### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达)
+#### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
 
 Ass. professor <br />
 Wuhan University of Technology <br />
