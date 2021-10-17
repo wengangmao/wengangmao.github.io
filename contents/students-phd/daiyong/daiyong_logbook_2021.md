@@ -25,6 +25,37 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 
+***
+## Week 42 -- 
+
+---
+***
+
+### Plan/action for Week 42
+    
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">1. Present 2D and 3D methods.  <span style = "background: yellow">[Next Monday]<br /> </span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">2. USV platform debugging , include the ui and data transmission<span style = "background: yellow">[Weekend?]<br /></span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">3. USV control platform/website <br /></span>
+
+
+
+
+
+
+***
+## Week 41 -- 
+
+---
+***
+
+### Plan/action for Week 41
+    
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">1. Present IsoChrone  optimization algorithm  <span style = "background: yellow">[Next Monday]<br /> </span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">2. USV platform status <span style = "background: yellow">[Weekend?]<br /></span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">3. USV control platform/website <br /></span>
+
+
+
 
 ***
 ## Week 40 -- (<strike>Meeting on 2021-10-04 absent</strike>) 
