@@ -11,6 +11,18 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 ***
+## Week 42 -- (Meeting on 2021-10-18)
+---
+***
+
+### Plan/action for Week 42
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Paper review for Brodogradnja (Due: 2021/10/19) <br /></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">Submit NMU and ISOPE (if willing to China) papers (Due: 2021/10/20) <br /></span>
+4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
+---
+
+***
 ## Week 41 -- (Meeting on 2021-10-11)
 ---
 ***
@@ -18,7 +30,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ### Plan/action for Week 41
     
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: Done">[by end of this week]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">Prepare for the Ecosail presentation: summarize your achievement so far <span style = "background: Done">[by end of this week]</span> <br /></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike>Prepare for the Ecosail presentation: summarize your achievement so far <span style = "background: Done">[by end of this week]<strike></span> <br /></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: blue">Submit NMU and ISOPE (if willing to China) papers <br /></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
 
@@ -35,7 +47,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 40
     
-1. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike>OE paper revision <span style = "background: yellow">[by end of this week]</strike><br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: yellow">[by end of this week]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Prepare for the Ecosail presentation: summarize your achievement so far <br /></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike>Participant the Vattenfall project meeting</strike> <br /></span>
 
