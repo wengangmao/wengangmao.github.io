@@ -11,6 +11,15 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 ***
+## Week 42 -- (Meeting on 2021-10-18)
+---
+***
+
+### Plan/action for Week 42
+
+
+
+***
 ## Week 41 -- (Meeting on 2021-10-11)
 ---
 ***
