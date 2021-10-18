@@ -16,10 +16,11 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ***
 
 ### Plan/action for Week 42
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: Done"><br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: Done">[by end of this week]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Paper review for Brodogradnja <br /></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: blue">Submit NMU and ISOPE (if willing to China) papers (Due: 2021/10/20) <br /></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
+---
 
 ***
 ## Week 41 -- (Meeting on 2021-10-11)
