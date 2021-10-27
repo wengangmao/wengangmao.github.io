@@ -11,6 +11,17 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 ***
+## Week 42 -- (Meeting on 2021-10-28)
+---
+***
+
+### Plan/action for Week 42
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Study plan update for the follow-up meeting in November<span style = "background: yellow">[by end of this week]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Study visit credit application to Rob<span style = "background: yellow">[by end of this week]<br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for constant RPM modes<span style = "background: yellow">[by end of this week]<br /> </span></span>
+4. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<br /> </span></span>
+
+***
 ## Week 42 -- (Meeting on 2021-10-18)
 ---
 ***
@@ -19,7 +30,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 1. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>OE paper revision <span style = "background: yellow">[by end of this week]</strike><br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Paper review for Brodogradnja <span style = "background: yellow">[Due: 2021/10/19]</strike> <br /></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Submit NMU and ISOPE (if willing to China) papers <span style = "background: yellow">[Due: 2021/10/20]</strike> <br /></span>
-4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
+4. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike><span style = "background: yellow">Assist Zhang Chi's paper revision [Done with Molflow result, to be finished for SHP file analysis]</strike> <br /></span>
 ---
 
 ***
