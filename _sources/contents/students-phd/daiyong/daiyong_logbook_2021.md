@@ -26,19 +26,16 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 
 ***
-## Week 42 -- (Meeting on 2021-10-18) 
+## Week 42 -- 
 
 ---
 ***
 
 ### Plan/action for Week 42
     
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Present 2D and 3D methods.  <span style = "background: yellow">[Next Monday]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue; background: yellow">Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Next Monday]<br /> </span></span>
-3.  <span style = "font-weight: 400; font-size: 20px; color: blue">USV platform debugging , include the ui and data transmission<span style = "background: yellow">[Weekend?]<br /></span></span>
-4. <span style = "font-weight: 400; font-size: 20px; color: blue">USV control platform/website <br /></span>
-5. <span style = "font-weight: 400; font-size: 20px; color: blue; background: yellow">Submit NMU paper (Due: 2021/10/20) <br /></span>
-6. <span style = "font-weight: 400; font-size: 20px; color: blue; background: yellow">Submit China world transport conference  </span>[WTC](https://www.wtc-conference.com/submit/1st.html) <br />
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">1. Present 2D and 3D methods.  <span style = "background: yellow">[Next Monday]<br /> </span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">2. USV platform debugging , include the ui and data transmission<span style = "background: yellow">[Weekend?]<br /></span></span>
+$\qquad$  <span style = "font-weight: 400; font-size: 20px; color: blue">3. USV control platform/website <br /></span>
 
 
 
@@ -46,7 +43,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 
 ***
-## Week 41 -- (Meeting on 2021-10-11) 
+## Week 41 -- 
 
 ---
 ***

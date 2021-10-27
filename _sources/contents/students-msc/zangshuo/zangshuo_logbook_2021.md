@@ -21,21 +21,6 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 | Writing the report/paper| 2021-09|<span style= 'background:yellow; color: blue; font-weight: 500'> 2022-01-10 </span>|
 
 
-***
----
-
-## Week 42 -- (Meeting on 2021-10-18)
----
-
-
-### Plan/action for Week 42
-
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions  <span style = "background: yelloe">[By this weeek]</span> <br /></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">Introduction of various electric propulsion systems, such as conventional, shaftless, thrust propellers, etc. <span style = "background: yelloe">[By this weeek]</span> <br /></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">Review different propulsion systems<br /></span>
-4. <span style = "font-weight: 400; font-size: 20px"><strike>Submission to ISOPE conference [Done]</strike> <br /></span>
-
-
 
 ***
 ## Week 40 --> to be continued in Week 41 -- (Meeting on 2021-10-11)
@@ -44,7 +29,7 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 
 ### Plan/action for Week 40
 
-1. <span style = "font-weight: 400; font-size: 20px"><strike>Introduction of basic electric and combustion engine energy system <span style = "background: yellow">[by end of this week]</strike><br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Introduction of basic electric and combustion engine propulsion system <span style = "background: yellow">[by end of this week]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions<br /></span>
 
 

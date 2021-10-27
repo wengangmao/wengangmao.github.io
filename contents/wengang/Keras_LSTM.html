@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RNN for vattenfall by Colab &#8212; Energy Efficiency Shipping</title>
+    <title>1, Load the data &#8212; Energy Efficiency Shipping</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,7 +33,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -41,10 +41,10 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -98,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   RESEARCH PROJECT
  </span>
@@ -130,7 +130,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   TEAMWORK LOGBOOK
  </span>
@@ -230,7 +230,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   R&amp;D - WENGANG (毛文刚)
  </span>
@@ -253,7 +253,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Vattenfall by LSTM
+   1, Load the data
   </a>
  </li>
  <li class="toctree-l1">
@@ -262,7 +262,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   PUBLICATIONS
  </span>
@@ -390,29 +390,29 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-the-data">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    1, Load the data
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">
    2, Preprocessing data: normalize, train, validation, test, etc.
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">
      2.1, resample the data with low-resolution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#normalize-the-data">
      2.2, normalize the data
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#test-the-functions-of-the-tf-data-dataset-for-slice-data-to-formulate-rolling-windowed-dataset">
    Test the functions of the tf.data.Dataset for slice data to formulate rolling windowed dataset
   </a>
@@ -429,8 +429,6 @@
               <div>
                 
   <p><a href="https://colab.research.google.com/github/wengangmao/vattenfall/blob/main/Keras_LSTM.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<div class="section" id="rnn-for-vattenfall-by-colab">
-<h1>RNN for vattenfall by Colab<a class="headerlink" href="#rnn-for-vattenfall-by-colab" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -461,7 +459,7 @@
 </div>
 </div>
 <div class="section" id="load-the-data">
-<h2>1, Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this headline">¶</a></h2>
+<h1>1, Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
@@ -506,16 +504,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Keras_LSTM_6_0.png" src="../../_images/Keras_LSTM_6_0.png" />
+<img alt="../../_images/Keras_LSTM_5_0.png" src="../../_images/Keras_LSTM_5_0.png" />
 <p><span style="color:blue;font-size:50px"><strong>Lets take a close look at the time series.</strong></span></p>
-<img alt="../../_images/Keras_LSTM_6_2.png" src="../../_images/Keras_LSTM_6_2.png" />
+<img alt="../../_images/Keras_LSTM_5_2.png" src="../../_images/Keras_LSTM_5_2.png" />
 </div>
 </div>
 </div>
 <div class="section" id="preprocessing-data-normalize-train-validation-test-etc">
-<h2>2, Preprocessing data: normalize, train, validation, test, etc.<a class="headerlink" href="#preprocessing-data-normalize-train-validation-test-etc" title="Permalink to this headline">¶</a></h2>
+<h1>2, Preprocessing data: normalize, train, validation, test, etc.<a class="headerlink" href="#preprocessing-data-normalize-train-validation-test-etc" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="resample-the-data-with-low-resolution">
-<h3>2.1, resample the data with low-resolution<a class="headerlink" href="#resample-the-data-with-low-resolution" title="Permalink to this headline">¶</a></h3>
+<h2>2.1, resample the data with low-resolution<a class="headerlink" href="#resample-the-data-with-low-resolution" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">]][</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">*</span><span class="mf">0.2</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">*</span><span class="mf">0.8</span><span class="p">):</span><span class="mi">10</span><span class="p">]</span>
@@ -537,14 +535,14 @@
 </div>
 <div class="cell_output docutils container">
 <p><span style="color:red; font-size:30px"><strong>No. of the values in the training dataset is: 47186</strong></span></p>
-<img alt="../../_images/Keras_LSTM_9_1.png" src="../../_images/Keras_LSTM_9_1.png" />
+<img alt="../../_images/Keras_LSTM_8_1.png" src="../../_images/Keras_LSTM_8_1.png" />
 <p><span style="color:blue; font-size:20px"><strong>Plot the heatmap for variation of standard deviation</strong></span></p>
-<img alt="../../_images/Keras_LSTM_9_3.png" src="../../_images/Keras_LSTM_9_3.png" />
+<img alt="../../_images/Keras_LSTM_8_3.png" src="../../_images/Keras_LSTM_8_3.png" />
 </div>
 </div>
 </div>
 <div class="section" id="normalize-the-data">
-<h3>2.2, normalize the data<a class="headerlink" href="#normalize-the-data" title="Permalink to this headline">¶</a></h3>
+<h2>2.2, normalize the data<a class="headerlink" href="#normalize-the-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, we assume all data are used for the training (the time series is not that stationary for the prediction)</span>
@@ -563,14 +561,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Keras_LSTM_11_0.png" src="../../_images/Keras_LSTM_11_0.png" />
-<img alt="../../_images/Keras_LSTM_11_1.png" src="../../_images/Keras_LSTM_11_1.png" />
+<img alt="../../_images/Keras_LSTM_10_0.png" src="../../_images/Keras_LSTM_10_0.png" />
+<img alt="../../_images/Keras_LSTM_10_1.png" src="../../_images/Keras_LSTM_10_1.png" />
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="test-the-functions-of-the-tf-data-dataset-for-slice-data-to-formulate-rolling-windowed-dataset">
-<h2>Test the functions of the tf.data.Dataset for slice data to formulate rolling windowed dataset<a class="headerlink" href="#test-the-functions-of-the-tf-data-dataset-for-slice-data-to-formulate-rolling-windowed-dataset" title="Permalink to this headline">¶</a></h2>
+<h1>Test the functions of the tf.data.Dataset for slice data to formulate rolling windowed dataset<a class="headerlink" href="#test-the-functions-of-the-tf-data-dataset-for-slice-data-to-formulate-rolling-windowed-dataset" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -778,7 +776,7 @@ Sun Oct 17 17:49:11 2021
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Keras_LSTM_19_0.png" src="../../_images/Keras_LSTM_19_0.png" />
+<img alt="../../_images/Keras_LSTM_18_0.png" src="../../_images/Keras_LSTM_18_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -816,12 +814,11 @@ Sun Oct 17 17:49:11 2021
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Keras_LSTM_20_0.png" src="../../_images/Keras_LSTM_20_0.png" />
-<img alt="../../_images/Keras_LSTM_20_1.png" src="../../_images/Keras_LSTM_20_1.png" />
-<img alt="../../_images/Keras_LSTM_20_2.png" src="../../_images/Keras_LSTM_20_2.png" />
-<img alt="../../_images/Keras_LSTM_20_3.png" src="../../_images/Keras_LSTM_20_3.png" />
-<img alt="../../_images/Keras_LSTM_20_4.png" src="../../_images/Keras_LSTM_20_4.png" />
-</div>
+<img alt="../../_images/Keras_LSTM_19_0.png" src="../../_images/Keras_LSTM_19_0.png" />
+<img alt="../../_images/Keras_LSTM_19_1.png" src="../../_images/Keras_LSTM_19_1.png" />
+<img alt="../../_images/Keras_LSTM_19_2.png" src="../../_images/Keras_LSTM_19_2.png" />
+<img alt="../../_images/Keras_LSTM_19_3.png" src="../../_images/Keras_LSTM_19_3.png" />
+<img alt="../../_images/Keras_LSTM_19_4.png" src="../../_images/Keras_LSTM_19_4.png" />
 </div>
 </div>
 </div>
@@ -839,7 +836,7 @@ Sun Oct 17 17:49:11 2021
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./contents\wengang"
+            path: "./contents/wengang"
         },
         predefinedOutput: true
     }

@@ -10,12 +10,12 @@ This is just a simple memory notebook for myself. Regarding the research and wor
 **Remind myself activities that should be completed in the upcoming 1-3 months**
 1. Development of the MSc course [MMS190 - Methods of risk and reliability analysis](https://wengangmao.github.io/mms190)
 2. Further development of the PhD course [FMMS050 - machine learning to engineering mechanics](https://wengangmao.github.io/fmms050)
-3. <strike>Professor evaluation <span style = "background: yellow; color: blue">[2021-11]</span></strike>
+3. Professor evaluation <span style = "background: yellow; color: blue">[2021-11]</span>
 4. Paper on SPDE wave modelling
 5. Code on tensorflow and ARIMA time series
 6. Code on stationary sea states
-7. <strike>Presentation on EcoSail project <span style = "background: yellow; color: blue">[2021-10-25]</span></strike>
-8. <strike>Collecting data for Vattenfall project</strike>
+7. Presentation on EcoSail project <span style = "background: yellow; color: blue">[2021-10-25]</span>
+8. Collecting data for Vattenfall project
 9. Collecting AIS data for Chalmers project
 10. Workshop for batteries
 11. Paper for HydroPower conference
