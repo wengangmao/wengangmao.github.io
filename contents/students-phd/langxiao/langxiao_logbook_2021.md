@@ -11,11 +11,11 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```
 
 ***
-## Week 42 -- (Meeting on 2021-10-28)
+## Week 43 -- (Meeting on 2021-10-28)
 ---
 ***
 
-### Plan/action for Week 42
+### Plan/action for Week 43
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">Study plan update for the follow-up meeting in November<span style = "background: yellow">[by end of this week]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Study visit credit application to Rob<span style = "background: yellow">[by end of this week]<br /> </span></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for constant RPM modes<span style = "background: yellow">[by end of this week]<br /> </span></span>
