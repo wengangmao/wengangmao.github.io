@@ -44,7 +44,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ### Plan/action for Week 42
     
 1. Present 2D and 3D methods.  <span style = "background: yellow">[Next Monday, ongoing on 2021-10-28, when to start/finish?]<br /> </span>
-2. Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Next Monday]<br /> </span>
+2. Further development and investigation of ISOCHONE method.  <span style = "background: yellow">[Present the results next meeting]<br /> </span>
 3. USV platform debugging , include the ui and data transmission<span style = "background: yellow">[Weekend, still ongoing on 2021-10-28]<br /></span>
 4. <strike> EcoSail simulator platform/website <br /> </strike>
 5. <strike> Submit NMU paper (Due: 2021/10/20) <br /></strike>
