@@ -31,8 +31,9 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 43
 1. Finish the Improvement for the Isochrones.  <span style = "background: yellow">[Next Monday]<br /> </span>
-2. USV platform debugging, include the ui and data transmission<span style = "background: yellow">[Weekend????]<br /></span>
-3. Test the 2d and 3d with all the parameterse <span style = "background: yellow">[Next Monday, ongoing on 2021-10-28, when to start/finish?]<br /> </span>
+2. Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Monday]<br /> </span>
+3. USV platform debugging, include the ui and data transmission<span style = "background: yellow">[Weekend????]<br /></span>
+4. Test the 2d and 3d with all the parameterse <span style = "background: yellow">[Next Monday, ongoing on 2021-10-28, when to start/finish?]<br /> </span>
 
 ***
 ## Week 42 -- (Meeting on 2021-10-18) 
@@ -45,8 +46,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 1. Present 2D and 3D methods.  <span style = "background: yellow">[Next Monday, ongoing on 2021-10-28, when to start/finish?]<br /> </span>
 2. Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Next Monday]<br /> </span>
 3. USV platform debugging , include the ui and data transmission<span style = "background: yellow">[Weekend, still ongoing on 2021-10-28]<br /></span>
-4. </strike> EcoSail simulator platform/website <br /> <strike>
-5. </strike> Submit NMU paper (Due: 2021/10/20) <br /><strike>
+4. <strike> EcoSail simulator platform/website <br /> </strike>
+5. <strike> Submit NMU paper (Due: 2021/10/20) <br /></strike>
 6. Submit China world transport conference [WTC](https://www.wtc-conference.com/submit/1st.html) <span style = "background: yellow">[ongoing on 2021-10-28]<br /></span>
 
 
