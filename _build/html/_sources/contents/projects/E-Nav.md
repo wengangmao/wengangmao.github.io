@@ -17,7 +17,7 @@ alt: large funding agencies supporting our research
 <br />
 
 
-<span style = "color:blue; font-weight: 500; font-size: 25px;">Sail plan service and online training platform for the shipping industry</span>
+<span style = "color:blue; font-weight: 500; font-size: 25px">Sail plan service and online training platform for the shipping industry</span>
 
 ---
 
@@ -30,4 +30,5 @@ E-NAV will develop a sail plan service and online training platform for the ship
 - **Update real-time ship performance models for performance monitoring**
 - **Develop training materials for various E-navigation components**
 - **Develop a gamification website for training in sailing at harsh seas**
-***
+
+

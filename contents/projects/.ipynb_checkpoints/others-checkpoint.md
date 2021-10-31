@@ -8,7 +8,7 @@ Below I just list several of them which we are in charge of at least 1 WP at Cha
 
 ---
 
-### Project on energy efficiency measures
+## Project on energy efficiency measures
 
 * PropIT -- wind propulsion ships funded by Swedish Energy Agency
 * Feasibility study on renewable ship propulsions funded by EU commission environment action
@@ -16,12 +16,12 @@ Below I just list several of them which we are in charge of at least 1 WP at Cha
 * DEMOPS -- Ship performance models for energy efficiency measures funded by Lighthouse/Trafikverket (on-going)
 
 ---
-***
 
-### Project on unmanned ships
+
+## Project on unmanned ships
 This area includes 1 project funded by Vinnova, 2 projects on control and optimization algorithms funded by Chalmers AoA Transport, and 1 project on electrifying unmanned ships (on-going).
 
-### Basic research
+## Basic research
 * Stochastic loads on ship fatigue and safety funded by VR
 * SEAMOCS funded by EU Marie Cruie Training network
 * Spatio-temporal modelling of metocean environmentd funded by VGR More2020

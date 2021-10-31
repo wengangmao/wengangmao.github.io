@@ -1,5 +1,5 @@
 format: jb-book
-root: contents/home
+root: contents/home.md
 parts:
 - caption: RESEARCH PROJECT
   chapters:
@@ -11,16 +11,19 @@ parts:
     title: VIA Kaizen 2020-2022
   - file: contents/projects/autobarge.md
     title: Autobarge 2022-2025
+  - file: contents/projects/shippingaieems.md
+    title: Shipping AI EEMs 2021-2024
   - file: contents/projects/others.md
     title: Other projects
+    
 - caption: TEAMWORK LOGBOOK
 #  numbered: false
   chapters:
   - file: contents/dawu/intro_dawu.md
     title: Dr. Da Wu
     sections:
-      - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
-        title: RNN/LSTM/GRU tutorial
+    - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
+      title: RNN/LSTM/GRU tutorial
         
   - file: contents/students-phd/langxiao/intro_xiao.md
     title: Xiao PhD Research
@@ -49,9 +52,8 @@ parts:
     sections:
     - file: contents/students-msc/zangshuo/zangshuo_logbook_2021.md
       title: Logbook 2021
-#    - file: contents/students-msc/zangshuo/zangshuo_research.ipynb
-#      title: Research results
-
+    - file: contents/students-msc/zangshuo/zangshuo_research.ipynb
+      title: Research results
 
 - caption: R&D - WENGANG (毛文刚) 
   chapters:
@@ -73,8 +75,3 @@ parts:
     title: Working articles
   - file: contents/references/published/published.md
     title: Published articles
-
-#  - file: contents/references/future/plan.md
-#    title: Planned publications
-#  - file: contents/references/intro.md
-#    title: VOYSMART RESEARCH DATABASE
