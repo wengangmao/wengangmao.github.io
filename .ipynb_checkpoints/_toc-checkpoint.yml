@@ -23,7 +23,7 @@ parts:
     title: Dr. Da Wu
     sections:
     - file: contents/dawu/codes/Building_RNNs_for_time_series_using_PyTorch.ipynb
-      title: RNN/LSTM/GRU tutorial
+      title: RNN-LSTM-GRU tutorial
         
   - file: contents/students-phd/langxiao/intro_xiao.md
     title: Xiao PhD Research
