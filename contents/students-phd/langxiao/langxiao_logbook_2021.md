@@ -16,8 +16,8 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ### Plan/action for Week 44
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<span style = "background: yellow"> [Ongoing on 11-01]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">objective function<span style = "background: yellow"> [by end of this week]<br /> </span></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">power constraint<span style = "background: yellow"> [by end of this week]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">objective function<span style = "font-weight: 400; font-size: 20px; color: blue"><span style = "background: yellow"> [by end of this week]<br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">power constraint<span style = "font-weight: 400; font-size: 20px; color: blue"><span style = "background: yellow"> [by end of this week]<br /> </span></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">Several case study routes comparison<span style = "background: yellow"> [by end of this week]<br /> </span></span>
 
 ***
