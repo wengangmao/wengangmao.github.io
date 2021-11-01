@@ -92,7 +92,9 @@ Phone: + 46 (0) 31 772 1483 <br />
 
 ### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
 
-Ass. professor <br />
-Wuhan University of Technology <br />
-Wuhan, China  <br />
+:briefcase: Ass. professor <br />
+:office: National Engineering Research Center for Water Transport Safety <br />
+:school: Wuhan University of Technology <br />
+:house: Wuhan, China  <br />
+:email: dawu#whut.endu.cn
 
