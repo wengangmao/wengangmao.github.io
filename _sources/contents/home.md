@@ -70,7 +70,7 @@ name: directive-fig
 - Chalmers Electrity: 30450814/30450811
 - DEMOPS: 30650006
 - VATTENFALL: 30224704
-- ISEA:
+- ISEA:30650011
 - ML+CFD: 30750025 
 
 +++
@@ -92,14 +92,7 @@ Phone: + 46 (0) 31 772 1483 <br />
 
 ### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
 
-<head> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script> 
-</head> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-<i class="fas fa-user-graduate"></i>&ensp;&nbsp;Ass. professor <br />
-<i class="fas fa-chalkboard-teacher"></i>&ensp;National Engineering Research Center for Water Transport Safety <br />
-<i class="fas fa-graduation-cap"></i>&ensp;Wuhan University of Technology <br />
-<i class="fas fa-map"></i>&ensp;Wuhan, China  <br />
-<i class="fas fa-shipping-fast"></i>&ensp;dawu#whut.endu.cn
+Ass. professor <br />
+Wuhan University of Technology <br />
+Wuhan, China  <br />
 
