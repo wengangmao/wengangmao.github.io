@@ -9,6 +9,16 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```{admonition}  <span style = "color: blue; font-weight: 600; font-size: 25px">Urgent duties</span>
 <span style = "color: blue; font-weight: 400; font-size: 20px">Develop algorithms to optimize fixed speed/RPM/Power for optimal navigation.</span>
 ```
+***
+## Week 44 -- (Meeting on 2021-11-01)
+---
+***
+
+### Plan/action for Week 44
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<span style = "background: yellow"> [Ongoing on 11-01]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">objective function<span style = "background: yellow"> [by end of this week]<br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">power constraint<span style = "background: yellow"> [by end of this week]<br /> </span></span>
+4. <span style = "font-weight: 400; font-size: 20px; color: blue">Several case study routes comparison<span style = "background: yellow"> [by end of this week]<br /> </span></span>
 
 ***
 ## Week 43 -- (Meeting on 2021-10-28)
@@ -16,9 +26,9 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ***
 
 ### Plan/action for Week 43
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Study plan update for the follow-up meeting in November<span style = "background: yellow">[by end of this week]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">Study visit credit application to Rob<span style = "background: yellow">[by end of this week]<br /> </span></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for constant RPM modes<span style = "background: yellow">[by end of this week]<br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Study plan update for the follow-up meeting in November<span style = "background: yellow"> [by end of this week]</strike><br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Study visit credit application to Rob<span style = "background: yellow"> [by end of this week]</strike><br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike>MOPSO implementation</strike> for constant RPM modes<span style = "background: yellow"> [by end of this week (Algorithm works in Week 43)]<br /> </span></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<br /> </span></span>
 
 ***
