@@ -9,6 +9,16 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ```{admonition}  <span style = "color: blue; font-weight: 600; font-size: 25px">Urgent duties</span>
 <span style = "color: blue; font-weight: 400; font-size: 20px">Develop algorithms to optimize fixed speed/RPM/Power for optimal navigation.</span>
 ```
+***
+## Week 44 -- (Meeting on 2021-11-01)
+---
+***
+
+### Plan/action for Week 44
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<span style = "background: yellow"> [Ongoing on 11-01]<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">objective function<span style = "font-weight: 400; font-size: 20px; color: blue"><span style = "background: yellow"> [by end of this week]<br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for hybrid RPM modes: <span style = "font-weight: 400; font-size: 20px; color: red">power constraint<span style = "font-weight: 400; font-size: 20px; color: blue"><span style = "background: yellow"> [by end of this week]<br /> </span></span>
+4. <span style = "font-weight: 400; font-size: 20px; color: blue">Several case study routes comparison<span style = "background: yellow"> [by end of this week]<br /> </span></span>
 
 ***
 ## Week 43 -- (Meeting on 2021-10-28)
@@ -16,9 +26,9 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ***
 
 ### Plan/action for Week 43
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Study plan update for the follow-up meeting in November<span style = "background: yellow">[by end of this week]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">Study visit credit application to Rob<span style = "background: yellow">[by end of this week]<br /> </span></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">MOPSO implementation for constant RPM modes<span style = "background: yellow">[by end of this week]<br /> </span></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Study plan update for the follow-up meeting in November<span style = "background: yellow"> [by end of this week]</strike><br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Study visit credit application to Rob<span style = "background: yellow"> [by end of this week]</strike><br /> </span></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike>MOPSO implementation</strike> for constant RPM modes<span style = "background: yellow"> [by end of this week (Algorithm works in Week 43)]<br /> </span></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">3DDA voyage optimization of one case study route for further comparison<br /> </span></span>
 
 ***
@@ -27,33 +37,21 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 ***
 
 ### Plan/action for Week 42
-<<<<<<< HEAD
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision<span style = "background: yello"> <span style = "background: yellow">[submit by end of this week<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px"><strike>Paper review for Brodogradnja <span style = "background: yellow"> [Due: 2021/10/19] </strike><br /></span></span>
-3. <span style = "font-weight: 400; font-size: 20px"><strike>Submit NMU and ISOPE (if willing to China) papers <span style = "background: yellow">[Due: 2021/10/20]</strike> <br /></span></span>
-4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
-=======
-1. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>OE paper revision <span style = "background: yellow">[by end of this week]</strike><br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Paper review for Brodogradnja <span style = "background: yellow">[Due: 2021/10/19]</strike> <br /></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Submit NMU and ISOPE (if willing to China) papers <span style = "background: yellow">[Due: 2021/10/20]</strike> <br /></span>
-4. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike><span style = "background: yellow">Assist Zhang Chi's paper revision [Done with Molflow result, to be finished for SHP file analysis]</strike> <br /></span>
->>>>>>> e0c36e0ef19dbd977454d912ae958bd2e974c692
----
+1. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>OE paper revision <span style = "background: yellow">[by end of this week]</strike></span></span><br />
+2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Paper review for Brodogradnja <span style = "background: yellow">[Due: 2021/10/19]</strike> </span></span><br />
+3. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Submit NMU and ISOPE (if willing to China) papers <span style = "background: yellow">[Due: 2021/10/20]</strike></span></span><br />
+4. <span style = "font-weight: 400; font-size: 20px; color: blue"><strike><span style = "background: yellow">Assist Zhang Chi's paper revision [Done with Molflow result, to be finished for SHP file analysis]</strike></span></span><br />
 
-***
+
+
+---
 ## Week 41 -- (Meeting on 2021-10-11)
 ---
-***
+
 
 ### Plan/action for Week 41
-    
-<<<<<<< HEAD
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: yellow">[by end of this week]<br /> </span></span>
-2. <span style = "font-weight: 400; font-size: 20px"><strike>Prepare for the Ecosail presentation: summarize your achievement so far <span style = "background: Done">[by end of this week]</strike></span> <br /></span>
-=======
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">OE paper revision <span style = "background: Done">[by end of this week]<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: black"><strike>Prepare for the Ecosail presentation: summarize your achievement so far <span style = "background: Done">[by end of this week]</strike></span> <br /></span>
->>>>>>> e0c36e0ef19dbd977454d912ae958bd2e974c692
 3. <span style = "font-weight: 400; font-size: 20px; color: blue">Submit NMU and ISOPE (if willing to China) papers <br /></span>
 4. <span style = "font-weight: 400; font-size: 20px; color: blue">Assist Zhang Chi's paper revision <br /></span>
 

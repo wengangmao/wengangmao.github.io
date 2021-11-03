@@ -9,7 +9,7 @@ author                      : Wengang Mao  # The author of the book
 copyright                   : "2021-2022"  # Copyright year to be placed in the footer
 logo                        : "contents/images/voysmart.png"  # A path to the book logo
 email                       : "wengang.mao@chalmers.se"
-exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
+#exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
