@@ -4,12 +4,12 @@
 +++
 ---
 
-Martin's project is funded by the Lighthouse funded DEMOPS and Energy agency funded DDEEF projects.
+Martin's project is funded by the Lighthouse funded DEMOPS and Energy agency funded [D2E2F](https://oceanenergy-sweden.se/energieffektivisering-av-mindre-fartyg/) projects.
 
 
-```{figure} ./images/martin.jpg 
+```{figure} ./images/martinPADI.png 
 ---
-height: 300px
+height: 200px
 name: funding agencies
 alt: large funding agencies supporting our research
 ---
@@ -24,9 +24,11 @@ alt: large funding agencies supporting our research
 
 ***
 ## Martin's research tasks for his PhD study
-- **Develop 4D ship performance models**
+- **Develop 4DOF ship performance models**
 - **Application of ML models for maintainance prediction**
-- **ML models for ship roll and manuevering study**
+- **ML models for ship roll and manouevering study**
 
 
 ***
+## Activities
+* DNV NORDIC MARITIME UNIVERSITY WORKSHOP 2022, 26‐28 January 2022 at University of South East Norway, Campus Vestfold in Horten, Norway
