@@ -18,9 +18,9 @@ This is just a simple memory notebook for myself. Regarding the research and wor
 8. <strike>Collecting data for Vattenfall project</strike>
 9. Collecting AIS data for Chalmers project
 10. Workshop for batteries
-11. Paper for HydroPower conference
+11. <strike>Paper for HydroPower conference</strike>
 12. Data analysis for ships at hand
-13. STINT finalization
+13. <strike>STINT finalization</strike>
 14. Investigation of ML + CFD
 15. Zero emission shipping presentation  <span style = "background: yellow; color: blue">[2021-11-27]</span>
 

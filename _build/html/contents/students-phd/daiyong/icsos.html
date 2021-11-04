@@ -1,0 +1,1026 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICSOS paper (not updated) &#8212; Energy Efficiency Shipping</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://voysmart.eu/contents/students-phd/daiyong/icsos.html" />
+    <link rel="shortcut icon" href="../../../_static/voysmart_favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="MSS-Mariner python code" href="mariner.html" />
+    <link rel="prev" title="Research Logbook – Daiyong" href="daiyong_logbook_2021.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/voysmart.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Energy Efficiency Shipping</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../home.html">
+   <span style="color:red; font-weight: 500">
+    Teamwork Logbook
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  RESEARCH PROJECT
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/ecosail.html">
+   Ecosail 2018-2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/E-Nav.html">
+   E-Nav 2019-2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/viakaizen.html">
+   VIA Kaizen 2020-2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/autobarge.html">
+   Autobarge 2022-2025
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/shippingaieems.html">
+   Shipping AI EEMs 2021-2024
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/others.html">
+   Other projects
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  TEAMWORK LOGBOOK
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../dawu/intro_dawu.html">
+   Dr. Da Wu
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../langxiao/intro_xiao.html">
+   Xiao PhD Research
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../langxiao/langxiao_logbook_2021.html">
+     Research Logbook 2021
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../langxiao/langxiao_research.html">
+     Research achievements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro_daiyong.html">
+   Daiyong PhD Research
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="daiyong_logbook_2021.html">
+     Research Logbook 2021
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ICSOS paper
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mariner.html">
+     MSS-mariner
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../martin/martin.html">
+   Martin PhD logbook 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../students-visit/zhangchi/zhangchi.html">
+   Zhangchi visiting 2021
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../students-msc/zangshuo/intro_zangshuo.html">
+   Zangshuo MSc study
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../students-msc/zangshuo/zangshuo_logbook_2021.html">
+     Logbook 2021
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../students-msc/zangshuo/zangshuo_research.html">
+     Research results
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  R&amp;D - WENGANG (毛文刚)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wengang/research_ideas.html">
+   Research outlook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wengang/work_plan.html">
+   Activities and Deadlines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wengang/rnn_tensorflow.html">
+   Tensorflow: vattenfall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wengang/Keras_LSTM.html">
+   Vattenfall by LSTM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wengang/code_experiences.html">
+   Code solutions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  PUBLICATIONS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../references/working/ongoing.html">
+   Working articles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../references/published/published.html">
+   Published articles
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/wengangmao/voysmart">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/contents/students-phd/daiyong/icsos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/wengangmao/voysmart"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/wengangmao/voysmart/issues/new?title=Issue%20on%20page%20%2Fcontents/students-phd/daiyong/icsos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/wengangmao/voysmart/edit/master/./contents/students-phd/daiyong/icsos.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/wengangmao/voysmart/master?urlpath=tree/./contents/students-phd/daiyong/icsos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://wengangmao.github.io/voysmart//hub/user-redirect/git-pull?repo=https://github.com/wengangmao/voysmart&urlpath=tree/voysmart/./contents/students-phd/daiyong/icsos.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-functions-for-the-parameters-calculate">
+   definition functions for the parameters calculate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-zigzag-data-and-pretreatment">
+   load zigzag data and pretreatment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abkoitz-model-test">
+   Abkoitz model test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#latest-square-fucntion-test">
+   latest square fucntion test
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="icsos-paper-not-updated">
+<h1>ICSOS paper (not updated)<a class="headerlink" href="#icsos-paper-not-updated" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span><span class="p">,</span> <span class="n">Geod</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">leastsq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="definition-functions-for-the-parameters-calculate">
+<h2>definition functions for the parameters calculate<a class="headerlink" href="#definition-functions-for-the-parameters-calculate" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># parameter equation for u</span>
+<span class="k">def</span> <span class="nf">para_u</span><span class="p">(</span><span class="n">p_u</span><span class="p">,</span><span class="n">u</span><span class="p">):</span>
+    <span class="n">pu0</span><span class="p">,</span><span class="n">pu1</span><span class="p">,</span><span class="n">pu2</span><span class="p">,</span><span class="n">pu3</span><span class="p">,</span><span class="n">pu4</span><span class="p">,</span><span class="n">pu5</span><span class="p">,</span><span class="n">pu6</span><span class="p">,</span><span class="n">pu7</span> <span class="o">=</span> <span class="n">p_u</span>
+    <span class="n">du</span> <span class="o">=</span> <span class="n">pu0</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu1</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span> <span class="n">pu2</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu3</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu4</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu5</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu6</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">pu7</span><span class="o">*</span><span class="n">u</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">du</span>
+<span class="k">def</span> <span class="nf">error_u</span><span class="p">(</span><span class="n">p_u</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">du</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">para_u</span><span class="p">(</span><span class="n">p_u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">du</span>
+
+<span class="c1"># parameter equation for v</span>
+<span class="k">def</span> <span class="nf">para_v</span><span class="p">(</span><span class="n">p_v</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">pv0</span><span class="p">,</span><span class="n">pv1</span><span class="p">,</span><span class="n">pv2</span><span class="p">,</span><span class="n">pv3</span><span class="p">,</span><span class="n">pv4</span><span class="p">,</span><span class="n">pv5</span><span class="p">,</span><span class="n">pv6</span><span class="p">,</span><span class="n">pv7</span><span class="p">,</span><span class="n">pv8</span><span class="p">,</span><span class="n">pv9</span><span class="p">,</span><span class="n">pv10</span><span class="p">,</span><span class="n">pv11</span><span class="p">,</span><span class="n">pv12</span><span class="p">,</span><span class="n">pv13</span> <span class="o">=</span> <span class="n">p_v</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="n">pv0</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv1</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv2</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv3</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv4</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv5</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv6</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv7</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv8</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv9</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv10</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv11</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv12</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">+</span> <span class="n">pv13</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dv</span>
+<span class="k">def</span> <span class="nf">error_v</span><span class="p">(</span><span class="n">p_v</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">dv</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">para_v</span><span class="p">(</span><span class="n">p_v</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">dv</span>
+
+<span class="c1"># parameter equation for r</span>
+<span class="k">def</span> <span class="nf">para_r</span><span class="p">(</span><span class="n">p_r</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">pr0</span><span class="p">,</span><span class="n">pr1</span><span class="p">,</span><span class="n">pr2</span><span class="p">,</span><span class="n">pr3</span><span class="p">,</span><span class="n">pr4</span><span class="p">,</span><span class="n">pr5</span><span class="p">,</span><span class="n">pr6</span><span class="p">,</span><span class="n">pr7</span><span class="p">,</span><span class="n">pr8</span><span class="p">,</span><span class="n">pr9</span><span class="p">,</span><span class="n">pr10</span><span class="p">,</span><span class="n">pr11</span><span class="p">,</span><span class="n">pr12</span><span class="p">,</span><span class="n">pr13</span> <span class="o">=</span> <span class="n">p_r</span>
+    <span class="n">dr</span> <span class="o">=</span> <span class="n">pr0</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr1</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr2</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr3</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr4</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr5</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr6</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr7</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr8</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr9</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr10</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr11</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr12</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">+</span> <span class="n">pr13</span><span class="o">*</span><span class="n">r</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dr</span>
+<span class="k">def</span> <span class="nf">error_r</span><span class="p">(</span><span class="n">p_r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">dr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">para_r</span><span class="p">(</span><span class="n">p_r</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">dr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-zigzag-data-and-pretreatment">
+<h2>load zigzag data and pretreatment<a class="headerlink" href="#load-zigzag-data-and-pretreatment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data = pd.read_csv(&quot;./model_data/trunning_30_inter.csv&quot;)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./model_data/zigzag_30_inter.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">speed</span> <span class="o">/</span> <span class="mf">1.852</span>
+<span class="n">service_speed</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">speed</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># no course data, use the diff heading instead</span>
+<span class="n">d_heading</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">heading</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;dcourse&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d_heading</span>
+
+<span class="c1"># calculate the rudder angle and heading</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;rudder&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">rudder</span><span class="o">-</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;heading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">heading</span><span class="p">)</span>
+
+<span class="c1"># calculate the u, v and r</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;u&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">d_heading</span><span class="p">))</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">speed</span> <span class="o">-</span> <span class="n">service_speed</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;v&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">d_heading</span><span class="p">))</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">speed</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;r&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">heading</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># trans longitude and latitude to x y (m)</span>
+<span class="n">trans_cor</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">(</span><span class="n">proj</span><span class="o">=</span><span class="s1">&#39;utm&#39;</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ellps</span><span class="o">=</span><span class="s1">&#39;WGS84&#39;</span><span class="p">,</span> <span class="n">preserve_units</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">trans_cor</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dx</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dy</span>
+
+<span class="c1"># data.loc[:,&quot;du&quot;] = data.u.diff().fillna(0)</span>
+<span class="c1"># data.loc[:,&quot;dv&quot;] = data.v.diff().fillna(0)</span>
+<span class="c1"># data.loc[:,&quot;dr&quot;] = data.r.diff().fillna(0)</span>
+<span class="c1"># rudder?</span>
+<span class="c1"># data.loc[:,&quot;drudder&quot;] = data.ruddera.diff().fillna(0)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="abkoitz-model-test">
+<h2>Abkoitz model test<a class="headerlink" href="#abkoitz-model-test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 加速度带入计算 求得加速度</span>
+<span class="c1"># 再在时间上积分</span>
+<span class="c1"># du, dv, dr,de(rudder)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### raw 60 paramerters</span>
+<span class="c1">### simplify to 36 parameters (8+14+14)</span>
+<span class="c1">### kt models</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ship = [x, y, u, v, r, e, heading]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Abkoitz_36Param</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Abkoitz with 36 parameters(u: 8, v:14, r: 14)</span>
+<span class="sd">    input: dataframe with the u,v,r,drudder (speed in m/s, angle in radian)</span>
+<span class="sd">    output: paramerers for u, v, r</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># get the u / v / r data from the dataframe</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">rudder</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rudder</span><span class="o">.</span><span class="n">values</span>
+<span class="c1">#     drudder = data.drudder.values</span>
+
+    <span class="c1"># calculate the input( du / dv / dr )</span>
+    <span class="n">du</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">rudder</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">v</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">v</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">rudder</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">,</span>\
+          <span class="n">rudder</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="n">v</span><span class="o">*</span><span class="n">rudder</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">rudder</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">u</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">dr</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">rudder</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">,</span>\
+          <span class="n">rudder</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="n">v</span><span class="o">*</span><span class="n">rudder</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">rudder</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">u</span><span class="o">*</span><span class="n">rudder</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># defini the min error</span>
+    <span class="n">ue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">ve</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">re</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+
+    <span class="c1"># calculate the output( dot_u / dot_v / dot_r)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">dot_u</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">h</span>
+    <span class="n">dot_v</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">h</span>
+    <span class="n">dot_r</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="n">h</span>
+
+    <span class="c1"># latest square method calculate the parameters</span>
+    <span class="n">parau</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error_u</span><span class="p">,</span><span class="n">ue</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">dot_u</span><span class="p">))</span>
+    <span class="n">parav</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error_v</span><span class="p">,</span><span class="n">ve</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">dot_v</span><span class="p">))</span>
+    <span class="n">parar</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error_r</span><span class="p">,</span><span class="n">re</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">dot_r</span><span class="p">))</span>
+    <span class="n">Param</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Pu</span><span class="o">=</span><span class="n">parau</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Pv</span><span class="o">=</span><span class="n">parav</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">Pr</span><span class="o">=</span><span class="n">parar</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Param</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dship</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">Pu</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pu&#39;</span><span class="p">]</span>
+<span class="n">Pv</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pv&#39;</span><span class="p">]</span>
+<span class="n">Pr</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pr&#39;</span><span class="p">]</span>
+<span class="c1"># x</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">service_speed</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="o">-</span> <span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+<span class="c1"># y</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">service_speed</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+<span class="c1"># du</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> \
+            <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="c1"># dv</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> \
+            <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> \
+            <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> \
+            <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+<span class="c1"># dr</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> \
+            <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> \
+            <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> \
+            <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+<span class="c1"># de</span>
+<span class="n">dship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span>  <span class="n">ship</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ship = [x, y, u, v, r, e, heading]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Abkowitz_36model</span><span class="p">(</span><span class="n">Param</span><span class="p">,</span> <span class="n">ship</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Param: dict, include the parameters for the Pu, Pv and Pr</span>
+<span class="sd">        ship: list, include the ship&#39;s x, y, u, v, r, e, heading data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shipx</span><span class="p">,</span> <span class="n">shipy</span><span class="p">,</span> <span class="n">shipu</span><span class="p">,</span> <span class="n">shipv</span><span class="p">,</span> <span class="n">shipr</span><span class="p">,</span> <span class="n">shipe</span> <span class="p">,</span><span class="n">shiph</span><span class="o">=</span> <span class="n">ship</span>
+    <span class="c1"># ship = [x, y, u, v, r, e, heading]</span>
+    <span class="n">dship</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">7</span><span class="p">))</span>
+    <span class="n">Pu</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pu&#39;</span><span class="p">]</span>
+    <span class="n">Pv</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pv&#39;</span><span class="p">]</span>
+    <span class="n">Pr</span> <span class="o">=</span> <span class="n">Param</span><span class="p">[</span><span class="s1">&#39;Pr&#39;</span><span class="p">]</span>
+    <span class="c1"># x</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">shipu</span> <span class="o">+</span> <span class="n">service_speed</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">shiph</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">shipv</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">shiph</span><span class="p">))</span>
+    <span class="c1"># y</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">shipu</span> <span class="o">+</span> <span class="n">service_speed</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">shiph</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">shipv</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">shiph</span><span class="p">))</span>
+    <span class="c1"># du</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">shipu</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">shipe</span><span class="o">**</span><span class="mi">2</span> \
+                <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span><span class="o">*</span><span class="n">shipr</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pu</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+    <span class="c1"># dv</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">shipv</span><span class="p">)</span><span class="o">*</span><span class="n">shipv</span> \
+                <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">shipv</span><span class="p">)</span><span class="o">*</span><span class="n">shipr</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">shipr</span><span class="p">)</span><span class="o">*</span><span class="n">shipr</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">shipr</span><span class="p">)</span><span class="o">*</span><span class="n">shipv</span> \
+                <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">shipe</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="n">shipv</span><span class="o">*</span><span class="n">shipe</span><span class="o">**</span><span class="mi">2</span> \
+                <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span><span class="o">*</span><span class="n">shipe</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">*</span><span class="n">shipr</span><span class="o">*</span><span class="n">shipv</span><span class="o">*</span><span class="n">shipe</span> <span class="o">+</span> <span class="n">Pv</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+    <span class="c1"># dr</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> \
+                <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> \
+                <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> \
+                <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">ship</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pr</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+    <span class="c1"># dheading</span>
+    <span class="n">dship</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">shipr</span>
+    <span class="k">return</span> <span class="n">dship</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">euler2</span><span class="p">(</span><span class="n">xdot</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">delta_t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">xdot</span><span class="o">*</span><span class="n">delta_t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Param</span> <span class="o">=</span> <span class="n">Abkoitz_36Param</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
+<span class="n">predict</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ship</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;v&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="s2">&quot;rudder&quot;</span><span class="p">,</span><span class="s2">&quot;heading&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">predict</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ship</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+    <span class="n">rudder</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rudder</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="c1">#     rpm = choose.rpm[i]</span>
+<span class="c1">#     ship[5] = rpm</span>
+    <span class="n">ship</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">rudder</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">Abkowitz_36model</span><span class="p">(</span><span class="n">Param</span><span class="p">,</span> <span class="n">ship</span><span class="p">)</span>
+    <span class="n">ship</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">euler2</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">ship</span><span class="p">),</span> <span class="n">dt</span><span class="p">))</span>
+    <span class="n">predict</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ship</span><span class="p">)</span>
+<span class="n">predict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">predict</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;v&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="s2">&quot;rudder&quot;</span><span class="p">,</span><span class="s2">&quot;heading&quot;</span><span class="p">])</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>u</th>
+      <th>v</th>
+      <th>r</th>
+      <th>rudder</th>
+      <th>heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.003978</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.531089</td>
+      <td>0.531089</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.054838</td>
+      <td>0.032211</td>
+      <td>0.003978</td>
+      <td>-1.221162e-08</td>
+      <td>1.332594e-08</td>
+      <td>0.531089</td>
+      <td>0.532008</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.109646</td>
+      <td>0.064472</td>
+      <td>0.003978</td>
+      <td>-2.442325e-08</td>
+      <td>2.665188e-08</td>
+      <td>0.531089</td>
+      <td>0.532831</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.164427</td>
+      <td>0.096778</td>
+      <td>0.003978</td>
+      <td>-3.663487e-08</td>
+      <td>3.997782e-08</td>
+      <td>0.531089</td>
+      <td>0.533652</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.219182</td>
+      <td>0.129129</td>
+      <td>0.003978</td>
+      <td>-4.884650e-08</td>
+      <td>5.330376e-08</td>
+      <td>0.531089</td>
+      <td>0.534458</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2092</th>
+      <td>116.214405</td>
+      <td>1.948242</td>
+      <td>0.003995</td>
+      <td>-2.554642e-05</td>
+      <td>2.787780e-05</td>
+      <td>0.531089</td>
+      <td>0.498714</td>
+    </tr>
+    <tr>
+      <th>2093</th>
+      <td>116.270260</td>
+      <td>1.978659</td>
+      <td>0.003995</td>
+      <td>-2.555863e-05</td>
+      <td>2.789112e-05</td>
+      <td>0.531089</td>
+      <td>0.498714</td>
+    </tr>
+    <tr>
+      <th>2094</th>
+      <td>116.326114</td>
+      <td>2.009076</td>
+      <td>0.003995</td>
+      <td>-2.557085e-05</td>
+      <td>2.790445e-05</td>
+      <td>0.531089</td>
+      <td>0.498714</td>
+    </tr>
+    <tr>
+      <th>2095</th>
+      <td>116.381968</td>
+      <td>2.039493</td>
+      <td>0.003995</td>
+      <td>-2.558306e-05</td>
+      <td>2.791777e-05</td>
+      <td>0.531089</td>
+      <td>0.498714</td>
+    </tr>
+    <tr>
+      <th>2096</th>
+      <td>116.437822</td>
+      <td>2.069910</td>
+      <td>0.003995</td>
+      <td>-2.559527e-05</td>
+      <td>2.793110e-05</td>
+      <td>0.531089</td>
+      <td>0.498716</td>
+    </tr>
+  </tbody>
+</table>
+<p>2097 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">predict</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">predict</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;r.&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;b.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fea30ba4b20&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/icsos_18_1.png" src="../../../_images/icsos_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx1</span><span class="o">.</span><span class="n">heading</span><span class="p">,</span> <span class="s2">&quot;b.&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">heading</span><span class="p">,</span>  <span class="s2">&quot;r.&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">rudder</span><span class="p">,</span>  <span class="s2">&quot;k.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe9d01b0280&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/icsos_19_1.png" src="../../../_images/icsos_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx1</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">xx1</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;b.&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;r.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fea035aaac0&gt;]
+</pre></div>
+</div>
+<img alt="../../../_images/icsos_20_1.png" src="../../../_images/icsos_20_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="latest-square-fucntion-test">
+<h2>latest square fucntion test<a class="headerlink" href="#latest-square-fucntion-test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Xi</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">6.19</span><span class="p">,</span><span class="mf">2.51</span><span class="p">,</span><span class="mf">7.29</span><span class="p">,</span><span class="mf">7.01</span><span class="p">,</span><span class="mf">5.7</span><span class="p">,</span><span class="mf">2.66</span><span class="p">,</span><span class="mf">3.98</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">9.1</span><span class="p">,</span><span class="mf">4.2</span><span class="p">])</span>
+<span class="n">Yi</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.25</span><span class="p">,</span><span class="mf">2.83</span><span class="p">,</span><span class="mf">6.41</span><span class="p">,</span><span class="mf">6.71</span><span class="p">,</span><span class="mf">5.1</span><span class="p">,</span><span class="mf">4.23</span><span class="p">,</span><span class="mf">5.05</span><span class="p">,</span><span class="mf">1.98</span><span class="p">,</span><span class="mf">10.5</span><span class="p">,</span><span class="mf">6.3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 拟合函数</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">k</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">p</span>
+    <span class="k">return</span> <span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">b</span>
+
+<span class="c1"># 误差函数</span>
+<span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">Para</span> <span class="o">=</span> <span class="n">leastsq</span><span class="p">(</span><span class="n">error</span><span class="p">,</span><span class="n">p0</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">Xi</span><span class="p">,</span><span class="n">Yi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">Para</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;k=&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="s2">&quot;b=&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cost：&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Para</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&quot;x+&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k= 0.9004584204388926 b= 0.831055638876812
+cost：1
+y=0.9x+0.83
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span> <span class="c1">##指定图像比例： 8：6</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Xi</span><span class="p">,</span><span class="n">Yi</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+
+<span class="c1">#画拟合直线</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1">##在0-15直接画100个连续点</span>
+<span class="n">y</span><span class="o">=</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">b</span> <span class="c1">##函数式</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span> <span class="c1">#绘制图例</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/icsos_26_0.png" src="../../../_images/icsos_26_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./contents\students-phd\daiyong"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="daiyong_logbook_2021.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Research Logbook – Daiyong</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="mariner.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">MSS-Mariner python code</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Wengang Mao<br/>
+        
+            &copy; Copyright 2021-2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
