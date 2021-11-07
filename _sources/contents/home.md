@@ -5,12 +5,14 @@
 
 +++
 ---
-
+<!---
 
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
 
 
 ---
+
+--->
 
 We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
 The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
