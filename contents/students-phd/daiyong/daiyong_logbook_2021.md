@@ -6,6 +6,14 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ---
 
+
+```{admonition}  <span style = "color: red; font-weight: 600; font-size: 25px">PhD study KPI</span>
+<br />
+<span style = "color: red; font-weight: 400; font-size: 25px"> Consider and report during weekly meetings:</span> <br />
+<span style = "color: red; font-weight: 400; font-size: 25px"> 1, Hours of interation with colleagues (Fika, lunch, social chats,...) 1hour chat with neighbor<br /></span>
+<span style = "color: red; font-weight: 400; font-size: 25px">2, Hours of research (literature study, writing, coding, ...) 10hours coding, 10 hour 3d degsin 1 hour literature study<br /></span>
+```
+
 +++
 ---
 
@@ -15,6 +23,27 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 <span style = "color: blue; font-weight: 400; font-size: 20px">2, USV testing <br /></span>
 
 ```
+***
+## Week 45 -- (Meeting on 2021-11-08)
+---
+
+
+### Plan/action for Week 45
+1. Test the 2d and 3d with all the parameterse <span style = "background: yellow">[Next Monday, ongoing on 2021-11-15, when to start/finish?]<br /> </span>
+
+
+
+***
+## Week 44 -- (Meeting on 2021-11-01)
+---
+
+
+### Plan/action for Week 44
+1. Finish the Improvement for the Isochrones.  <span style = "background: yellow"><br /> </span>
+2. Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Monday]<br /> </span>
+
+
+
 
 ***
 ## Week 43 -- (Meeting on 2021-10-28)
@@ -25,7 +54,7 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 1. Finish the Improvement for the Isochrones.  <span style = "background: yellow">[Next Monday]<br /> </span>
 2. Further development and investigation of ISOCHONE method. Present the results next meeting.  <span style = "background: yellow">[Monday]<br /> </span>
 3. USV platform debugging, include the ui and data transmission<span style = "background: yellow">[Weekend????]<br /></span>
-4. Test the 2d and 3d with all the parameterse <span style = "background: yellow">[Next Monday, ongoing on 2021-10-28, when to start/finish?]<br /> </span>
+
 
 ***
 ## Week 42 -- (Meeting on 2021-10-18) 
