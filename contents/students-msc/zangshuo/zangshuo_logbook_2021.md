@@ -22,6 +22,20 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 
 
 ***
+
+---
+
+## Week 44 -- (Meeting on 2021-11-01)
+---
+
+
+### Plan/action for Week 41
+
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions  <span style = "background: yellow">[By 2021-11-07]</span> <br /></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Categorize various power systems with typical vehicle concepts/product<span style = "background: yelloe">[By 2021-11-08]</span> <br /></span>
+3. <span style = "font-weight: 400; font-size: 20px; color: blue">Study capability of different propulsion systems in Kw<br /></span>
+
+
 ---
 
 ## Week 42 -- (Meeting on 2021-10-18)
@@ -30,9 +44,9 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 
 ### Plan/action for Week 42
 
-1. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions  <span style = "background: yelloe">[By this weeek]</span> <br /></span>
-2. <span style = "font-weight: 400; font-size: 20px; color: blue">Introduction of various electric propulsion systems, such as conventional, shaftless, thrust propellers, etc. <span style = "background: yelloe">[By this weeek]</span> <br /></span>
-3. <span style = "font-weight: 400; font-size: 20px; color: blue">Review different propulsion systems<br /></span>
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions  <span style = "background: yellow">[By this weeek]</span> <br /></span>
+2. <strike>Introduction of various electric propulsion systems, such as conventional, shaftless, thrust propellers, etc. <span style = "background: yelloe">[By this weeek]</span> <br /></strike>
+3. <strike>Review different propulsion systems<br /></strike>
 4. <span style = "font-weight: 400; font-size: 20px"><strike>Submission to ISOPE conference [Done]</strike> <br /></span>
 
 

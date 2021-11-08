@@ -7,7 +7,7 @@ In order to build the markdown into html pages, you need to download:
 - jupter book (build html files from markdown files)
 - ghp-import  (upload html files onto Github to publish the website)
 
-Run the following steps to compile the Jupter book:
+Run the following steps to compile the Jupyter book:
 
 > 1. Go to upper level directory containing the "voysmart" folder
 > 2. Build the book by run "jupyter-book build voysmart" or "jb build voysmart"

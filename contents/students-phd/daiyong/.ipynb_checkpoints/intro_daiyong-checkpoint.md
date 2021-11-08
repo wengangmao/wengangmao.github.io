@@ -8,7 +8,7 @@
 Daiyong's project is funded by the E-Nav and other INNOVA/Chalmers projects. Daiyong zhang majors in Traffic and Transportation Engineering, he is a project assistant for the unmanned ship project, his current research focuses on the motion of the unmanned ship and Unmanned Surface Vessel Control.
 
 
-
+<!---
 ```{figure} ./images/daiyong.jpg 
 ---
 height: 300px
@@ -16,6 +16,8 @@ name: funding agencies
 alt: large funding agencies supporting our research
 ---
 ```
+
+--->
 
 <br />
 

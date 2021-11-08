@@ -17,8 +17,17 @@ Zhang Chi's project is funded by NSFC and CSC to develop methods for sustainable
 ***
 ## Chi's research tasks for his PhD study
 - **Voyage optimization algorithms**
+- **Risk assessment using Bayesian network**
 - **ARIMA model to predict arctic environments**
 - **Real time ice prediction and its application for arctic path planning**
+
+***
+## Week 44 -- (Meeting on 2021-11-01)
+---
+
+### Plan/action for Week 44
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Write VAR time series paper<br /> </span></span>
+2. <span style = "font-weight: 400; font-size: 20px; color: blue">Organize doc thesis<br /> </span></span>
 
 ***
 ## Week 43 -- (Meeting on 2021-10-28)
