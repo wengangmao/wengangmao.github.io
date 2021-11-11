@@ -1,8 +1,9 @@
-# R&D Activites and deadlines
+# **R&D Activites and deadlines**
 +++
+---
 
 This is just a simple memory notebook for myself. Regarding the research and work in details, please contact me by [email or phone](https://www.chalmers.se/en/staff/Pages/wengang-mao.aspx).
-
++++
 ---
 
 ## Notebook: work duties
@@ -30,7 +31,6 @@ This is just a simple memory notebook for myself. Regarding the research and wor
 
 ## Major projectdeliverables 
 
----
 
 ### EcoSail project
 - Completed on 2021-10-30

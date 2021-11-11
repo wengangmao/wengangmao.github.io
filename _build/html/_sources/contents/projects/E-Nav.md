@@ -19,6 +19,7 @@ alt: large funding agencies supporting our research
 
 <span style = "color:blue; font-weight: 500; font-size: 25px">Sail plan service and online training platform for the shipping industry</span>
 
++++
 ---
 
 

@@ -1,6 +1,7 @@
-# Shipping AI EEMs
+# **Vinnova - Shipping AI EEMs**
 
 +++
+---
 
 This project is funded by VINNOVA, jointed with Swedish Space Agency, FORMAS and Swedish Energy Agency! 
 
@@ -16,6 +17,7 @@ height: 200px
 
 <span style = "color:blue; font-weight: 500; font-size: 25px;">AI enhanced EEMs to reduce shipping emissions</span>
 
++++
 ---
 
 
@@ -32,6 +34,5 @@ Concerning that a ship’s energy consumption and performance is strongly affect
 - **Spatio-temporal model of metoceaen parameters for shipping**
 - **Develop AI based EEMs and digitalization**
 
-+++
 ---
 

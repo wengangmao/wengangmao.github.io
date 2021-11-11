@@ -6,7 +6,6 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 
 ---
 
-<<<<<<< HEAD
 
 ```{admonition}  <span style = "color: red; font-weight: 600; font-size: 25px">PhD study KPI</span>
 <br />
@@ -15,8 +14,6 @@ Platform for VoySmart team to communicate our research activities in weekly meet
 <span style = "color: red; font-weight: 400; font-size: 25px">2, Hours of research (literature study, writing, coding, ...) 10hours coding, 10 hour 3d degsin 1 hour literature study<br /></span>
 ```
 
-=======
->>>>>>> 5394e942e7b3702e63b3e72d00451099d98b8ff4
 +++
 ---
 
