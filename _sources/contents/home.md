@@ -10,7 +10,6 @@
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
 
 
----
 
 --->
 
@@ -32,7 +31,7 @@ name: directive-fig
 ```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Common issues in the upcoming month</span>
 
 <span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU workshop</span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences</span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences </span> <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">3, Dynamic ML modelling </span> <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">4, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br />
 
@@ -109,3 +108,5 @@ Phone: + 46 (0) 31 772 1483 <br />
 <i class="fas fa-map"></i>&ensp;Wuhan, China  <br />
 <i class="fas fa-shipping-fast"></i>&ensp;dawu#whut.endu.cn
 
++++
+---
