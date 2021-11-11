@@ -1,4 +1,4 @@
-# VIA Kaizen
+# **Trafikverket - VIA Kaizen**
 
 +++
 ---
@@ -19,6 +19,7 @@ alt: large funding agencies supporting our research
 
 <span style = "color:blue; font-weight: 500; font-size: 25px;">How do you realize the most energy-efficient ship trip in practice?</span>
 
++++
 ---
 
 
@@ -34,4 +35,5 @@ This project concerns R&D to develop, implement and evaluate (qualitative and qu
 - **Research on various method to predict a ship's fuel consumption and ETA**
 - **Investigate possible EEMs from dynamic performance models**
 
-***
++++
+---

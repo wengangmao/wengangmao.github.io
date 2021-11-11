@@ -1,4 +1,4 @@
-# Daiyong Zhang
+# **Daiyong Zhang**
 
 <span style = "color: blue; font-size: 20px; font-weight: 500">Planned PhD study: 2020-01 until 2023-12</span>
 
@@ -24,9 +24,9 @@ alt: large funding agencies supporting our research
 
 <span style = "color:red; font-weight: 500; font-size: 20px;">PhD topic: control and optimization algorithms for unmanned ship navigation</span>
 
++++
 ---
 
-***
 ## Daiyong's research tasks for his PhD study
 - **Sensitive study of different voyage optimization algorithm for path planning**
 - **Develop ship maneuverability model for unmanned ship navigation**

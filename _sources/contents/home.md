@@ -8,11 +8,7 @@
 
 
 <!---
-
 <center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
-
-
-
 --->
 
 We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
@@ -36,7 +32,6 @@ name: directive-fig
 <span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences </span> <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">3, Dynamic ML modelling </span> <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">4, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br />
-
 ```
 
 
@@ -57,12 +52,13 @@ name: directive-fig
 
 ## 3, Project related issues
 
-* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
-* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
-* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-10-20]</span> 
+* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022-04-01]</span> 
+* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-04-01]</span> 
+* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022]</span> 
 * Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
++++
 ---
 
 ## 4. Project report numbers at Chalmers (internal use)
@@ -78,15 +74,13 @@ name: directive-fig
 - ISEA: 30650011
 - ML+CFD: 30750025
 - AutoBarge: 30250036
-- AI EEMs:30250037
+- AI EEMs: 30250037
+
 
 +++
 ---
 
 ## Contact us for more information:
-
-+++
----
 
 ### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)</span>
 
@@ -110,5 +104,3 @@ Phone: + 46 (0) 31 772 1483 <br />
 <i class="fas fa-map"></i>&ensp;Wuhan, China  <br />
 <i class="fas fa-shipping-fast"></i>&ensp;dawu#whut.endu.cn
 
-+++
----

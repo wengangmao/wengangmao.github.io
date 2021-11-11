@@ -1,4 +1,4 @@
-# Lang Xiao
+# **Lang Xiao**
 <span style = "color: blue; font-size: 20px; font-weight: 500">Planned PhD study: 2018-10 until 2022-12</span>
 
 +++
@@ -20,16 +20,14 @@ alt: large funding agencies supporting our research
 
 <span style = "color:red; font-weight: 500; font-size: 20px;">PhD topic: machine learning methods for ship performance modeling</span>
 
++++
 ---
 
-***
+
 ## Xiao's research tasks for his PhD study
 - **Develop static ship performance models for voyage optimization**
 - **Develop dynamic ship performance models for ship performance monitoring**
 - **Exploit machine learning methods for sustainable shipping**
-
-
-***
 
 
 
@@ -41,6 +39,7 @@ alt: large funding agencies supporting our research
 3. Outgoing exchange/visit in 2019
 4. 3-4 journal papers (one more is needed)
 
++++
 ---
 
 ## List of publications and other achievements
@@ -53,8 +52,8 @@ alt: large funding agencies supporting our research
 ---
 ```
 
-***
-
++++
+---
 
 ## Project objective
 To increase energy efficiency is one of the most urgent tasks in today’s shipping industry. Various measures have been developed to help increase shipping energy efficiency. One of the most important elements for these measures is a reliable ship speed-power model, which can describe the influence of a ship’s energy performance in seaways. However, today’s models always contain large uncertainties that may hinder the development and evaluation of these measures. Therefore, the objective of this thesis is to develop such speed-power models especially applicable for ship voyage optimization. First, a semi-empirical model is proposed based on experimental tests. Then, a machine learning model (black box) is developed based on large amount of full-scale measurement. The effect of various performance models on a ship’s voyage optimization solutions has also been investigated. For the semi-empirical model, the formulas to estimate a ship’s added resistance in head waves are developed to better describe a ship’s hull forms and other main particulars.

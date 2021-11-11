@@ -1,4 +1,4 @@
-# Other projects
+# **Other projects**
 
 +++
 ---
@@ -15,6 +15,7 @@ Below I just list several of them which we are in charge of at least 1 WP at Cha
 * SPLINE, ASMAP -- develop ML based ship fuel consumption models funded by Chalmers AoA ICT
 * DEMOPS -- Ship performance models for energy efficiency measures funded by Lighthouse/Trafikverket (on-going)
 
++++
 ---
 
 
@@ -28,6 +29,7 @@ This area includes 1 project funded by Vinnova, 2 projects on control and optimi
 * STINT on sustinable arctic shipping (on-going)
 * Adlerbertska forskningsstiftelsen ML-CFD for maritime applications (on-going)
 
++++
 ---
 
 <br />
