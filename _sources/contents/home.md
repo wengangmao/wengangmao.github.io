@@ -31,13 +31,14 @@ name: directive-fig
 
 ```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Common issues in the upcoming month</span>
 
-<span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU workshop (deadline: 2021-09-30)</span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences (deadlines: 2021-9)</span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU workshop</span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences</span> <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">3, Dynamic ML modelling </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px"><strike>4, EcoSail 7th GA meeting 2021-10-25 to 10-27</strike></span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">4, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br />
 
 ```
-***
+
+
 
 ##  1, Objectives of our research activities
 - Develop models to estimate a ship's fuel consumption and maneuverability
