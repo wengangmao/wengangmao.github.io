@@ -32,6 +32,5 @@ Concerning that a ship’s energy consumption and performance is strongly affect
 - **Spatio-temporal model of metoceaen parameters for shipping**
 - **Develop AI based EEMs and digitalization**
 
-+++
 ---
 
