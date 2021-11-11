@@ -16,14 +16,16 @@ This is just a simple memory notebook for myself. Regarding the research and wor
 6. Code on stationary sea states
 7. <strike>Presentation on EcoSail project <span style = "background: yellow; color: blue">[2021-10-25]</span></strike>
 8. <strike>Collecting data for Vattenfall project</strike>
-9. Collecting AIS data for Chalmers project
+9. <strike>Collecting AIS data for Chalmers project</strike>
 10. Workshop for batteries
 11. <strike>Paper for HydroPower conference</strike>
-12. Data analysis for ships at hand
+12. <strike>Data analysis for ships at hand</strike>
 13. <strike>STINT finalization</strike>
 14. Investigation of ML + CFD
 15. Zero emission shipping presentation  <span style = "background: yellow; color: blue">[2021-11-27]</span>
-
+16. MSS workshop abstract submission
+17. E-Nav training platform
+18. Master Thesis work
 
 
 ## Major projectdeliverables 

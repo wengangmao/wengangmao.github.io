@@ -31,9 +31,10 @@ name: directive-fig
 
 ```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Common issues in the upcoming month</span>
 
-<span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU abstract (deadline: 2021-09-30)</span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU workshop (deadline: 2021-09-30)</span>  <br />
 <span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences (deadlines: 2021-9)</span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">3, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">3, Dynamic ML modelling </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"><strike>4, EcoSail 7th GA meeting 2021-10-25 to 10-27</strike></span> <br />
 
 ```
 ***
@@ -72,8 +73,10 @@ name: directive-fig
 - Chalmers Electrity: 30450814/30450811
 - DEMOPS: 30650006
 - VATTENFALL: 30224704
-- ISEA:30650011
-- ML+CFD: 30750025 
+- ISEA: 30650011
+- ML+CFD: 30750025
+- AutoBarge: 30250036
+- AI EEMs: 30250037
 
 +++
 ---

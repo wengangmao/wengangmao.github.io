@@ -2,7 +2,7 @@
 
 +++
 
-This project is funded by VINNOVA, jointed with Swedish Space Energy, FORMAS and Swedish Energy Agency! 
+This project is funded by VINNOVA, jointed with Swedish Space Agency, FORMAS and Swedish Energy Agency! 
 
 
 ```{figure} ./images/aieems.png 
