@@ -21,25 +21,26 @@ Electrifying ships is a promising solution to achieve the IMO zero emission regu
 | Writing the report/paper| 2021-09|<span style= 'background:yellow; color: blue; font-weight: 500'> 2022-01-10 </span>|
 
 
-***
 
++++
 ---
 
 ## Week 44 -- (Meeting on 2021-11-01)
 ---
 
 
-### Plan/action for Week 41
+### Plan/action for Week 44
 
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">Literature review on improvement of conventional propulsion systems for electric propulsions  <span style = "background: yellow">[By 2021-11-07]</span> <br /></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Categorize various power systems with typical vehicle concepts/product<span style = "background: yelloe">[By 2021-11-08]</span> <br /></span>
 3. <span style = "font-weight: 400; font-size: 20px; color: blue">Study capability of different propulsion systems in Kw<br /></span>
 
 
++++
 ---
 
 ## Week 42 -- (Meeting on 2021-10-18)
----
+
 
 
 ### Plan/action for Week 42

@@ -1,4 +1,4 @@
-# Zang Shuo
+# **Zang Shuo**
 <span style = "color: blue; font-size: 20px; font-weight: 500">Planned MSc study: 2020-09 until 2023-04</span>
 
 +++
@@ -20,16 +20,16 @@ alt: large funding agencies supporting our research
 
 <span style = "color:red; font-weight: 500; font-size: 20px;">MSc topic: optimization and electrifying inland ships</span>
 
++++
 ---
 
-***
+
 ## Zang Shuo's research tasks for his MSc study
 - **Review electric ship propulsion systems**
 - **Review electric power management systems**
 - **Simulation platform for electric ships**
 
 
-***
 
 
 
