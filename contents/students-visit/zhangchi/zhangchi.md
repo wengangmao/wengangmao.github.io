@@ -26,6 +26,13 @@ Zhang Chi's project is funded by NSFC and CSC to develop methods for sustainable
 ---
 
 ### Plan/action for Week 44
+1. <span style = "font-weight: 400; font-size: 20px; color: blue">Write VAR time series part of doc thesis<br /> </span></span>
+
+***
+## Week 44 -- (Meeting on 2021-11-01)
+---
+
+### Plan/action for Week 44
 1. <span style = "font-weight: 400; font-size: 20px; color: blue">Write VAR time series paper<br /> </span></span>
 2. <span style = "font-weight: 400; font-size: 20px; color: blue">Organize doc thesis<br /> </span></span>
 
