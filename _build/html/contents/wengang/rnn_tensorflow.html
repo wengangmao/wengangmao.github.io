@@ -1,613 +1,515 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Tensorflow: vattenfall &#8212; Energy Efficiency Shipping</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/wengang/rnn_tensorflow';</script>
     <link rel="canonical" href="https://voysmart.eu/contents/wengang/rnn_tensorflow.html" />
     <link rel="shortcut icon" href="../../_static/voysmart_favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="RNN for vattenfall by Colab" href="Keras_LSTM.html" />
     <link rel="prev" title="R&amp;D Activites and deadlines" href="work_plan.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/voysmart.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Energy Efficiency Shipping</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   <span style="color:red; font-weight: 500">
-    Teamwork Logbook
-   </span>
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  RESEARCH PROJECT
- </span>
-</p>
+    
+    
+    <img src="../../_static/voysmart.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/voysmart.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    <span style = "color:red; font-weight: 500">Teamwork Logbook</span>
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">RESEARCH PROJECT</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/ecosail.html">
-   Ecosail 2018-2021
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/E-Nav.html">
-   E-Nav 2019-2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/viakaizen.html">
-   VIA Kaizen 2020-2022
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/autobarge.html">
-   Autobarge 2022-2025
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/shippingaieems.html">
-   Shipping AI EEMs 2021-2024
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../projects/others.html">
-   Other projects
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/ecosail.html">Ecosail 2018-2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/E-Nav.html">E-Nav 2019-2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/viakaizen.html">VIA Kaizen 2020-2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/autobarge.html">Autobarge 2022-2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/shippingaieems.html">Shipping AI EEMs 2021-2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/others.html">Other projects</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  TEAMWORK LOGBOOK
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TEAMWORK LOGBOOK</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../dawu/intro_dawu.html">
-   Dr. Da Wu
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../students-phd/langxiao/intro_xiao.html">
-   Xiao PhD Research
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-phd/langxiao/langxiao_logbook_2021.html">
-     Research Logbook 2021
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-phd/langxiao/langxiao_research.html">
-     Research achievements
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../students-phd/martin/martin.html">
-   Martin PhD logbook 2021
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../students-phd/daiyong/intro_daiyong.html">
-   Daiyong PhD Research
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-phd/daiyong/icsos.html">
-     ICSOS paper
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-phd/daiyong/mariner.html">
-     MSS-mariner
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../students-visit/zhangchi/zhangchi.html">
-   Zhangchi visiting 2021
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../students-msc/zangshuo/intro_zangshuo.html">
-   Zangshuo MSc study
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-msc/zangshuo/zangshuo_logbook_2021.html">
-     Logbook 2021
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../students-msc/zangshuo/zangshuo_research.html">
-     Research results
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../dawu/intro_dawu.html">Dr. Da Wu</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../students-phd/langxiao/intro_xiao.html">Xiao PhD Research</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../students-phd/langxiao/langxiao_logbook_2021.html">Research Logbook 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../students-phd/langxiao/langxiao_research.html">Research achievements</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  R&amp;D - WENGANG (毛文刚)
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../students-phd/martin/martin.html">Martin PhD logbook 2021</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../students-phd/daiyong/intro_daiyong.html">Daiyong PhD Research</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../students-phd/daiyong/icsos.html">ICSOS paper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../students-phd/daiyong/mariner.html">MSS-mariner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../students-visit/zhangchi/zhangchi.html">Zhangchi visiting 2021</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../students-msc/zangshuo/intro_zangshuo.html">Zangshuo MSc study</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../students-msc/zangshuo/zangshuo_logbook_2021.html">Logbook 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../students-msc/zangshuo/zangshuo_research.html">Research results</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R&amp;D - WENGANG (毛文刚)</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="research_ideas.html">
-   Research outlook
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="work_plan.html">
-   Activities and Deadlines
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Tensorflow: vattenfall
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Keras_LSTM.html">
-   Vattenfall by LSTM
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code_experiences.html">
-   Code solutions
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="research_ideas.html">Research outlook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="work_plan.html">Activities and Deadlines</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tensorflow: vattenfall</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Keras_LSTM.html">Vattenfall by LSTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_experiences.html">Code solutions</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  PUBLICATIONS
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PUBLICATIONS</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../references/working/ongoing.html">
-   Working articles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../references/published/published.html">
-   Published articles
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../references/working/ongoing.html">Working articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/published/published.html">Published articles</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Visit our <a href="https://github.com/wengangmao/voysmart">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/contents/wengang/rnn_tensorflow.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/wengangmao/voysmart"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/wengangmao/voysmart/issues/new?title=Issue%20on%20page%20%2Fcontents/wengang/rnn_tensorflow.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/wengangmao/voysmart/edit/master/./contents/wengang/rnn_tensorflow.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://wengangmao.github.io/hub/user-redirect/git-pull?repo=https%3A//github.com/wengangmao/voysmart&urlpath=tree/voysmart/./contents/wengang/rnn_tensorflow.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/wengangmao/voysmart/master?urlpath=tree/./contents/wengang/rnn_tensorflow.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://wengangmao.github.io/voysmart//hub/user-redirect/git-pull?repo=https://github.com/wengangmao/voysmart&urlpath=tree/voysmart/./contents/wengang/rnn_tensorflow.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/voysmart" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/voysmart/edit/master/./contents/wengang/rnn_tensorflow.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/voysmart/issues/new?title=Issue%20on%20page%20%2Fcontents/wengang/rnn_tensorflow.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/contents/wengang/rnn_tensorflow.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tensorflow: vattenfall</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tensorflow: vattenfall
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-the-data">
-     1, Load the data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">
-     2, Preprocessing data: normalize, train, validation, test, etc.
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">
-       2.1, resample the data with low-resolution
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence">
-       2.2, autocorrelation function (ACF) and (PACF) to check time dependence
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#crossing-autocorrelationship-for-various-parameters">
-       2.3 crossing autocorrelationship for various parameters
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#normalize-the-data">
-       2.4, normalize the data
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">
-     3, Understand the dataset construction and build basic models (treated as independent dataset)
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">
-       3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span">
-     <span style="color:blue; font-size:25px">
-      <strong>
-       4, Dataset (rolling/windowed dataset) for time series analysis
-      </strong>
-     </span>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#read-data-into-the-data-class">
-       4.1, Read data into the data class
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#check-the-constructed-basic-dataset-class">
-       4.2, Check the constructed basic dataset class
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span">
-       <span style="color:blue; font-size:25px">
-        <strong>
-         4.3, Formulate train, test, validation datasets in the data structure
-        </strong>
-       </span>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">
-     5,
-     <strong>
-      Single step model: $
-      <span class="math notranslate nohighlight">
-       \(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)
-      </span>
-      $
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#baseline-and-linear-models">
-       5.1, Baseline and linear models
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#test-1-narrow-window-dataset-single-output-window">
-         Test 1: narrow window dataset (single output window)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#test-2-wide-output-window">
-         Test 2: wide output window
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">
-       5.2, Linear model with narrow window dataset
-       <span style="background: yellow">
-        ”WindowGenerator(input_width=1, label_width=1, shift=1)”
-       </span>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">
-       5.3, linear model for wide window data inputs
-       <span style="background: yellow">
-        ”WindowGenerator(input_width=300, label_width=300, shift=1)”
-       </span>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dense-model-multiple-layers-and-activation-function">
-       5.4, Dense model (multiple layers and activation function)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">
-     6,
-     <strong>
-      CNN Model construction for
-      <span class="math notranslate nohighlight">
-       \(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)
-      </span>
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#set-up-the-convolutional-neuron-network-cnn-dataset">
-       6.1, Set up the convolutional neuron network (CNN) dataset.
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#test-for-the-multiple-steps-model-model">
-       6.2, Test for the “multiple-steps model” model
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#convolutional-neuron-network">
-       6.3, Convolutional Neuron Network:
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       6.4, Convolutional Neuron Network
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recurrent-neuron-network-rnn">
-       6.5 Recurrent Neuron Network (RNN)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multi-step-output-models">
-   7. Multi-step output models
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generate-the-dataset-for-the-modelling">
-     7.1, Generate the dataset for the modelling
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#illustration-of-various-models-for-single-shot-prediction">
-     7.2 Illustration of various models for single-shot prediction
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#linear-and-dense-model">
-       7.2.1, Linear and dense model
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cnn-model-with-conv-length">
-       7.2.2, CNN model with conv length
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#rnn-lstm-model">
-       7.3.3, RNN (LSTM) model
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#illustration-of-autoregressive-rnn-model">
-     7.3 Illustration of autoregressive RNN model
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tensorflow: vattenfall</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1, Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">2, Preprocessing data: normalize, train, validation, test, etc.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">2.1, resample the data with low-resolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence">2.2, autocorrelation function (ACF) and (PACF) to check time dependence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crossing-autocorrelationship-for-various-parameters">2.3 crossing autocorrelationship for various parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalize-the-data">2.4, normalize the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">3, Understand the dataset construction and build basic models (treated as independent dataset)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span"><span style="color:blue; font-size:25px"> <strong>4, Dataset (rolling/windowed dataset) for time series analysis</strong></span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-data-into-the-data-class">4.1, Read data into the data class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-constructed-basic-dataset-class">4.2, Check the constructed basic dataset class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span"><span style="color:blue; font-size:25px"> <strong>4.3, Formulate train, test, validation datasets in the data structure</strong></span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">5, <strong>Single step model: $<span class="math notranslate nohighlight">\(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)</span>$</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline-and-linear-models">5.1, Baseline and linear models</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1-narrow-window-dataset-single-output-window">Test 1: narrow window dataset (single output window)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2-wide-output-window">Test 2: wide output window</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">5.2, Linear model with narrow window dataset <span style="background: yellow">”WindowGenerator(input_width=1, label_width=1, shift=1)”</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">5.3, linear model for wide window data inputs <span style="background: yellow">”WindowGenerator(input_width=300, label_width=300, shift=1)”</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dense-model-multiple-layers-and-activation-function">5.4, Dense model (multiple layers and activation function)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">6, <strong>CNN Model construction for <span class="math notranslate nohighlight">\(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)</span></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-convolutional-neuron-network-cnn-dataset">6.1, Set up the convolutional neuron network (CNN) dataset.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-for-the-multiple-steps-model-model">6.2, Test for the “multiple-steps model” model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convolutional-neuron-network">6.3, Convolutional Neuron Network:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.4, Convolutional Neuron Network</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recurrent-neuron-network-rnn">6.5 Recurrent Neuron Network (RNN)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-step-output-models">7. Multi-step output models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-dataset-for-the-modelling">7.1, Generate the dataset for the modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-of-various-models-for-single-shot-prediction">7.2 Illustration of various models for single-shot prediction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-and-dense-model">7.2.1, Linear and dense model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn-model-with-conv-length">7.2.2, CNN model with conv length</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rnn-lstm-model">7.3.3, RNN (LSTM) model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-of-autoregressive-rnn-model">7.3 Illustration of autoregressive RNN model</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="tensorflow-vattenfall">
-<h1>Tensorflow: vattenfall<a class="headerlink" href="#tensorflow-vattenfall" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tensorflow-vattenfall">
+<h1>Tensorflow: vattenfall<a class="headerlink" href="#tensorflow-vattenfall" title="Permalink to this heading">#</a></h1>
 <p><strong>Deep learning to model transient dynamics of hydro Turbine</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,8 +528,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="load-the-data">
-<h2>1, Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this headline">¶</a></h2>
+<section id="load-the-data">
+<h2>1, Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from tensorflow import keras</span>
@@ -665,16 +567,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_4_0.png" src="../../_images/rnn_tensorflow_4_0.png" />
+<img alt="../../_images/074942b1974b08904ee21f220d2e60a8ca5d049ed597bc32250591e10e3e7fdd.png" src="../../_images/074942b1974b08904ee21f220d2e60a8ca5d049ed597bc32250591e10e3e7fdd.png" />
 <p><span style="color:blue;font-size:50px"><strong>Lets take a close look at the time series.</strong></span></p>
-<img alt="../../_images/rnn_tensorflow_4_2.png" src="../../_images/rnn_tensorflow_4_2.png" />
+<img alt="../../_images/a4643e4bd03a9428abc339b78f11fd2c75bb26db48633fe6653558a225cf3f6b.png" src="../../_images/a4643e4bd03a9428abc339b78f11fd2c75bb26db48633fe6653558a225cf3f6b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="preprocessing-data-normalize-train-validation-test-etc">
-<h2>2, Preprocessing data: normalize, train, validation, test, etc.<a class="headerlink" href="#preprocessing-data-normalize-train-validation-test-etc" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="resample-the-data-with-low-resolution">
-<h3>2.1, resample the data with low-resolution<a class="headerlink" href="#resample-the-data-with-low-resolution" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="preprocessing-data-normalize-train-validation-test-etc">
+<h2>2, Preprocessing data: normalize, train, validation, test, etc.<a class="headerlink" href="#preprocessing-data-normalize-train-validation-test-etc" title="Permalink to this heading">#</a></h2>
+<section id="resample-the-data-with-low-resolution">
+<h3>2.1, resample the data with low-resolution<a class="headerlink" href="#resample-the-data-with-low-resolution" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">]][</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span><span class="mi">100</span><span class="p">]</span>
@@ -696,9 +598,9 @@
 </div>
 <div class="cell_output docutils container">
 <p><span style="color:red; font-size:30px"><strong>No. of the values in the training dataset is: 1967</strong></span></p>
-<img alt="../../_images/rnn_tensorflow_7_1.png" src="../../_images/rnn_tensorflow_7_1.png" />
+<img alt="../../_images/92cfbe45a1cbfa5ba34d1d32492b48bc13d28082830a0767e8129a4733c851c6.png" src="../../_images/92cfbe45a1cbfa5ba34d1d32492b48bc13d28082830a0767e8129a4733c851c6.png" />
 <p><span style="color:blue; font-size:20px"><strong>Plot the heatmap for variation of standard deviation</strong></span></p>
-<img alt="../../_images/rnn_tensorflow_7_3.png" src="../../_images/rnn_tensorflow_7_3.png" />
+<img alt="../../_images/6fed4290604a04c2453af9d5dd08d852e8fae7aa44505203b6f160e5732e85b0.png" src="../../_images/6fed4290604a04c2453af9d5dd08d852e8fae7aa44505203b6f160e5732e85b0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -732,7 +634,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x28253e14520&gt;
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_8_1.png" src="../../_images/rnn_tensorflow_8_1.png" />
+<img alt="../../_images/c3c3579c69d1163829bfb0d3a5b7ea529c45ef96e4a58e7dbf1f8885df8accb8.png" src="../../_images/c3c3579c69d1163829bfb0d3a5b7ea529c45ef96e4a58e7dbf1f8885df8accb8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -752,9 +654,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="autocorrelation-function-acf-and-pacf-to-check-time-dependence">
-<h3>2.2, autocorrelation function (ACF) and (PACF) to check time dependence<a class="headerlink" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="autocorrelation-function-acf-and-pacf-to-check-time-dependence">
+<h3>2.2, autocorrelation function (ACF) and (PACF) to check time dependence<a class="headerlink" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">autocorr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -788,12 +690,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_11_0.png" src="../../_images/rnn_tensorflow_11_0.png" />
+<img alt="../../_images/2b4d774bba8726b9a1d030330a1011f119681c09393abfb58ebf515bd293a02c.png" src="../../_images/2b4d774bba8726b9a1d030330a1011f119681c09393abfb58ebf515bd293a02c.png" />
 </div>
 </div>
-</div>
-<div class="section" id="crossing-autocorrelationship-for-various-parameters">
-<h3>2.3 crossing autocorrelationship for various parameters<a class="headerlink" href="#crossing-autocorrelationship-for-various-parameters" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="crossing-autocorrelationship-for-various-parameters">
+<h3>2.3 crossing autocorrelationship for various parameters<a class="headerlink" href="#crossing-autocorrelationship-for-various-parameters" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NB: we have resampled the data for the autocorreltion analysis</span>
@@ -838,7 +740,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_13_0.png" src="../../_images/rnn_tensorflow_13_0.png" />
+<img alt="../../_images/c91961a0b4bea9a035a4e6bfe35b9f50808006e9c0f70446da23b931715f2742.png" src="../../_images/c91961a0b4bea9a035a4e6bfe35b9f50808006e9c0f70446da23b931715f2742.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -887,12 +789,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_14_0.png" src="../../_images/rnn_tensorflow_14_0.png" />
+<img alt="../../_images/09fc58a8cf491be0bf7bc033731578d9776ca8c8888b138e64fffaf46e3f3799.png" src="../../_images/09fc58a8cf491be0bf7bc033731578d9776ca8c8888b138e64fffaf46e3f3799.png" />
 </div>
 </div>
-</div>
-<div class="section" id="normalize-the-data">
-<h3>2.4, normalize the data<a class="headerlink" href="#normalize-the-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="normalize-the-data">
+<h3>2.4, normalize the data<a class="headerlink" href="#normalize-the-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, we assume all data are used for the training (the time series is not that stationary for the prediction)</span>
@@ -911,8 +813,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_16_0.png" src="../../_images/rnn_tensorflow_16_0.png" />
-<img alt="../../_images/rnn_tensorflow_16_1.png" src="../../_images/rnn_tensorflow_16_1.png" />
+<img alt="../../_images/41298cde8fb54ed2e1618832983baf3d89e852ee140346dcbd48c94abc95b9f6.png" src="../../_images/41298cde8fb54ed2e1618832983baf3d89e852ee140346dcbd48c94abc95b9f6.png" />
+<img alt="../../_images/a1f871a7aadee50df62626f7f11ac4ea138bc1ec2d9b1261faf016410add3c6d.png" src="../../_images/a1f871a7aadee50df62626f7f11ac4ea138bc1ec2d9b1261faf016410add3c6d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -943,10 +845,10 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">
-<h2>3, Understand the dataset construction and build basic models (treated as independent dataset)<a class="headerlink" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">
+<h2>3, Understand the dataset construction and build basic models (treated as independent dataset)<a class="headerlink" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature_keys</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">):</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span><span class="mi">100</span><span class="p">]</span>
@@ -1100,7 +1002,7 @@ Epoch 10/10
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_23_0.png" src="../../_images/rnn_tensorflow_23_0.png" />
+<img alt="../../_images/8ce08355ff61ec6cf407d0383bf0c1cb752fcf0fa1d72d621d12c942c98dd194.png" src="../../_images/8ce08355ff61ec6cf407d0383bf0c1cb752fcf0fa1d72d621d12c942c98dd194.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1149,8 +1051,8 @@ Epoch 10/10
 </div>
 </div>
 </div>
-<div class="section" id="understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">
-<h3>3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4<a class="headerlink" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4" title="Permalink to this headline">¶</a></h3>
+<section id="understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">
+<h3>3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4<a class="headerlink" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># split the time series of data into train (70%), test (20%) and validation (10%)</span>
@@ -1200,15 +1102,15 @@ Epoch 10/10
  Text(0, 4.0, &#39;4.0&#39;)]
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_26_2.png" src="../../_images/rnn_tensorflow_26_2.png" />
+<img alt="../../_images/70a38d599e72f4141292a3e41c39ff7b93d99169267ace44e6459fcfa8473f07.png" src="../../_images/70a38d599e72f4141292a3e41c39ff7b93d99169267ace44e6459fcfa8473f07.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span">
-<h2><span style ="color:blue; font-size:25px"> <strong>4, Dataset (rolling/windowed dataset) for time series analysis</strong></span><a class="headerlink" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="read-data-into-the-data-class">
-<h3>4.1, Read data into the data class<a class="headerlink" href="#read-data-into-the-data-class" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span">
+<h2><span style ="color:blue; font-size:25px"> <strong>4, Dataset (rolling/windowed dataset) for time series analysis</strong></span><a class="headerlink" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span" title="Permalink to this heading">#</a></h2>
+<section id="read-data-into-the-data-class">
+<h3>4.1, Read data into the data class<a class="headerlink" href="#read-data-into-the-data-class" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4.1.1, Indexes and offsets</span>
@@ -1309,9 +1211,9 @@ Epoch 10/10
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="check-the-constructed-basic-dataset-class">
-<h3>4.2, Check the constructed basic dataset class<a class="headerlink" href="#check-the-constructed-basic-dataset-class" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="check-the-constructed-basic-dataset-class">
+<h3>4.2, Check the constructed basic dataset class<a class="headerlink" href="#check-the-constructed-basic-dataset-class" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test of windowed dataset </span>
@@ -1351,12 +1253,12 @@ Labels shape: (3, 1, 5)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_32_0.png" src="../../_images/rnn_tensorflow_32_0.png" />
+<img alt="../../_images/dd18fc1c94b25f3a2aeee58df8a7294314733491bff1588368de947ef2448d03.png" src="../../_images/dd18fc1c94b25f3a2aeee58df8a7294314733491bff1588368de947ef2448d03.png" />
 </div>
 </div>
-</div>
-<div class="section" id="span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span">
-<h3><span style ="color:blue; font-size:25px"> <strong>4.3, Formulate train, test, validation datasets in the data structure</strong></span><a class="headerlink" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span">
+<h3><span style ="color:blue; font-size:25px"> <strong>4.3, Formulate train, test, validation datasets in the data structure</strong></span><a class="headerlink" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
@@ -1433,30 +1335,30 @@ Labels shape (batch, time, features): (32, 1, 5)
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">
-<h2>5, <strong>Single step model: $<span class="math notranslate nohighlight">\(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)</span>$</strong><a class="headerlink" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="baseline-and-linear-models">
-<h3>5.1, Baseline and linear models<a class="headerlink" href="#baseline-and-linear-models" title="Permalink to this headline">¶</a></h3>
-<table class="colwidths-auto table">
+</section>
+</section>
+<section id="single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">
+<h2>5, <strong>Single step model: $<span class="math notranslate nohighlight">\(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)</span>$</strong><a class="headerlink" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2" title="Permalink to this heading">#</a></h2>
+<section id="baseline-and-linear-models">
+<h3>5.1, Baseline and linear models<a class="headerlink" href="#baseline-and-linear-models" title="Permalink to this heading">#</a></h3>
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><span style = "color: red; font-weight: 500; font-size: 20px"> Baseline narrow window </span></p></th>
-<th class="text-align:center head"><p><span style = "color: red; font-weight: 500; font-size: 20px">Baseline wide window </span></p></th>
-<th class="text-align:center head"><p><span style = "color: blue; font-weight: 500; font-size: 20px">Linear model with narrow window</span></p></th>
-<th class="text-align:center head"><p><span style = "color: blue; font-weight: 500; font-size: 20px"> Linear model with wide window </span></p></th>
+<tr class="row-odd"><th class="head text-center"><p><span style = "color: red; font-weight: 500; font-size: 20px"> Baseline narrow window </span></p></th>
+<th class="head text-center"><p><span style = "color: red; font-weight: 500; font-size: 20px">Baseline wide window </span></p></th>
+<th class="head text-center"><p><span style = "color: blue; font-weight: 500; font-size: 20px">Linear model with narrow window</span></p></th>
+<th class="head text-center"><p><span style = "color: blue; font-weight: 500; font-size: 20px"> Linear model with wide window </span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><img alt="baseline" src="contents/wengang/images/baseline.png" /></p></td>
-<td class="text-align:center"><p><img alt="baselinenarrow" src="contents/wengang/images/baseline_wide_window.png" /></p></td>
-<td class="text-align:center"><p><img alt="linenarrow" src="contents/wengang/images/linear_narrow_window.png" /></p></td>
-<td class="text-align:center"><p><img alt="linewide" src="contents/wengang/images/linear_wide_window.png" /></p></td>
+<tr class="row-even"><td class="text-center"><p><img alt="baseline" src="contents/wengang/images/baseline.png" /></p></td>
+<td class="text-center"><p><img alt="baselinenarrow" src="contents/wengang/images/baseline_wide_window.png" /></p></td>
+<td class="text-center"><p><img alt="linenarrow" src="contents/wengang/images/linear_narrow_window.png" /></p></td>
+<td class="text-center"><p><img alt="linewide" src="contents/wengang/images/linear_wide_window.png" /></p></td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="test-1-narrow-window-dataset-single-output-window">
-<h4>Test 1: narrow window dataset (single output window)<a class="headerlink" href="#test-1-narrow-window-dataset-single-output-window" title="Permalink to this headline">¶</a></h4>
+<section id="test-1-narrow-window-dataset-single-output-window">
+<h4>Test 1: narrow window dataset (single output window)<a class="headerlink" href="#test-1-narrow-window-dataset-single-output-window" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the first dataset (all features as output)</span>
@@ -1535,9 +1437,9 @@ Labels shape (batch, time, features): (32, 1, 1)
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="test-2-wide-output-window">
-<h4>Test 2: wide output window<a class="headerlink" href="#test-2-wide-output-window" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="test-2-wide-output-window">
+<h4>Test 2: wide output window<a class="headerlink" href="#test-2-wide-output-window" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wide_window</span> <span class="o">=</span> <span class="n">WindowGenerator</span><span class="p">(</span>
@@ -1550,7 +1452,7 @@ Labels shape (batch, time, features): (32, 1, 1)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_43_0.png" src="../../_images/rnn_tensorflow_43_0.png" />
+<img alt="../../_images/4622615ac04bd36c53671f78ef023359d8a878469a5cb53783cb7e73a14f8be1.png" src="../../_images/4622615ac04bd36c53671f78ef023359d8a878469a5cb53783cb7e73a14f8be1.png" />
 </div>
 </div>
 <p><strong>From above analysis, it should be remarked</strong></p>
@@ -1558,10 +1460,10 @@ Labels shape (batch, time, features): (32, 1, 1)
 <li><p>it is important to keep “baseline = Baseline(label_index=single_step_window.column_indices[‘head_gross’])”</p></li>
 <li><p>the index should be the same as the WindowGenerator function!!***</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">
-<h3>5.2, Linear model with narrow window dataset <span style = "background: yellow">”WindowGenerator(input_width=1, label_width=1, shift=1)”</span><a class="headerlink" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">
+<h3>5.2, Linear model with narrow window dataset <span style = "background: yellow">”WindowGenerator(input_width=1, label_width=1, shift=1)”</span><a class="headerlink" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define linear model from the package</span>
@@ -1586,7 +1488,7 @@ Labels shape (batch, time, features): (32, 1, 1)
 Output shape: (32, 1, 1)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_46_1.png" src="../../_images/rnn_tensorflow_46_1.png" />
+<img alt="../../_images/a3b489a4b27b0ae14e00f0c3bc10f0ab48dcb61f153781cace5710c3b047d940.png" src="../../_images/a3b489a4b27b0ae14e00f0c3bc10f0ab48dcb61f153781cace5710c3b047d940.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1646,12 +1548,12 @@ Epoch 3/3
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;NB: the linear model is the same as the optimized in the history, which is diferent from the above one using only one running&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_48_1.png" src="../../_images/rnn_tensorflow_48_1.png" />
+<img alt="../../_images/1c19d71f649481e241775938cbaca899788d0d5bc7797d71115a1f08bd076316.png" src="../../_images/1c19d71f649481e241775938cbaca899788d0d5bc7797d71115a1f08bd076316.png" />
 </div>
 </div>
-</div>
-<div class="section" id="linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">
-<h3>5.3, linear model for wide window data inputs <span style = "background: yellow">”WindowGenerator(input_width=300, label_width=300, shift=1)”</span><a class="headerlink" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">
+<h3>5.3, linear model for wide window data inputs <span style = "background: yellow">”WindowGenerator(input_width=300, label_width=300, shift=1)”</span><a class="headerlink" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the result to check the linear model</span>
@@ -1680,13 +1582,13 @@ Epoch 3/3
 Output shape: (32, 320, 1)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_50_1.png" src="../../_images/rnn_tensorflow_50_1.png" />
-<img alt="../../_images/rnn_tensorflow_50_2.png" src="../../_images/rnn_tensorflow_50_2.png" />
+<img alt="../../_images/8397505e174454ca0fa2f340c5209b59b42643ab41683c28047205a29564aedd.png" src="../../_images/8397505e174454ca0fa2f340c5209b59b42643ab41683c28047205a29564aedd.png" />
+<img alt="../../_images/e5e1234010f5d4642b9769bc84f9c8c3982a0f4ea6919bca3f43fe7a29f776a6.png" src="../../_images/e5e1234010f5d4642b9769bc84f9c8c3982a0f4ea6919bca3f43fe7a29f776a6.png" />
 </div>
 </div>
-</div>
-<div class="section" id="dense-model-multiple-layers-and-activation-function">
-<h3>5.4, Dense model (multiple layers and activation function)<a class="headerlink" href="#dense-model-multiple-layers-and-activation-function" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dense-model-multiple-layers-and-activation-function">
+<h3>5.4, Dense model (multiple layers and activation function)<a class="headerlink" href="#dense-model-multiple-layers-and-activation-function" title="Permalink to this heading">#</a></h3>
 <p><img alt="dense_dataset" src="contents/wengang/images/dense_dataset.png" /></p>
 <p><strong>Multi-step dense dataset structure</strong></p>
 <div class="cell docutils container">
@@ -1728,15 +1630,15 @@ Epoch 3/3
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2825537bf40&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_52_2.png" src="../../_images/rnn_tensorflow_52_2.png" />
+<img alt="../../_images/b58bb60cf7b06072e281be0d7273b6b4391768bd605c6a714d7e4e17e479f965.png" src="../../_images/b58bb60cf7b06072e281be0d7273b6b4391768bd605c6a714d7e4e17e479f965.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">
-<h2>6, <strong>CNN Model construction for <span class="math notranslate nohighlight">\(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)</span></strong><a class="headerlink" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="set-up-the-convolutional-neuron-network-cnn-dataset">
-<h3>6.1, Set up the convolutional neuron network (CNN) dataset.<a class="headerlink" href="#set-up-the-convolutional-neuron-network-cnn-dataset" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">
+<h2>6, <strong>CNN Model construction for <span class="math notranslate nohighlight">\(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)</span></strong><a class="headerlink" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3" title="Permalink to this heading">#</a></h2>
+<section id="set-up-the-convolutional-neuron-network-cnn-dataset">
+<h3>6.1, Set up the convolutional neuron network (CNN) dataset.<a class="headerlink" href="#set-up-the-convolutional-neuron-network-cnn-dataset" title="Permalink to this heading">#</a></h3>
 <p><img alt="RNN_Data_Structrue" src="contents/wengang/images/cnn_dataset.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1767,12 +1669,12 @@ Label column name(s): [&#39;head_gross&#39;]
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Given 3 hours of inputs, predict 1 hour into the future.&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_55_2.png" src="../../_images/rnn_tensorflow_55_2.png" />
+<img alt="../../_images/50bb6a7f845204c535e2eda9746d76624f5a572645cc6ed4b1762c242937f5f6.png" src="../../_images/50bb6a7f845204c535e2eda9746d76624f5a572645cc6ed4b1762c242937f5f6.png" />
 </div>
 </div>
-</div>
-<div class="section" id="test-for-the-multiple-steps-model-model">
-<h3>6.2, Test for the “multiple-steps model” model<a class="headerlink" href="#test-for-the-multiple-steps-model-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-for-the-multiple-steps-model-model">
+<h3>6.2, Test for the “multiple-steps model” model<a class="headerlink" href="#test-for-the-multiple-steps-model-model" title="Permalink to this heading">#</a></h3>
 <p>(Using CNN data structure) – <span style = "color: blue; font-size: 20px"> Narrow window: input_width = 3</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1797,7 +1699,7 @@ Label column name(s): [&#39;head_gross&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/rnn_tensorflow_57_0.png" src="../../_images/rnn_tensorflow_57_0.png" />
+<img alt="../../_images/042f9fc11e86b4694c7ed1028fcc21681fd17319bfe00c6fb2bd0cd1ab2eb153.png" src="../../_images/042f9fc11e86b4694c7ed1028fcc21681fd17319bfe00c6fb2bd0cd1ab2eb153.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1823,12 +1725,12 @@ Label column name(s): [&#39;head_gross&#39;]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 5s 2ms/step - loss: 0.0028 - mean_absolute_error: 0.0424
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_58_1.png" src="../../_images/rnn_tensorflow_58_1.png" />
+<img alt="../../_images/9137c71a0abffb4480778b845366458b336bec2342aeed68c101d9af131b6021.png" src="../../_images/9137c71a0abffb4480778b845366458b336bec2342aeed68c101d9af131b6021.png" />
 </div>
 </div>
-</div>
-<div class="section" id="convolutional-neuron-network">
-<h3>6.3, Convolutional Neuron Network:<a class="headerlink" href="#convolutional-neuron-network" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="convolutional-neuron-network">
+<h3>6.3, Convolutional Neuron Network:<a class="headerlink" href="#convolutional-neuron-network" title="Permalink to this heading">#</a></h3>
 <p><span style = "color: blue; font-size: 20px"> Narrow window: input_width = CONV_width = 3</span>
 Difference between multi-step dense model and CNN model</p>
 <ul class="simple">
@@ -1889,12 +1791,12 @@ Output shape: (32, 291, 1)
 WARNING:tensorflow:5 out of the last 66 calls to &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000028256AB3A60&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_61_1.png" src="../../_images/rnn_tensorflow_61_1.png" />
+<img alt="../../_images/1a56d7b14fc870f7273e48c23ba6b7b970a469559fa108eb45d4ab1075c04f2a.png" src="../../_images/1a56d7b14fc870f7273e48c23ba6b7b970a469559fa108eb45d4ab1075c04f2a.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id1">
-<h3>6.4, Convolutional Neuron Network<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id1">
+<h3>6.4, Convolutional Neuron Network<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p><span style = "color: blue; font-size: 20px"> Wide window: input_width = CONV_width = 30</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1922,24 +1824,24 @@ Labels shape: (32, 24, 1)
 Output shape: (32, 24, 1)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_63_1.png" src="../../_images/rnn_tensorflow_63_1.png" />
+<img alt="../../_images/aef4ba3855edd3ddd9b08b80e9c31fb6d2cc3f73cee0b587710ef85041ce29fd.png" src="../../_images/aef4ba3855edd3ddd9b08b80e9c31fb6d2cc3f73cee0b587710ef85041ce29fd.png" />
 </div>
 </div>
-</div>
-<div class="section" id="recurrent-neuron-network-rnn">
-<h3>6.5 Recurrent Neuron Network (RNN)<a class="headerlink" href="#recurrent-neuron-network-rnn" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="recurrent-neuron-network-rnn">
+<h3>6.5 Recurrent Neuron Network (RNN)<a class="headerlink" href="#recurrent-neuron-network-rnn" title="Permalink to this heading">#</a></h3>
 <p><strong>In this example test, we will use the LSTM of RNN for demonstration</strong></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><span style="color: red; font-size: 20px"> Input: Data structure of the RNN input</span></p></th>
-<th class="text-align:center head"><p><span style="font-size: 20px"> Output: only the final results </span></p></th>
-<th class="text-align:center head"><p><span style="font-size: 20px; color: blue"> Output: all internal prediction results </span></p></th>
+<tr class="row-odd"><th class="head text-center"><p><span style="color: red; font-size: 20px"> Input: Data structure of the RNN input</span></p></th>
+<th class="head text-center"><p><span style="font-size: 20px"> Output: only the final results </span></p></th>
+<th class="head text-center"><p><span style="font-size: 20px; color: blue"> Output: all internal prediction results </span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_dataset.png" /></p></td>
-<td class="text-align:center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_output_final.png" /></p></td>
-<td class="text-align:center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_output_all.png" /></p></td>
+<tr class="row-even"><td class="text-center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_dataset.png" /></p></td>
+<td class="text-center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_output_final.png" /></p></td>
+<td class="text-center"><p><img alt="rnn_dataset" src="contents/wengang/images/rnn_output_all.png" /></p></td>
 </tr>
 </tbody>
 </table>
@@ -1974,7 +1876,7 @@ Output shape: (32, 24, 1)
 Output shape: (32, 1)
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_65_1.png" src="../../_images/rnn_tensorflow_65_1.png" />
+<img alt="../../_images/60918700ecbda0f467c71e748944b816404c185885db89bd106f0993410860a4.png" src="../../_images/60918700ecbda0f467c71e748944b816404c185885db89bd106f0993410860a4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2020,18 +1922,18 @@ Output shape: (32, 1)
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="multi-step-output-models">
-<h1>7. Multi-step output models<a class="headerlink" href="#multi-step-output-models" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="multi-step-output-models">
+<h1>7. Multi-step output models<a class="headerlink" href="#multi-step-output-models" title="Permalink to this heading">#</a></h1>
 <p><strong>NB: different from Multi-output models that can be obtained by the previous code. Two rough approaches to this:</strong></p>
 <ul class="simple">
 <li><p>Single shot predictions where the entire time series is predicted at once.</p></li>
 <li><p>Autoregressive predictions where the model only makes single step predictions and its output is fed back as its input.</p></li>
 </ul>
-<div class="section" id="generate-the-dataset-for-the-modelling">
-<h2>7.1, Generate the dataset for the modelling<a class="headerlink" href="#generate-the-dataset-for-the-modelling" title="Permalink to this headline">¶</a></h2>
+<section id="generate-the-dataset-for-the-modelling">
+<h2>7.1, Generate the dataset for the modelling<a class="headerlink" href="#generate-the-dataset-for-the-modelling" title="Permalink to this heading">#</a></h2>
 <p><strong>NB: we will skip the baseline model in this example</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2052,32 +1954,32 @@ Label indices: [24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 4
 Label column name(s): None
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_69_1.png" src="../../_images/rnn_tensorflow_69_1.png" />
+<img alt="../../_images/a69e37c7933a866cecb906a1bce460d9292be49ccf373b8376e024aa4d0f2038.png" src="../../_images/a69e37c7933a866cecb906a1bce460d9292be49ccf373b8376e024aa4d0f2038.png" />
 </div>
 </div>
-</div>
-<div class="section" id="illustration-of-various-models-for-single-shot-prediction">
-<h2>7.2 Illustration of various models for single-shot prediction<a class="headerlink" href="#illustration-of-various-models-for-single-shot-prediction" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
+</section>
+<section id="illustration-of-various-models-for-single-shot-prediction">
+<h2>7.2 Illustration of various models for single-shot prediction<a class="headerlink" href="#illustration-of-various-models-for-single-shot-prediction" title="Permalink to this heading">#</a></h2>
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>base_future = last</p></th>
-<th class="text-align:center head"><p>base_future = repeated</p></th>
-<th class="text-align:center head"><p>linear/dense models</p></th>
-<th class="text-align:center head"><p>CNN</p></th>
-<th class="text-align:center head"><p>RNN</p></th>
+<tr class="row-odd"><th class="head text-center"><p>base_future = last</p></th>
+<th class="head text-center"><p>base_future = repeated</p></th>
+<th class="head text-center"><p>linear/dense models</p></th>
+<th class="head text-center"><p>CNN</p></th>
+<th class="head text-center"><p>RNN</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><img alt="base_last" src="contents/wengang/images/multistep_baseline_last.png" /></p></td>
-<td class="text-align:center"><p><img alt="base_repeat" src="contents/wengang/images/multistep_baseline_repeat.png" /></p></td>
-<td class="text-align:center"><p><img alt="linear_dense" src="contents/wengang/images/multistep_linear_dense.png" /></p></td>
-<td class="text-align:center"><p><img alt="cnn" src="contents/wengang/images/multistep_cnn.png" /></p></td>
-<td class="text-align:center"><p><img alt="cnn" src="contents/wengang/images/multistep_rnn.png" /></p></td>
+<tr class="row-even"><td class="text-center"><p><img alt="base_last" src="contents/wengang/images/multistep_baseline_last.png" /></p></td>
+<td class="text-center"><p><img alt="base_repeat" src="contents/wengang/images/multistep_baseline_repeat.png" /></p></td>
+<td class="text-center"><p><img alt="linear_dense" src="contents/wengang/images/multistep_linear_dense.png" /></p></td>
+<td class="text-center"><p><img alt="cnn" src="contents/wengang/images/multistep_cnn.png" /></p></td>
+<td class="text-center"><p><img alt="cnn" src="contents/wengang/images/multistep_rnn.png" /></p></td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="linear-and-dense-model">
-<h3>7.2.1, Linear and dense model<a class="headerlink" href="#linear-and-dense-model" title="Permalink to this headline">¶</a></h3>
+<section id="linear-and-dense-model">
+<h3>7.2.1, Linear and dense model<a class="headerlink" href="#linear-and-dense-model" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Linear model</span>
@@ -2132,13 +2034,13 @@ Label column name(s): None
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 7s 3ms/step - loss: 0.0069 - mean_absolute_error: 0.0350
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_72_1.png" src="../../_images/rnn_tensorflow_72_1.png" />
-<img alt="../../_images/rnn_tensorflow_72_2.png" src="../../_images/rnn_tensorflow_72_2.png" />
+<img alt="../../_images/5566ce53c874a2575d1a1da8a706482dbf8ebeb63e87f67a3a25a4d22c6fcdcc.png" src="../../_images/5566ce53c874a2575d1a1da8a706482dbf8ebeb63e87f67a3a25a4d22c6fcdcc.png" />
+<img alt="../../_images/96637334d5f79f4d39dd4a67e715be3a38d64aba6383473eb33ad339c6cd848b.png" src="../../_images/96637334d5f79f4d39dd4a67e715be3a38d64aba6383473eb33ad339c6cd848b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="cnn-model-with-conv-length">
-<h3>7.2.2, CNN model with conv length<a class="headerlink" href="#cnn-model-with-conv-length" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="cnn-model-with-conv-length">
+<h3>7.2.2, CNN model with conv length<a class="headerlink" href="#cnn-model-with-conv-length" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CONV_WIDTH</span> <span class="o">=</span> <span class="mi">3</span>
@@ -2168,12 +2070,12 @@ Label column name(s): None
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2457/2457 [==============================] - 6s 3ms/step - loss: 0.0066 - mean_absolute_error: 0.0335
 </pre></div>
 </div>
-<img alt="../../_images/rnn_tensorflow_74_1.png" src="../../_images/rnn_tensorflow_74_1.png" />
+<img alt="../../_images/9fe5698453fab3f082a5ba923a096520ee2f7f2f1624ddd4f68a25feb2ff6d9b.png" src="../../_images/9fe5698453fab3f082a5ba923a096520ee2f7f2f1624ddd4f68a25feb2ff6d9b.png" />
 </div>
 </div>
-</div>
-<div class="section" id="rnn-lstm-model">
-<h3>7.3.3, RNN (LSTM) model<a class="headerlink" href="#rnn-lstm-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rnn-lstm-model">
+<h3>7.3.3, RNN (LSTM) model<a class="headerlink" href="#rnn-lstm-model" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi_lstm_model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
@@ -2198,10 +2100,10 @@ Label column name(s): None
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="illustration-of-autoregressive-rnn-model">
-<h2>7.3 Illustration of autoregressive RNN model<a class="headerlink" href="#illustration-of-autoregressive-rnn-model" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="illustration-of-autoregressive-rnn-model">
+<h2>7.3 Illustration of autoregressive RNN model<a class="headerlink" href="#illustration-of-autoregressive-rnn-model" title="Permalink to this heading">#</a></h2>
 <p><img alt="rnn_autoregressive" src="contents/wengang/images/multistep_rnn_autoregressive.png" /></p>
 <p><strong>Model description of autoregressive rnn model</strong></p>
 <div class="cell docutils container">
@@ -2279,8 +2181,8 @@ Label column name(s): None
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2294,7 +2196,7 @@ Label column name(s): None
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./contents\wengang"
         },
         predefinedOutput: true
@@ -2302,56 +2204,156 @@ Label column name(s): None
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-            
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="work_plan.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><strong>R&amp;D Activites and deadlines</strong></p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="Keras_LSTM.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">RNN for vattenfall by Colab</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
-        
-        </div>
-    </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Wengang Mao<br/>
-        
-            &copy; Copyright 2021-2022.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="work_plan.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>R&amp;D Activites and deadlines</strong></p>
       </div>
-    </div>
+    </a>
+    <a class="right-next"
+       href="Keras_LSTM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">RNN for vattenfall by Colab</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tensorflow: vattenfall</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1, Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data-normalize-train-validation-test-etc">2, Preprocessing data: normalize, train, validation, test, etc.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resample-the-data-with-low-resolution">2.1, resample the data with low-resolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation-function-acf-and-pacf-to-check-time-dependence">2.2, autocorrelation function (ACF) and (PACF) to check time dependence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crossing-autocorrelationship-for-various-parameters">2.3 crossing autocorrelationship for various parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalize-the-data">2.4, normalize the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-the-dataset-construction-and-build-basic-models-treated-as-independent-dataset">3, Understand the dataset construction and build basic models (treated as independent dataset)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-datastructure-of-the-tensorflow-package-formulate-rolling-windowed-dataset-for-model-in-section-4">3.2, Understand datastructure of the tensorflow package –&gt; formulate rolling windowed dataset –&gt; for model in Section 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-dataset-rolling-windowed-dataset-for-time-series-analysis-span"><span style="color:blue; font-size:25px"> <strong>4, Dataset (rolling/windowed dataset) for time series analysis</strong></span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-data-into-the-data-class">4.1, Read data into the data class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-constructed-basic-dataset-class">4.2, Check the constructed basic dataset class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#span-style-color-blue-font-size-25px-4-3-formulate-train-test-validation-datasets-in-the-data-structure-span"><span style="color:blue; font-size:25px"> <strong>4.3, Formulate train, test, validation datasets in the data structure</strong></span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-step-model-head-t-f-guide-open-t-1-t-2-pump-speed-t-1-t-2-discharge-rate-t-1-t-2">5, <strong>Single step model: $<span class="math notranslate nohighlight">\(Head\_t = f(guide\_open_{(t-1, t-2, ...)}, pump\_speed_{(t-1, t-2, ...)}, discharge\_rate_{(t-1, t-2, ...)},...)\)</span>$</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline-and-linear-models">5.1, Baseline and linear models</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-1-narrow-window-dataset-single-output-window">Test 1: narrow window dataset (single output window)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-2-wide-output-window">Test 2: wide output window</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-model-with-narrow-window-dataset-span-style-background-yellow-windowgenerator-input-width-1-label-width-1-shift-1-span">5.2, Linear model with narrow window dataset <span style="background: yellow">”WindowGenerator(input_width=1, label_width=1, shift=1)”</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-model-for-wide-window-data-inputs-span-style-background-yellow-windowgenerator-input-width-300-label-width-300-shift-1-span">5.3, linear model for wide window data inputs <span style="background: yellow">”WindowGenerator(input_width=300, label_width=300, shift=1)”</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dense-model-multiple-layers-and-activation-function">5.4, Dense model (multiple layers and activation function)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn-model-construction-for-x-t-f-x-t-1-x-t-2-x-t-3">6, <strong>CNN Model construction for <span class="math notranslate nohighlight">\(x_t = f(X_{t-1}, X_{t-2}, X_{t-3},...)\)</span></strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-convolutional-neuron-network-cnn-dataset">6.1, Set up the convolutional neuron network (CNN) dataset.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-for-the-multiple-steps-model-model">6.2, Test for the “multiple-steps model” model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convolutional-neuron-network">6.3, Convolutional Neuron Network:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.4, Convolutional Neuron Network</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recurrent-neuron-network-rnn">6.5 Recurrent Neuron Network (RNN)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-step-output-models">7. Multi-step output models</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-dataset-for-the-modelling">7.1, Generate the dataset for the modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-of-various-models-for-single-shot-prediction">7.2 Illustration of various models for single-shot prediction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-and-dense-model">7.2.1, Linear and dense model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn-model-with-conv-length">7.2.2, CNN model with conv length</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rnn-lstm-model">7.3.3, RNN (LSTM) model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-of-autoregressive-rnn-model">7.3 Illustration of autoregressive RNN model</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wengang Mao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021-2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
