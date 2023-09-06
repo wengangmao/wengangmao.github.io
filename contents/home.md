@@ -1,91 +1,37 @@
-# <span style = "color:red; font-weight: 500">Research on shipping energy efficiency measures </span>
-<br />
+# <span style = "color:blue; font-weight: 500">Research on ship energy efficiency </span>
 
-<span style = "color: blue; font-size: 20px; font-weight: 500">We are looking forward to cooperating with you in the following R\&D fields.</span><br />
-
+<center><span style = "background: black; color: white; font-weight: 600; font-size: 20px; align: center"> "Welcome to contact for cooperation!" </span></center>
 
 ## <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚) </span>
-
 ![contact](./images/wengangmao_contact.png)
+- PhD, Mathematical Statistics at Chalmers University of Technology (Sweden)
+- Msc, Naval Architecture and Ocean Engineering at Shanghai Jiao Tong University (China)
+- BA,  Naval Architecture and Ocean Engineering at Tianjin University (China)
 
-
-<center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Welcome to contact me for cooperation ..." </span></center>
-
+```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Research competences</span>
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * AI/Machine learning for shipping efficiency and safety</span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Weather routing and voyage optimization </span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Fatigue and fracture of offshore structures </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Autonomous shipping -- manueuverability modelling and optimal control  </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Statistical and BEM numerical analysis of wave loadings  </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Ship energy system modelling </span> <br />
+```
 +++
 ---
 
-
-
-
-We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
 The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
 
 ```{figure} ./images/3dda_voyplan.gif
 ---
-height: 500px
+height: 300px
 name: directive-fig
 ---
 ```
-<center><span style = "color: red; font-weight: 500;  font-size: 30px">A demo for the voyage optimization developed by us!</span></center>  <br />
-
-
-+++
----
-
-```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Upcoming conferences and deadlines</span>
-
-<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Icsos 2023 (Yantai China), IOSPE 2024 (Greece) and OMAE 2024 (Singapore)</span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Bigdata/digitalization course </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">* Proposals on optimal dynamic coupling of ship energy systems  </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">4, </span> <br />
-```
+<center><span style = "color: red; font-weight: 300;  font-size: 20px">Demo of a 3DDA voyage optimization developed by us!</span></center>  <br />
 
 
 
-##  1, Objectives of our research activities
-- Develop models to estimate a ship's fuel consumption and maneuverability
-- Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships
-- Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA
-- Develop innovative measures to increase ship energy efficiency
-- Develop control algorithms to automatically navigate a ship
-
-## 2, Planning of staff/PhD milestones
-
-* Daniel Vergara Lic plan: December 2023
-* Yuhan Chen Lic plan: Spring 2024
-
-
-## 3, Project related issues
-
-* Ship maneuverability dynamic modelling (Spring 2024)
-* AIS data analysis for abnormal sailing (December 2023)
-* Ship resistance AI  (November 2023)
-* Port Just-In-Time and human factors for Ligthhouse project (November 2023)
-* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022-04-01]</span> 
-* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-04-01]</span> 
-* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022]</span> 
-* Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
-
-
-+++
----
-
-## 4. Project report numbers at Chalmers (internal use)
-**My account: 30WEMA01;  MT account: 305000**
-- Faculty: 30450000
-- Ecosail: 30250007
-- STINT: 48204039
-- Chalmers Electrity: 30450814/30450811
-- DEMOPS: 30650006
-- VATTENFALL: 30224704
-- ML+CFD: 30750025
-- AutoBarge: 30250036
-- AI EEMs: 30250037
-
-
-+++
----
-
+<!---
 ## Contact us for more information:
 
 ### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)</span>
@@ -97,7 +43,7 @@ Gothenburg, Sweden <br />
 Email: wengang.mao@chalmers.se <br />
 Phone: + 46 (0) 31 772 1483 <br />
 
-<!---
+
 ### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
 
 <head> 

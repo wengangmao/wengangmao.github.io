@@ -6,7 +6,7 @@
 # Book settings
 title                       : Energy Efficiency Shipping  # The title of the book. Will be placed in the left navbar.
 author                      : Wengang Mao  # The author of the book
-copyright                   : "2021-2022"  # Copyright year to be placed in the footer
+copyright                   : "2022-2023"  # Copyright year to be placed in the footer
 logo                        : "contents/images/voysmart.png"  # A path to the book logo
 email                       : "wengang.mao@chalmers.se"
 #exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
@@ -29,7 +29,7 @@ html:
   use_issues_button         : true # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
   use_edit_page_button      : true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in#
   baseurl                   : "https://voysmart.eu"  # The base URL where your book will be hosted. Used for creating image previews and social links. for example: https://mypage.com/mybook/
-  extra_navbar              : Visit our <a href="https://github.com/wengangmao/voysmart">GitHub Repository</a>
+  extra_navbar              : Visit our <a href="https://github.com/wengangmao/wengangmao.github.io">GitHub Repository</a>
     <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
   comments:
     hypothesis: true

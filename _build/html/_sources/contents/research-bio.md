@@ -1,22 +1,13 @@
-# <span style = "color:blue; font-weight: 500">Research on ship energy efficiency </span>
+# <span style = "color:red; font-weight: 500">Research on ship energy efficiency </span>
+<br />
 
-<center><span style = "background: black; color: white; font-weight: 600; font-size: 20px; align: center"> "Welcome to contact for cooperation!" </span></center>
 
 ## <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚) </span>
+
 ![contact](./images/wengangmao_contact.png)
--- PhD, Mathematical Statistics at Chalmers University of Technology (Sweden)
--- Msc, Naval Architecture and Ocean Engineering at Shanghai Jiao Tong University (China)
--- BA,  Naval Architecture and Ocean Engineering at Tianjin University (China)
 
-```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Research competences</span>
-<span style = "color: blue; font-weight: 500;  font-size: 15px"> * AI/Machine learning for shipping efficiency and safety</span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Weather routing and voyage optimization </span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Fatigue and fracture of offshore structures </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">* Autonomous shipping -- manueuverability modelling and optimal control  </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">* Statistical and BEM numerical analysis of wave loadings  </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">* Ship energy system modelling </span> <br />
-```
 
+<center><span style = "background: green; color: yellow; font-weight: 800; font-size: 30px; align: center"> "Welcome to contact me for cooperation ..." </span></center>
 
 +++
 ---
@@ -36,6 +27,18 @@ name: directive-fig
 <center><span style = "color: red; font-weight: 300;  font-size: 20px">A demo for the voyage optimization developed by us!</span></center>  <br />
 
 
++++
+---
+
+```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Research competences</span>
+
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * AI/Machine learning for shipping efficiency and safety</span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Weather routing and voyage optimization </span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Fatigue and fracture of offshore structures </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Autonomous shipping -- manueuverability modelling and optimal control  </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Statistical and BEM numerical analysis of wave loadings  </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Ship energy system modelling </span> <br />
+```
 
 
 
