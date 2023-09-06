@@ -63,8 +63,6 @@ parts:
 
 - caption: Research Investigations
   chapters:
-  - file: contents/wengang/research_ideas.md
-    title: Research outlook
   - file: contents/wengang/work_plan.md
     title: Activities and Deadlines
   - file: contents/wengang/rnn_tensorflow.ipynb

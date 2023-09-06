@@ -3,6 +3,8 @@
 ---
 
 This is just a simple memory notebook for myself. Regarding the research and work in details, please contact me by [email or phone](https://www.chalmers.se/en/staff/Pages/wengang-mao.aspx).
+
+In addition, I also would like to share some examples of research investigattions with public sharing codes.
 +++
 ---
 
@@ -30,6 +32,17 @@ This is just a simple memory notebook for myself. Regarding the research and wor
 
 
 ## Major projectdeliverables 
+
+
+### Students related tasks
+* Ship maneuverability dynamic modelling (Spring 2024)
+* AIS data analysis for abnormal sailing (December 2023)
+* Ship resistance AI  (November 2023)
+* Port Just-In-Time and human factors for Ligthhouse project (November 2023)
+* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022-04-01]</span> 
+* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-04-01]</span> 
+* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022]</span> 
+* Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
 ### EcoSail project
