@@ -1,15 +1,21 @@
-# <span style = "color:red; font-weight: 500">Teamwork Logbook</span>
+# <span style = "color:red; font-weight: 500">Research on shipping energy efficiency measures </span>
 <br />
 
-**A virtual team platform to work with energy efficiency measures in shipping**
+<span style = "color: blue; font-size: 20px; font-weight: 500">We are looking forward to cooperating with you in the following R\&D fields.</span><br />
+
+
+## <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚) </span>
+
+![contact](./images/wengangmao_contact.png)
+
+
+<center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Welcome to contact me for cooperation ..." </span></center>
 
 +++
 ---
 
 
-<!---
-<center><span style = "background: green; color: yellow; font-weight: 1000; font-size: 30px; align: center"> "Save the Earth, not to find the next ..." </span></center>
---->
+
 
 We are a team of researchers based at [Chalmers University of Technology](https://www.chalmers.se/en/departments/m2/Pages/default.aspx). 
 The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
@@ -26,12 +32,12 @@ name: directive-fig
 +++
 ---
 
-```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Common issues in the upcoming month</span>
+```{admonition} <span style = "color:red; font-weight: 500; font-size: 20px"> Upcoming conferences and deadlines</span>
 
-<span style = "color: blue; font-weight: 500;  font-size: 15px">1, NMU workshop</span>  <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">2, ISOPE or OMAE conferences </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">3, Dynamic ML modelling </span> <br />
-<span style = "color: blue; font-weight: 500;  font-size: 15px">4, EcoSail 7th GA meeting 2021-10-25 to 10-27</span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Icsos 2023 (Yantai China), IOSPE 2024 (Greece) and OMAE 2024 (Singapore)</span>  <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px"> * Bigdata/digitalization course </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">* Proposals on optimal dynamic coupling of ship energy systems  </span> <br />
+<span style = "color: blue; font-weight: 500;  font-size: 15px">4, </span> <br />
 ```
 
 
@@ -45,13 +51,16 @@ name: directive-fig
 
 ## 2, Planning of staff/PhD milestones
 
-* Daiyong Lic plan: 2022-09-30
-* Martin Lic plan: 2022-09-30
-* Xiao's PhD defense plan: 2022-12-30 
-* New PhD student expected 2022-03-01
+* Daniel Vergara Lic plan: December 2023
+* Yuhan Chen Lic plan: Spring 2024
+
 
 ## 3, Project related issues
 
+* Ship maneuverability dynamic modelling (Spring 2024)
+* AIS data analysis for abnormal sailing (December 2023)
+* Ship resistance AI  (November 2023)
+* Port Just-In-Time and human factors for Ligthhouse project (November 2023)
 * Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022-04-01]</span> 
 * Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-04-01]</span> 
 * Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022]</span> 
@@ -66,12 +75,9 @@ name: directive-fig
 - Faculty: 30450000
 - Ecosail: 30250007
 - STINT: 48204039
-- E-Nav: 30250017
-- VIA Kaizen: 30250029
 - Chalmers Electrity: 30450814/30450811
 - DEMOPS: 30650006
 - VATTENFALL: 30224704
-- ISEA: 30650011
 - ML+CFD: 30750025
 - AutoBarge: 30250036
 - AI EEMs: 30250037
@@ -91,6 +97,7 @@ Gothenburg, Sweden <br />
 Email: wengang.mao@chalmers.se <br />
 Phone: + 46 (0) 31 772 1483 <br />
 
+<!---
 ### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
 
 <head> 
@@ -104,3 +111,4 @@ Phone: + 46 (0) 31 772 1483 <br />
 <i class="fas fa-map"></i>&ensp;Wuhan, China  <br />
 <i class="fas fa-shipping-fast"></i>&ensp;dawu#whut.endu.cn
 
+--->
