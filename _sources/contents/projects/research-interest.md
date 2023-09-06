@@ -1,13 +1,47 @@
-# <span style = "color:red; font-weight: 500">Research objectives </span>
+# <span style = "color:red; font-weight: 500">Research Interest, Outlook and Members </span>
 <br />
 
++++
+---
 
-##  1, Objectives of our research activities
+##  Overall Research Objectives
 - Develop models to estimate a ship's fuel consumption and maneuverability
 - Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships
 - Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA
 - Develop innovative measures to increase ship energy efficiency
 - Develop control algorithms to automatically navigate a ship
+
+### Energy efficiency measures
+* Optimization of ship resistance, engine load and propulsion efficiency
+* Control algorithm for CPP ship navigation
+* Electrifying ships with optimization speed and battery configurations
+
+
+### Autonomous shipping
+* How to introduce uncertain models in MPC control algorithms
+* Kalmar filter or wavelet methods to get smooth u, v, r for maneuverability models of various ship propulsion systems
+* RNN+LSTM learning to predict real-time ship trajectories
+* Re-inforcement learning for near future path planning
+* Machine learning methods to predict and forecast a ship's navigation behavior
+
+
+
+### Spatio-temporal modelling of metocean parameters
+* SPDE models and conditional prediction for short-term weather prediction
+* Spatio-temporal modelling of wind and wave environments
+* Spatio-temporal/SPDE metocean models to assist ship navigation
+* Wave statistics to ship safety
+
+
+### Machine learning for maritime applications
+* ML DCP method to split stationary sea states and their applications
+* Hybrid models for ship performance modelling
+* How to get baselines from ML analysis
+* ARIMA and LSTM for dynamic ship performance prediction (must be more accurate than ordinary machine learning methods)
+
+
+
+
 
 ## 2, Planning of staff/PhD milestones
 
@@ -15,16 +49,6 @@
 * Yuhan Chen Lic plan: Spring 2024
 
 
-## 3, Project related issues
-
-* Ship maneuverability dynamic modelling (Spring 2024)
-* AIS data analysis for abnormal sailing (December 2023)
-* Ship resistance AI  (November 2023)
-* Port Just-In-Time and human factors for Ligthhouse project (November 2023)
-* Simulation platform to be ready <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022-04-01]</span> 
-* Summary of your achievement on ship performance models <span style = "background: yellow; font-size: 15px; font-weight:500"> [2021-04-01]</span> 
-* Summary of your achievement on voyage optimizations <span style = "background: yellow; font-size: 15px; font-weight:500"> [2022]</span> 
-* Master thesis proposals ([Access](http://www.chalmers.se/en/departments/m2/education/master/Pages/examensarbete-p%c3%a5-mastersniva.aspx))
 
 
 +++
