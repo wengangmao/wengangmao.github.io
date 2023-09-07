@@ -1,8 +1,11 @@
 # <span style = "color:green; font-weight: 500">Energy efficiency shipping</span>
+</br>
 
-****************************************************************************************************************************
+
+<center>********************************************************</center>
 <center><span style = "color:red; font-weight: 600; font-size: 20px">Welcome to contact us for cooperation!</span></center>
-****************************************************************************************************************************
+<center>********************************************************</center>
+
 
 ## <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚) </span>
 ![contact](./images/wengangmao_contact.png)
@@ -23,6 +26,7 @@
 ```
 +++
 ---
+## Research Funders
 
 The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
 
@@ -30,7 +34,7 @@ The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H20
 ---
 
 ### T1, Weather routing and voyage optimization
-<center><span style = "color: red; font-weight: 300;  font-size: 20px">Demo of a 3DDA voyage optimization developed by us!</span></center> 
+<span style = "color:; font-weight: 500;  font-size: 20px">Demo of a 3DDA voyage optimization algorithm developed by us through two EU projects!</span>
 
 ```{figure} ./images/3dda_voyplan.gif
 ---
@@ -39,3 +43,32 @@ name: directive-fig
 ---
 ```
 </br>
+
+### T2, Machine learning + semi-emipircal enhanced ship energy performance models
+
+```{figure} ./images/rship.png
+---
+height: 300px
+name: directive-fig
+---
+```
+</br>
+
+```{figure} ./images/vml.png
+---
+height: 300px
+name: directive-fig
+---
+```
+</br>
+
+
+### T3, IMO energy requirement and measures
+
+```{figure} ./images/back1.png
+---
+height: 400px
+name: background
+alt: background_eem
+---
+```
