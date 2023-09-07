@@ -48,13 +48,13 @@ name: directive-fig
 
 ```{figure} ./images/rship.png
 ---
-height: 300px
+height: 200px
 name: directive-fig
 ---
 ```
 </br>
 
-```{figure} ./images/vml.png
+```{figure} ./images/vml.jpg
 ---
 height: 300px
 name: directive-fig
