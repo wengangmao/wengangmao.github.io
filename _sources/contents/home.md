@@ -26,9 +26,14 @@
 ```
 +++
 ---
-## Research Funders
+## Research Funding websites
 
-The research activities are mainly supported by e.g., Swedish VR, EU FP7, EU H2020, Swedish Transport Administration, Lighthouse, Vinnova, Chalmers AoAs, etc.
+* **[Chalmers Internal Guidelines](https://www.researchprofessional.com/0/rr/home)**
+* **[Swedish Trafikverket portal](https://bransch.trafikverket.se/for-dig-i-branschen/forskning-och-innovation/lamna-forslag-pa-forskning/)**
+* **[Swedish Vinnova](https://www.vinnova.se/sok-finansiering/hitta-finansiering/)**
+* **[Swedish Energy Agency](https://www.energimyndigheten.se/utlysningar/)**
+* **[Swedish High education -- STINT](https://www.stint.se/en/our-programmes/)**
+* [Åforsk](https://aforsk.com/PreviousWinners)
 
 +++
 ---
