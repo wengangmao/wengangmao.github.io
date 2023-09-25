@@ -5,15 +5,15 @@ parts:
 - caption: RESEARCH PROJECTS
   chapters:
   - file: contents/projects/research-interest.md
-    title: Research Information
+    title: Project Information
   - file: contents/projects/autobarge.md
     title: Autobarge 2022-2025
   - file: contents/projects/shippingaieems.md
     title: Shipping AI EEMs 2021-2024
-  - file: contents/projects/E-Nav.md
-    title: E-Nav 2019-2022
   - file: contents/projects/viakaizen.md
     title: VIA Kaizen 2020-2022
+  - file: contents/projects/E-Nav.md
+    title: E-Nav 2019-2022
   - file: contents/projects/ecosail.md
     title: Ecosail 2018-2021
   - file: contents/projects/others.md
@@ -56,13 +56,13 @@ parts:
   - file: contents/teaching/mms190/introduction.md
     title: Course Introduction 
   - file: contents/teaching/mms190/limit-state/intro-ls.md
-    title: Limit state approaches
+    title: PART 1 -- Limit state approaches
   - file: contents/teaching/mms190/basic-statistics/intro-bs.md
-    title: Basic statistical theory
+    title: PART 2 -- Basic statistical theory
   - file: contents/teaching/mms190/reliability-methods/intro-rm.md
-    title: Reliability methods
+    title: PART 3 -- Reliability methods
   - file: contents/teaching/mms190/extreme-design/intro-ed.md
-    title: Extreme condition design
+    title: PART 4 -- Extreme condition design
 
 
 #- caption: TEAMWORK LOGBOOK
