@@ -8,17 +8,17 @@
 ## 1, Shipping information and Research trend
 Here we will collect some useful website which can help us understand the state-of-the-art about the progress of shipping and naval architecture related communities.
 
-### Shipping related websites
--- **[Shipping Splash](https://splash247.com/)
--- **[Lloyds List](https://lloydslist.maritimeintelligence.informa.com/)
--- **[DNV Maritime Impact](https://www.dnv.com/expert-story/maritime-impact/)
--- **[Marine Insight](https://www.marineinsight.com/)
--- **[Swedish Shipping](https://www.sjofartstidningen.se/)
+### 1.1, Shipping related websites
+- **[Shipping Splash](https://splash247.com/)
+- **[Lloyds List](https://lloydslist.maritimeintelligence.informa.com/)
+- **[DNV Maritime Impact](https://www.dnv.com/expert-story/maritime-impact/)
+- **[Marine Insight](https://www.marineinsight.com/)
+- **[Swedish Shipping](https://www.sjofartstidningen.se/)
 
-### Knowledge and tools related website
--- **[Open Propeller](https://openprop.engineering.dartmouth.edu/index.html)
--- **[Open Seamap](http://www.openseamap.org/index.php?id=61&L=1)
--- **[MAN Engine](https://www.man-es.com/marine/products/planning-tools-and-downloads/ceas-engine-calculations)
+### 1.2, Knowledge and tools related website
+- **[Open Propeller](https://openprop.engineering.dartmouth.edu/index.html)
+- **[Open Seamap](http://www.openseamap.org/index.php?id=61&L=1)
+- **[MAN Engine](https://www.man-es.com/marine/products/planning-tools-and-downloads/ceas-engine-calculations)
 
 +++
 ---
