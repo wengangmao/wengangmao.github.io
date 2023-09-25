@@ -4,63 +4,46 @@
 +++
 ---
 
-##  Overall Research Objectives
-- Develop models to estimate a ship's fuel consumption and maneuverability
-- Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships
-- Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA
-- Develop innovative measures to increase ship energy efficiency
-- Develop control algorithms to automatically navigate a ship
 
-### Energy efficiency measures
-* Optimization of ship resistance, engine load and propulsion efficiency
-* Control algorithm for CPP ship navigation
-* Electrifying ships with optimization speed and battery configurations
+## 1, Shipping information and Research trend
+Here we will collect some useful website which can help us understand the state-of-the-art about the progress of shipping and naval architecture related communities.
 
+### Shipping related websites
+-- **[Shipping Splash](https://splash247.com/)
+-- **[Lloyds List](https://lloydslist.maritimeintelligence.informa.com/)
+-- **[DNV Maritime Impact](https://www.dnv.com/expert-story/maritime-impact/)
+-- **[Marine Insight](https://www.marineinsight.com/)
+-- **[Swedish Shipping](https://www.sjofartstidningen.se/)
 
-### Autonomous shipping
-* How to introduce uncertain models in MPC control algorithms
-* Kalmar filter or wavelet methods to get smooth u, v, r for maneuverability models of various ship propulsion systems
-* RNN+LSTM learning to predict real-time ship trajectories
-* Re-inforcement learning for near future path planning
-* Machine learning methods to predict and forecast a ship's navigation behavior
-
-
-
-### Spatio-temporal modelling of metocean parameters
-* SPDE models and conditional prediction for short-term weather prediction
-* Spatio-temporal modelling of wind and wave environments
-* Spatio-temporal/SPDE metocean models to assist ship navigation
-* Wave statistics to ship safety
-
-
-### Machine learning for maritime applications
-* ML DCP method to split stationary sea states and their applications
-* Hybrid models for ship performance modelling
-* How to get baselines from ML analysis
-* ARIMA and LSTM for dynamic ship performance prediction (must be more accurate than ordinary machine learning methods)
-
-
-
-
-
-## 2, Planning of staff/PhD milestones
-
-* Daniel Vergara Lic plan: December 2023
-* Yuhan Chen Lic plan: Spring 2024
-
-
-
+### Knowledge and tools related website
+-- **[Open Propeller](https://openprop.engineering.dartmouth.edu/index.html)
+-- **[Open Seamap](http://www.openseamap.org/index.php?id=61&L=1)
+-- **[MAN Engine](https://www.man-es.com/marine/products/planning-tools-and-downloads/ceas-engine-calculations)
 
 +++
 ---
 
-## 4. Project report numbers at Chalmers (internal use)
+## 2, Research Funding websites
+
+* **[Chalmers Internal Guidelines](https://www.researchprofessional.com/0/rr/home)**
+* **[Swedish Trafikverket portal](https://bransch.trafikverket.se/for-dig-i-branschen/forskning-och-innovation/lamna-forslag-pa-forskning/)**
+* **[Swedish Vinnova](https://www.vinnova.se/sok-finansiering/hitta-finansiering/)**
+* **[Swedish Energy Agency](https://www.energimyndigheten.se/utlysningar/)**
+* **[Swedish High education -- STINT](https://www.stint.se/en/our-programmes/)**
+* **[Åforsk](https://aforsk.com/PreviousWinners)
+
++++
+---
+
+
+## 3. Project report numbers at Chalmers (internal use)
 **My account: 30WEMA01;  MT account: 305000**
 - Faculty: 30450000
+- DEMOPS: 30650006
+- PINNs: 3045000
 - Ecosail: 30250007
 - STINT: 48204039
 - Chalmers Electrity: 30450814/30450811
-- DEMOPS: 30650006
 - VATTENFALL: 30224704
 - ML+CFD: 30750025
 - AutoBarge: 30250036
@@ -70,29 +53,25 @@
 +++
 ---
 
-## Contact us for more information:
 
-### <span style = "font-weight: 600; font-size: 20px">Wengang Mao (毛文刚)</span>
+## 4, Research staff and milestones
 
-Professor of ship mechanics <br />
-Department of Mechanics and Maritime Sciences <br />
-Chalmers Univeristy of Technology <br />
-Gothenburg, Sweden <br />
-Email: wengang.mao@chalmers.se <br />
-Phone: + 46 (0) 31 772 1483 <br />
+### PhD students
+* Mohammad Sheikholeslami (Main-supervisor 2023 - )
+* Daniel Vergara (Main-supervisor 2021 - ) - Lic plan: December 2023
+* Yuhan Chen (Main-supervisor 2023 - ) - Lic plan: Spring 2024
+* Martin Alexandersson (Main-supervisor 2018 - ) PhD plan: Winter 2024
+* Xiao Lang (Main-supervisor 2018 - 2023)
+* Helong Wang (Main-supervisor 2016 - 2020)
 
-<!---
-### <span style = "font-weight: 600; font-size: 20px">Da Wu (吴达) </span>
+* Axel Hörteborn (co-supervisor)
+* Jeseung Lee (co-supervisor)
+* Chengqian Zhang (Co-supervisor)
+* Fabian Tillig (co-supervisor PhD: 2020)
 
-<head> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script> 
-</head> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-<i class="fas fa-user-graduate"></i>&ensp;&nbsp;Ass. professor <br />
-<i class="fas fa-chalkboard-teacher"></i>&ensp;National Engineering Research Center for Water Transport Safety <br />
-<i class="fas fa-graduation-cap"></i>&ensp;Wuhan University of Technology <br />
-<i class="fas fa-map"></i>&ensp;Wuhan, China  <br />
-<i class="fas fa-shipping-fast"></i>&ensp;dawu#whut.endu.cn
+### PostDoc
+* Xiao Lang (2022-2023)
+* Da Wu (2020-2021)
+* Anders Hildman (2019-2021)
+* Lars Jonasson (2017-2019)
 
---->
