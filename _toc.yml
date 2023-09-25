@@ -5,7 +5,7 @@ parts:
 - caption: RESEARCH PROJECTS
   chapters:
   - file: contents/projects/research-interest.md
-    title: Research Interest & Members
+    title: Research Information
   - file: contents/projects/autobarge.md
     title: Autobarge 2022-2025
   - file: contents/projects/shippingaieems.md
@@ -18,7 +18,53 @@ parts:
     title: Ecosail 2018-2021
   - file: contents/projects/others.md
     title: Other projects
-    
+
+
+- caption: Research Investigations
+  chapters:
+  - file: contents/research/work_plan.md
+    title: Activities and Deadlines
+  - file: contents/research/rnn_tensorflow.ipynb
+    title: Vattenfall by Tensorflow
+  - file: contents/research/Keras_LSTM.ipynb
+    title: Vattenfall by LSTM
+  - file: contents/research/code_experiences.md
+    title: Code solutions
+
+
+- caption: PhD course -- statistical/machine learning
+  chapters:
+  - file: contents/teaching/fmms050/introduction.md
+    title: Course Introduction 
+  - file: contents/teaching/fmms050/1_ml-types.md
+    title: PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS 
+  - file: contents/teaching/fmms050/2_regression.md
+    title: PART 2 -- STATISTICAL REGRESSION
+  - file: contents/teaching/fmms050/3_machinelearning.md
+    title: PART 3 -- MACHINE LEARNING METHODS
+  - file: contents/teaching/fmms050/4_timeseries.md
+    title: PART 4 -- TIME SERIES LEARNING METHODS
+  - file: contents/teaching/fmms050/5_dataprocess.md
+    title: PART 5 -- DATA FILTERING METHODS (upcoming)
+  - file: contents/teaching/fmms050/6_deeplearning.md
+    title: PART 6 -- DEEP LEARNING AND SPATIO-TEMPORAL MODELLING (upcoming)
+
+
+
+- caption: MSc course--reliability methods
+  chapters:
+  - file: contents/teaching/mms190/introduction.md
+    title: Course Introduction 
+  - file: contents/teaching/mms190/limit-state/intro-ls.md
+    title: Limit state approaches
+  - file: contents/teaching/mms190/basic-statistics/intro-bs.md
+    title: Basic statistical theory
+  - file: contents/teaching/mms190/reliability-methods/intro-rm.md
+    title: Reliability methods
+  - file: contents/teaching/mms190/extreme-design/intro-ed.md
+    title: Extreme condition design
+
+
 #- caption: TEAMWORK LOGBOOK
 ##  numbered: false
 #  chapters:
@@ -61,21 +107,10 @@ parts:
 #    - file: contents/students-msc/zangshuo/zangshuo_research.ipynb
 #      title: Research results
 
-- caption: Research Investigations
-  chapters:
-  - file: contents/wengang/work_plan.md
-    title: Activities and Deadlines
-  - file: contents/wengang/rnn_tensorflow.ipynb
-    title: Vattenfall by Tensorflow
-  - file: contents/wengang/Keras_LSTM.ipynb
-    title: Vattenfall by LSTM
-  - file: contents/wengang/code_experiences.md
-    title: Code solutions
 
-
-- caption: Useful Links and Resources
-  chapters:
-  - file: contents/references/working/ongoing.md
-    title: Working articles
-  - file: contents/references/published/published.md
-    title: Published articles
+#- caption: Useful Links and Resources
+#  chapters:
+#  - file: contents/references/working/ongoing.md
+#    title: Working articles
+#  - file: contents/references/published/published.md
+#    title: Published articles

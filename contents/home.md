@@ -26,35 +26,40 @@
 ```
 +++
 ---
-## Research Funding websites
 
-* **[Chalmers Internal Guidelines](https://www.researchprofessional.com/0/rr/home)**
-* **[Swedish Trafikverket portal](https://bransch.trafikverket.se/for-dig-i-branschen/forskning-och-innovation/lamna-forslag-pa-forskning/)**
-* **[Swedish Vinnova](https://www.vinnova.se/sok-finansiering/hitta-finansiering/)**
-* **[Swedish Energy Agency](https://www.energimyndigheten.se/utlysningar/)**
-* **[Swedish High education -- STINT](https://www.stint.se/en/our-programmes/)**
-* [Åforsk](https://aforsk.com/PreviousWinners)
+## Research Outcomes by Examples
+The overall objectives of our research activities are to:
+- **Develop models to estimate a ship's fuel consumption and maneuverability
+- **Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships
+- **Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA
+- **Develop innovative measures to increase ship energy efficiency
+- **Develop control algorithms to automatically navigate a ship
 
 +++
 ---
+### 1, Energy efficiency measures
+* Optimization of ship resistance, engine load and propulsion efficiency
+* Control algorithm for CPP ship navigation
+* Electrifying ships with optimization speed and battery configurations
 
-### T1, Weather routing and voyage optimization
+
+#### T1.1, Weather routing and voyage optimization
 <span style = "color:; font-weight: 500;  font-size: 20px">Demo of a 3DDA voyage optimization algorithm developed by us through two EU projects!</span>
 
 ```{figure} ./images/3dda_voyplan.gif
 ---
 height: 300px
-name: directive-fig
+name: 3dda_demo
 ---
 ```
 </br>
 
-### T2, Machine learning + semi-emipircal enhanced ship energy performance models
+#### T1.2, Machine learning + semi-emipircal enhanced ship energy performance models
 
 ```{figure} ./images/rship.png
 ---
 height: 200px
-name: directive-fig
+name: ship_resistance
 ---
 ```
 </br>
@@ -62,13 +67,13 @@ name: directive-fig
 ```{figure} ./images/vml.jpg
 ---
 height: 300px
-name: directive-fig
+name: ml-speed
 ---
 ```
 </br>
 
 
-### T3, IMO energy requirement and measures
+#### T1.3, IMO energy requirement and measures
 
 ```{figure} ./images/back1.png
 ---
@@ -77,3 +82,26 @@ name: background
 alt: background_eem
 ---
 ```
+
+
+### Autonomous shipping
+* How to introduce uncertain models in MPC control algorithms
+* Kalmar filter or wavelet methods to get smooth u, v, r for maneuverability models of various ship propulsion systems
+* RNN+LSTM learning to predict real-time ship trajectories
+* Re-inforcement learning for near future path planning
+* Machine learning methods to predict and forecast a ship's navigation behavior
+
+
+
+### Spatio-temporal modelling of metocean parameters
+* SPDE models and conditional prediction for short-term weather prediction
+* Spatio-temporal modelling of wind and wave environments
+* Spatio-temporal/SPDE metocean models to assist ship navigation
+* Wave statistics to ship safety
+
+
+### Machine learning for maritime applications
+* ML DCP method to split stationary sea states and their applications
+* Hybrid models for ship performance modelling
+* How to get baselines from ML analysis
+* ARIMA and LSTM for dynamic ship performance prediction (must be more accurate than ordinary machine learning methods)

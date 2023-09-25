@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>FMMS050 - Statistical regression and machine learning &#8212; Energy Efficiency Shipping</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/teaching/fmms050/introduction';</script>
+    <link rel="canonical" href="https://voysmart.eu/contents/teaching/fmms050/introduction.html" />
+    <link rel="shortcut icon" href="../../../_static/voysmart_favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Categories of machine learning methods" href="1_ml-types.html" />
+    <link rel="prev" title="Solutions of solving code problems" href="../../research/code_experiences.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../home.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/voysmart.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/voysmart.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../home.html">
+                    <span style = "color:green; font-weight: 500">Energy efficiency shipping</span>
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">RESEARCH PROJECTS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../projects/research-interest.html">Research Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/autobarge.html">Autobarge 2022-2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/shippingaieems.html">Shipping AI EEMs 2021-2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/E-Nav.html">E-Nav 2019-2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/viakaizen.html">VIA Kaizen 2020-2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/ecosail.html">Ecosail 2018-2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/others.html">Other projects</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Investigations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../research/work_plan.html">Activities and Deadlines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../research/rnn_tensorflow.html">Tensorflow: vattenfall</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../research/Keras_LSTM.html">Vattenfall by LSTM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../research/code_experiences.html">Code solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">PhD course -- statistical/machine learning</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Course Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_ml-types.html">PART 1 -- MACHINE LEARNING FOR ENGINEERING APPLICATIONS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_regression.html">PART 2 -- STATISTICAL REGRESSION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_machinelearning.html">PART 3 -- MACHINE LEARNING METHODS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_timeseries.html">PART 4 -- TIME SERIES LEARNING METHODS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_dataprocess.html">PART 5 -- DATA FILTERING METHODS (upcoming)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_deeplearning.html">PART 6 -- DEEP LEARNING AND SPATIO-TEMPORAL MODELLING (upcoming)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MSc course--reliability methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mms190/introduction.html">Course Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mms190/limit-state/intro-ls.html">Limit state approaches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mms190/basic-statistics/intro-bs.html">Basic statistical theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mms190/reliability-methods/intro-rm.html">Reliability methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mms190/extreme-design/intro-ed.html">Extreme condition design</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/wengangmao.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/wengangmao.github.io/edit/master/./contents/teaching/fmms050/introduction.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/wengangmao/wengangmao.github.io/issues/new?title=Issue%20on%20page%20%2Fcontents/teaching/fmms050/introduction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/contents/teaching/fmms050/introduction.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>FMMS050 - Statistical regression and machine learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syllabus-for-this-course">Syllabus for this course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-language-english">Teaching language: English</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">Eligibility</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-specific-prerequisites">Course specific prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-and-objectives">Aim and objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-contents">Course contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-machine-learning-applications">Basis of machine learning applications:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-learning-methods">Statistical learning methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-methods">Machine learning methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Machine learning methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization">Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examination-including-compulsory-elements">Examination including compulsory elements</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fmms050-statistical-regression-and-machine-learning">
+<h1>FMMS050 - Statistical regression and machine learning<a class="headerlink" href="#fmms050-statistical-regression-and-machine-learning" title="Permalink to this heading">#</a></h1>
+<hr class="docutils" />
+<p><strong>This course can be accessed through the <a class="reference external" href="https://wengangmao.github.io/fmms050/contents/introduction.html#">website</a>.</strong></p>
+<hr class="docutils" />
+<section id="syllabus-for-this-course">
+<h2>Syllabus for this course<a class="headerlink" href="#syllabus-for-this-course" title="Permalink to this heading">#</a></h2>
+<p>The course is given by the Division of Marine Technology on the Department of Mechanics and Maritime Sciences, Chalmers University of Technology in Gothenburg, Sweden.</p>
+<p>Course credit: 7,5 Credits
+Grading: Pass, Fail
+Education cycle: Doctoral student
+Major subject: Shipping and Marine Technology, Applied Mechanics
+Department: 30 - MECHANICS AND MARITIME SCIENCES</p>
+</section>
+<section id="teaching-language-english">
+<h2>Teaching language: English<a class="headerlink" href="#teaching-language-english" title="Permalink to this heading">#</a></h2>
+<p>Examiner and Lecturer: Wengang Mao
+Phone: 031–7721483; Email: <a class="reference external" href="mailto:Wengang&#46;Mao&#37;&#52;&#48;chalmers&#46;se">Wengang<span>&#46;</span>Mao<span>&#64;</span>chalmers<span>&#46;</span>se</a></p>
+</section>
+<section id="eligibility">
+<h2>Eligibility<a class="headerlink" href="#eligibility" title="Permalink to this heading">#</a></h2>
+<p>Doctoral students and senior master students at Chalmers</p>
+</section>
+<section id="course-specific-prerequisites">
+<h2>Course specific prerequisites<a class="headerlink" href="#course-specific-prerequisites" title="Permalink to this heading">#</a></h2>
+<p>Mathematics (including mathematical statistics, linear algebra, numerical analysis and multi-variable calculus), mechanics and strength of materials and engineering materials. Applicants should have the need to deal with some experimental or full-scale data from engineering mechanics.</p>
+</section>
+<section id="aim-and-objectives">
+<h2>Aim and objectives<a class="headerlink" href="#aim-and-objectives" title="Permalink to this heading">#</a></h2>
+<p>The purpose of the course is to give statistical and machine learning methods to deal with experimental and full-scale test data from engineering mechanics, in order to understand the hidden characteristics within the data. In this course, the so-called data will cover two types, i.e., independent observations from multi-variables with uncertainties/noises, and strongly dependent observations of time series signals. In addition to the direct implementation skills of these methods for practical applications, this course also aims at teaching some fundamental theory connected to each method.<br />
+Learning outcomes
+After finishing the course, the student will have professional knowledge in the interpretation of various random nature involved engineering problems and application of various statistical and machine learning methods to model and explain engineering scenarios containing uncertainties.</p>
+</section>
+<section id="course-contents">
+<h2>Course contents<a class="headerlink" href="#course-contents" title="Permalink to this heading">#</a></h2>
+<p>The course is divided into four parts: basis of machine learning applications, statistical learning methods, machine learning methods and time series forecasting. Some more details of each part are given as below.</p>
+<section id="basis-of-machine-learning-applications">
+<h3>Basis of machine learning applications:<a class="headerlink" href="#basis-of-machine-learning-applications" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Clarification of different terminologies within field of AI and ML</p></li>
+<li><p>Overview of different machine learning categories</p></li>
+<li><p>Basic mathematics and statistics for application of ML</p></li>
+</ul>
+</section>
+<section id="statistical-learning-methods">
+<h3>Statistical learning methods<a class="headerlink" href="#statistical-learning-methods" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Regression and its interpretation</p></li>
+<li><p>radient for regression (parameter estimations)</p></li>
+<li><p>Polynomial and Spline fitting</p></li>
+<li><p>Generalized linear regression</p></li>
+<li><p>Generalized additive model and mixed effect model</p></li>
+</ul>
+</section>
+<section id="machine-learning-methods">
+<h3>Machine learning methods<a class="headerlink" href="#machine-learning-methods" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Logistical regression and classification</p></li>
+<li><p>Neural network</p></li>
+<li><p>Support vector machine</p></li>
+<li><p>Decision trees and ensemble algorithm</p></li>
+<li><p>Boosting method (XGBoost)</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Machine learning methods<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Gaussian transformation method</p></li>
+<li><p>Basic properties of stationary Gaussian process</p></li>
+<li><p>Autocorrelation and Conditional expectation</p></li>
+<li><p>Auto regressive models and Moving average models</p></li>
+<li><p>ARIMA models</p></li>
+<li><p>Examples of applications</p></li>
+</ul>
+</section>
+</section>
+<section id="organization">
+<h2>Organization<a class="headerlink" href="#organization" title="Permalink to this heading">#</a></h2>
+<p>The course will contain some assignments and seminars related to different methods.</p>
+<p>Teaching is in the form of lectures, assignments and seminars. The course contains 18 lectures, each will last for 2-4 hours. In the end of the course, there will have two lectures where students will need to present their assignments.</p>
+</section>
+<section id="literature">
+<h2>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<p>Hastie T., Ribshirani R. and Friedman J. (2003). The elements of statistical learning, Data mining, inference and prediction. Springer. <br /></p>
+<p>Shalizi, C.R. (2019). Advanced data analysis from an Elementary point of view. Pre-print. <br /></p>
+<p>Shumway, R.H. and Stoffer, D.S. (2016). Time series analysis and its applications with R examples, Fourth edition. Springer.<br /></p>
+<p>Wei, W.W.S. (2006). Time series analysis Univariate and multivariate models, Second edition. Pearson Addison Wesley.</p>
+</section>
+<section id="examination-including-compulsory-elements">
+<h2>Examination including compulsory elements<a class="headerlink" href="#examination-including-compulsory-elements" title="Permalink to this heading">#</a></h2>
+<p>The examination of the course consists of assignments and a final seminar.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./contents\teaching\fmms050"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../research/code_experiences.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Solutions of solving code problems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_ml-types.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Categories of machine learning methods</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syllabus-for-this-course">Syllabus for this course</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-language-english">Teaching language: English</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">Eligibility</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-specific-prerequisites">Course specific prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-and-objectives">Aim and objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-contents">Course contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-machine-learning-applications">Basis of machine learning applications:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-learning-methods">Statistical learning methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-methods">Machine learning methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Machine learning methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organization">Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examination-including-compulsory-elements">Examination including compulsory elements</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wengang Mao
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022-2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
