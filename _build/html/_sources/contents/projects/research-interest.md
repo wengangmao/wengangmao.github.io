@@ -19,6 +19,7 @@ Here we will collect some useful website which can help us understand the state-
 - **[Open Propeller](https://openprop.engineering.dartmouth.edu/index.html)**
 - **[Open Seamap](http://www.openseamap.org/index.php?id=61&L=1)**
 - **[MAN Engine](https://www.man-es.com/marine/products/planning-tools-and-downloads/ceas-engine-calculations)**
+- **[DNV vessel finder](https://vesselregister.dnv.com/vesselregister)**
 
 ### 1.3, Companies of cooperation interest/contact
 - **[Yara Marine](https://yaramarine.com/vessel-optimization/)**

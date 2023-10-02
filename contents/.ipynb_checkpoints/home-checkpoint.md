@@ -29,11 +29,11 @@
 
 ## Research Outcomes by Examples
 The overall objectives of our research activities are to:
-- **Develop models to estimate a ship's fuel consumption and maneuverability
-- **Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships
-- **Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA
-- **Develop innovative measures to increase ship energy efficiency
-- **Develop control algorithms to automatically navigate a ship
+- **Develop models to estimate a ship's fuel consumption and maneuverability**
+- **Develop models to describe the spatio-temporal correlation of metocean conditions encountered by ships**
+- **Develop optimization algorithms to plan a ship's voyage with reduced fuel/emissions and enhanced safety & ETA**
+- **Develop innovative measures to increase ship energy efficiency**
+- **Develop control algorithms to automatically navigate a ship**
 
 +++
 ---
